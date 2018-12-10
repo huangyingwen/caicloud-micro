@@ -1,0 +1,69 @@
+validates:
+  selectCluster: You must select a cluster
+  selectPartition: You must select a partition
+  nameEmpty: Data volume name can not be empty
+  nameWrong: Name consists of letters, numbers, bars, can only begin with English
+   letters, can not start and end with a bar
+  storageQuotaEmpty: Storage quota can not be empty
+  storageQuotaWrong: Storage quota must be greater than or equal to 10, less than or equal to
+   1000, and is a multiple of 10
+  storageQuotaPositive: Storage quota must be a positive integer
+  selectProgram: Need to choose an existing storage class
+  serverEmpty: Server can not be empty
+  pathEmpty: Path can not be empty
+  endpointEmpty: Endpoints can not be empty
+  ipEmpty: ip can not be empty
+  storageName: The name of the storage class can not be empty
+tips:
+  selectBuildedAliyun: Select an Aliyun cloud disk has been built
+  enterIp: Please fill in the IP address
+  enterEndPoint: Please fill in an existing endpoint name
+  selectDeploy: Please select a deployment location first
+  restuser: Authorized users for authentication is turned on
+  gidMin: "The minimum value of GID range for the storage class, such as: 40000"
+  gidMax: "The maximum value of GID range for the storage class, such as: 50000"
+  volumetype: "GlusterFS volume type, such as: replicate: 3"
+  noCluster: Current tenants do not have a cluster of resources! Please contact the administrator as soon as possible!
+  noTenant: The current user does not have permission and is temporarily unable
+   to use the platform! Please contact the administrator as soon as possible!
+  enterProgram: Please enter the name of the storage class
+  onCreateProgram: Creating storage class
+  createProgramSuccess: Created successfully
+  onDeleteProgram: Removing storage class
+  deleteProgramSuccess: Deleted successfully
+  onCreate: Creating data volume
+  createSuccess: Created successfully
+  onDelete: Removing data volume
+  deleteSuccess: Deleted successfully
+  confirmDelYunHardDisk: Are you sure to delete the cloud drive ${name}
+  confirmDel: Are you sure to delete the data volume ${volume}
+  dataLostHint: If the data volume ${volume} has been used, deletion will result in data loss
+actions:
+  createAliyun: Create an Aliyun disk
+  createEndpoint: Create an endpoint
+  create: Create a data volume
+  useEndPoint: Use an existing endpoint
+  createStorage: Create storage class
+currentProgram: Existing storage class
+aliyun: Aliyun disk
+server: server
+endpoint: Endpoint
+path: path
+nodeRW: Single node read and write
+nodesRW: Multi-node read and write
+nodesR: Multi-node read-only
+deploy: Deployment location
+storageProgram: Storage class
+RWStrategy: Read and write strategy
+errorReason: Error reason
+message: Message
+notUse: Not used
+user: User
+noVolume: No data volume!
+search: Enter a name for fuzzy search
+filter: filter
+clear: Emptied
+storageType: Storage type
+programName: Storage class name
+type: Type
+noStorage: No storage class

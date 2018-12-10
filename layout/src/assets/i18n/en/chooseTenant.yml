@@ -1,0 +1,10 @@
+# buttons, form titles
+actions:
+  userEntrance: User Entrance
+  adminEntrance: Admin Entrance
+  enter: Enter
+
+# messages, placeholders, tips
+tips:
+  enterAdminPlatformSuccess: Entering System Admin Platform
+  enterUserPlatformSuccess: Entering User Platform

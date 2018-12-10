@@ -1,0 +1,610 @@
+# application properties
+status: Application status
+application: Application
+workPayloadType: Work payload type
+appPayloadType:
+  deploymentApp: Deployment application
+  jobApp: Batch task
+updateTime: Update time
+runningTime: Running duration
+runningStatus: Real-time status
+grayReleaseSts: Canary release status
+autoScalingSts: Autoscaler state
+userName: username
+password: password
+partition: Partition
+weights: Weight
+name: Application Name
+deployPosition: Deployment location
+deployPositionVal: Cluster ${cname} / Partition ${pname}
+baseInfo: Basic Information
+controller: Controller
+config: Configuration
+monitor: monitor
+createTime: Creation time
+monitorProbe: Monitoring prober
+DNSStrategy: DNS policy
+clusterDNS: Use cluster DNS
+nodeDNS: Use node DNS
+clusterWithNodeDNS: Use cluster and node DNS
+resourceRequest: Resource request
+storageRequest: Capacity request
+method: method
+project: Project
+imageName: Image name
+imageTag: Image tag
+devRepo: Development Repository
+deployWay: Select deploy way
+afterStartup: After starting
+beforeExit: Before exiting
+lifecycle: Lifecycle hook
+outData: Plug-in data
+timeInterval: time interval
+unknowType: Unknown type
+compare: Number of current instances / expected instances
+deployControll: Deployment control
+waitTime: Initial waiting time
+outTime: timeout
+successTime: Success threshold
+wrongTime: Failure threshold
+instanceList: Service instance list
+select: Select application
+baseConfig: Basic configuration
+containerBaseInfo: Container Basic Info
+images: Images
+configFile: Config File
+mountConfigFile: Mount Config File
+logCollection: Log Collection
+fileLog: File Log
+advance: Advance
+storage: Storage
+mountFileName: File Name
+mountCatalog: Mount Catalog
+selectCluster: Select Cluster
+selectPartition: Select Partition
+privilegeMod: Privilege Mode
+overview: Overview
+accessConfig: Access Config
+workConfig: Run Config
+chartRepo: Chart Repository
+controllers:
+  type: ReplicaType
+  controllerType: Type
+  config: Controller config
+  deployment: Stateless instance
+  statefulSet: Stateful instance
+  job: Job instance
+  cronjob: CronJob instance
+  replica: Replica
+  readyReplica: Ready instances
+  currentReplica: Instances in current version
+  currentAvaliableReplica: Avaliable Instances in current version
+  declaredReplica: Declared Replica
+  strategy: Update strategy
+  strategyType: Strategy Type
+  strategy:unavailable: The maximum number of unavailable instances
+  strategy:surge: The maximum number of excess instances
+  strategy:RollingUpdate: RollingUpdate
+  strategy:Recreate: Recreate
+  strategy:tips:RollingUpdate: The Deployment updates Pods in a rolling update fashion
+  strategy:tips:Recreate: All existing Pods are killed before new ones are created
+  name: Instance prefix name
+  domain: Instance domain name
+  number: Number of instances
+  conditions: Health status
+  conditions:type: Type
+  conditions:reason: reason
+  conditions:lastUpdateTime: Last update time
+  conditions:message: description
+  creationTimestamp: Creation time
+  runningTime: Running duration
+  metadata:
+    name: name
+
+appType:
+  common: Deployment
+  stateful: StatefulSet
+  batch: Job
+  protect: DaemonSet
+
+chartConfig:
+  appType: Application Type
+  service: service
+  volume: storage
+  name: name
+  version: version
+  description: description
+  versionList: Version list
+  detail: Configuration details
+
+title:
+  quickDeploy: Quick deploy
+  completeDeploy: Complete deploy
+  chartDeploy: Chart deploy
+  storeDeploy: Store deploy
+
+no: No application
+container: container
+# container properties
+containers:
+  port: port
+  name: Container name
+  customName: Custom container name
+  config: Container config
+  allocated: System allocated
+  image: Image URL
+  imagePullPolicy: Image pull policy
+  args: Command Arguments
+  command: Command
+  command:help: The command will replace the default ENTRYPOINT in Dockerfile.
+  status: status
+  resource: Resource
+  resourceConfig: Resource Config
+  resources:
+    requests:
+      cpu: CPU request
+      cpuCore: 'CPU request: ${name} Core'
+      memory: Memory request
+      memoryGb: 'Memory request: ${name}'
+    limits:
+      cpu: CPU limit
+      cpuCore: 'CPU limit: ${name} Core'
+      memory: Memory limit
+      memoryGb: 'CPU limit: ${name}'
+  volumeMounts:
+    name: Mount point
+    path: Mount path
+  mount: Mount volume
+  mounts:
+    path: Container path
+    name: Volume name
+  probe:
+    liveness: Liveness
+    readiness: Readiness
+    delay: Delay
+    timeout: Timeout
+    period: Request Period
+    useHTTPS: Use HTTPS
+    thresholds: Threshold
+    threshold:
+      success: SuccessThreshold
+      failure: FailureThreshold
+    handler:
+      type: HandlerType
+      portAndPath: Port & Path
+      checkAddress: Check Address
+      method:
+        command: Command
+        scheme: Protocol
+        host: In most scenarios, you do not want to set the host field. Here’s one scenario where you would set it. Suppose the Container listens on 127.0.0.1 and the Pod’s hostNetwork field is true. Then host, under httpGet, should be set to 127.0.0.1. If your pod relies on virtual hosts, which is probably the more common case, you should not use host, but rather set the Host header in httpHeaders
+        port: Port
+        path: Path
+        header: HTTP Header
+        header:name: HeaderName
+        header:value: HeaderValue
+
+volume: Volume
+# volume properties
+volumes:
+  baseInfo: Basic Information
+  extraInfo: Extended Information
+  name: Volume name
+  type: Volume type
+  status: status
+  status:success: Mounted
+  status:pending: Pending
+  status:error: Error
+  path: path
+  server: server
+  endpoint: Endpoint
+  scratch: Temporary volume
+  dynamic: Dynamic volume
+  static: Static volume
+  dedicated: Dedicated volume
+  mountToContainer: Mount To Container
+  source:
+    class: Storage class
+    mode: Read/Write mode
+    target: Volume name
+    modes:
+      ReadWriteOnce: Single node read/write
+      ReadOnlyMany: Multi-node read-only
+      ReadWriteMany: Multi-node read/write
+  storage: capacity
+  storages:
+    basicPerformance: Basic capacity
+    commonPerformance: General capacity
+    highPerformance: Advanced capacity
+    custom: customize
+    request: Capacity limit
+    limit: Capacity limit
+    allocated: Allocated capacity
+  tips:
+    select: Select volume
+    have: Existing volume
+    mount: It can be mounted by containers
+    scratch: Scratch is kind of temporary volume. Every replica has its own scratch volume and it only can read/write itself's. Containers in a replica can share one scratch volume. Scratch volume will be deleted after updating or deleting a replica. Make sure that those data in scratch volume would not impact your business after it is destroyed.
+    dynamic: Dynamic volume will create a volume by storage class. The volume is shared by all replicas. It will be remained after application is deleted, then you could mount the volume via Static volume.
+    static: Static volume is an existing volume. The volume is shared by all replicas.  It will be remained after application is deleted.
+    dedicated: Dedicated volumes only appear in stateful applications. Dedicated volume creates a volume for every replica. All those volumes are independent and will be remained after application is deleted.
+  validates:
+    sameName: A volume with the same name already exists
+    tooSmall: The volume capacity is less than requested capacity
+    exceedCap: Exceeds the capacity limit
+    mountRequired: The added volume needs to be mounted to the container
+
+env: Environment variables
+# env properties
+envs:
+  key: key
+  value: value
+
+service: service
+# service properties
+services:
+  name: service name
+  serviceType: Service type
+  type: Access type
+  clusterIP: Only can be accessed in cluster
+  nodePort: Use node port to access
+  export: Whether to export
+  signExport: Mark the service is exported
+  internalService: Internal service
+  externalService: External service
+  accessPort: Access Port
+  ports:
+    protocol: protocol
+    targetPort: Container port
+    port: Service port
+    nodePort: Node port
+    hostPort: Node port
+    address: address
+    nodePortTip: System allocation port automatically
+
+terminal: terminal
+
+log: Log
+
+# buttons, form titles
+actions:
+  deploy: Deploy
+  restartApp: Restart
+  update: Edit
+  updateGrayRelease: Update canary release
+  upgradeGrayRelease: Publish the config
+  chooseVolumeSource: Choose a storage class
+  chooseCharts: Choose a template
+  chooseChartsRepo: Choose a chart library
+  chooseAppFromStore: Choose application from appStore
+  chooseAppStore: Choose From AppStore
+  chooseVersion: Choose a version
+  addService: Add service port
+  addVolume: Add volume
+  addEnv: Add environment variables
+  prevStep: Previous
+  nextStep: Next
+  doneStep: Finish
+  operation: operating
+  rollback: Roll back
+  rollbackLastVersion: Restore the previous version
+  addAutoScaler: Open autoScaler
+  updateAutoScaler: Update autoScaler
+  saveAndDeploy: Save and deploy the application
+  save: Save
+  qucikDeploy: One-click deployment
+  grayRelease: Create a canary release
+  exportImageConfig: Export the image config
+  updateReplica: Modify replica
+  updateImages: Update image
+  updateAppConfig: Modify config
+  delCurrentVersion: Delete current version
+  delCurrentChart: Delete current chart
+  editChart: Modify chart
+
+pods: Pod
+pod:
+  image: Container image
+  podsCount: Pods' count
+  podsConfig: Pods' configuration
+  podsNetwork: Pods' network
+  restartCount: Restart times
+  times: Times
+  runningTime: Running duration
+  ipAddress: IP address
+  status:
+    running: Running
+    pending: Deploying
+    error: Error
+  restart: Restart policy
+  dns: DNS policy
+  hostname: Hostname
+  subdomain: Subdomain name
+  termination: Duration before exiting
+  host:
+    network: Shared network namespace with the host
+    net: Shared network namespace with the host
+    pid: Shared pid namespace with host
+    ipc: Share ipc namespace with the host
+    yes: 'Yes'
+    no: 'no'
+  tips:
+    fromGrayRelease: From CanaryRelease
+    newest: The Newest Pod
+
+# messages, placeholders
+tips:
+  envKey: It is made up of English letters, numbers, and underscores, and cannot begin with number.
+  mountFilePath: Enter path please, but don't enter root path.
+  nodePortRange: port range is between 30000 and 32767
+  targetPortRange: port range is between 0 and 65535
+  uniqServiceName: ServiceName must be unique
+  serviceName: It is made up of English letters, numbers, and crossbars. It can only begin with English letters, not the beginning or end of the bar, and the length of 2-32 characters.
+  termination: Very from 0 to 360 and 0 means immediately remove
+  quickDeploy: Only need a image address, then you can deploy application.
+  completeDeploy: From the beginning, deploy application step by step.
+  chartDeploy: Select chart from chart library,  then start deploying.
+  storeDeploy: Select chart from application store,  then start deploying.
+  appName: You can enter Chinese or special characters, the length of which is between 2 and 32.
+  statefulsetsName: The name must only contain lowercase alphanumeric characters and -, and must begin and end with an alphanumeric character.
+  pullMirror: Force to pull image
+  onDeploy: Creating application
+  deploySuccess: Create successfully!
+  addSuccess: ${application} Create successfully!
+  deleteSuccess: Delete ${name} successfully!
+  exportChart: Export application template
+  deployFromChart: Deploy from template
+  deployQuickly: Deploy manually
+  search: Fuzzy searching by keywords
+  serviceExplain: The name of the service serving the outside world, it's the domain used by other apps to access this application.
+  serviceTip: Service corresponds to some container port, container port will be mapped to the host port, host port optional.
+  containerName: The application name can not be modified after the deployment is successful.
+  optional: Optional
+  deployQuicklyTip: Only need a image, you can quickly deploy the application. By default, use stateless instance controller (Deployment). its configuration can be modified after deploying.
+  clusterIP: (Cluster inside)
+  currentRevision: current version
+  preRevision: Previous version
+  onRollBack: Rolling back application
+  rollBackSuccess: Rollback successfully
+  onExportChart: Exporting template
+  exportChartSuccess: Exported successful
+  onSaveChart: Saving template
+  saveChartSuccess: Saved successfully
+  deleteChart: Removing template
+  deleteChartSuccess: Removed successfully
+  onDelApp: Removing application ${appName} ...
+  delAppSuccess: Removed application ${appName} successfully
+  confirmDelApp: Are you sure to delete application ${appName}
+  onRestart: Restarting
+  confirmRestartApp: Are you sure to restart application ${appName}
+  confirmStopApp: Are you sure to stop application ${appName}
+  confirmStartApp: Are you sure to start application ${appName}
+  confirmDelAutoScaler: Are you sure to delete autoscaler ${name}
+  delAutoScalerTip: The replicas producted after autoscaler will not be deleted, if you need to recover initical replica count, please update the application.
+  confirmCloseAutoScaler: Are you sure to turn off autoscaler ${appName}
+  confirmUpdateTotalApp: Are you sure to update application ${appName}
+  confirmRollBack: Are you sure to rollback application ${appName} to version ${version}
+  containerList: Container list
+  selectPod: Please select a pod
+  noVolumes: No bound volume
+  fetchinglogBottom: Fetching logs
+  fetchinglogStart: Getting logs
+  appsOfPartition: All applications under the partition
+  noApplicaiton: No application
+  openMonitor: Whether to open the monitor
+  useExporter: Whether to use exporter
+  configCPUAndMemory: Config CPU and memory resource requests
+  mirror: 'Image pull policy, the default is Always, closed is set to IfNotPresent'
+  imagePullPolicyHelp: IfNotPresent policy means don't pull image when pod is existed on node. Set to Always if you want to pull image every time pod is rescheduling.
+  grayReleasing: Creating a canary release
+  grayReleaseSuccess: Create successfully
+  grayReleaseUpdating: Updating canary release
+  confirmGrayRelease: Are you sure to publish ${subApp}
+  grayReleaseUpdated: Update successfully
+  grayReleaseDeleting: Deleting canary release
+  confirmDelGrayRelease: Are you sure to delete the canary release of application ${appName}
+  grayReleaseDeleted: Delete successfully
+  confirmCancelGrayDeploy: Are you sure to cancel the canary release of aoolication ${appName}
+  confirmDelSubGrayRelease: Are you sure to delete the canary release of subapplication ${subApp} in application ${appName}
+  upgradeGrayRelease: Application is releasing a new version
+  upgradeGrayReleaseSuccess: Publish successfully
+  updateApplicationConfig: Updating application config
+  updateApplicationConfigSuccess: Update successfully
+  deletingApplication: Deleting application
+  deleteApplicationSuccess: Delete successfully
+  updatingResource: Updating ${resource}
+  updateResourceSuccess: Update ${resource} successfully
+  addImageToQueueSuccess: Image has been successfully added to the export queue!
+  onCreateGrayRelease: Creating a canary release for sub-application ${subapp} of application ${application}
+  createGrayReleaseSuccess: Create canary release for sub-application ${subapp} of application ${application} successfully
+  onUpdateGrayRelease: Updating canary release
+  updateGrayReleaseSuccess: Updated successfully
+  onDeleteGrayRelease: Deleting canary release for sub-application ${subapp} of application ${application}
+  deleteGrayReleaseSuccess: Delete canary release for sub-application ${subapp} of application ${application} successfully
+  grayReleaseUpdate: Sub-application ${subapp} of application ${application} is publishing a new version
+  grayReleaseUpdateSuccess: Publish a new version for Sub-application ${subapp} of application ${application} successfully
+  serviceNamePlaceholder: The name of the service
+  ok: Running
+  update: Update
+  warn: Failed
+  confirmDelTag: Are you sure to delete the tag ${tag}
+  configError: Current config does not work. ${Msg}
+  unKnown: Unknown
+  overdue: Overdue application
+  podsConfigEmpty: Pods' configuration is Empty
+  controllerConfigEmpty: Controller's configuration is empty
+  noController: This version template does not have a controller configured
+  fromAppStore: Choose
+  statefulAutoScaler: Can't create AutoScaler For StatefulSet
+  statefulGrayRelease: Can't create GrayRelease For StatefulSet
+  notfound: This app does not exist
+  backToAppList: Back to AppList
+  clusterDNS: Only use DNS which is configured by cluster
+  nodeDNS: Only use DNS which is belong to node running on pods
+  clusterWithNodeDNS: Use cluster's DNS and node's DNS, cluster' DNS first.If pods use Hostnetwork，the mode is recommended.
+  replicaDenyInAutoScaler: The replicas is controllered by autoscaling.
+  configMapReadOnly: ConfigFile is readonly
+validates:
+  addStorageFirst: Please add storage first
+  updateVersion: Please update the version
+  updateWeight: Please update the weight
+  weightNumber: Please use a number between 1 - 99
+  isRequired: ${name} can not be empty
+  spaceName: Name consists of letters, numbers, dash, and can only begin with English letter or number
+  required:
+    application: Please fill application name
+    chart: Please select a template
+    source:class: Please select a storage class
+    source:target: Please select an existing volume
+    mount:path: Please fill container path
+    storage: Please fill storage capacity
+    containerName: Please fill container name
+    image: Please fill image address
+    service:name: Please fill service name
+    service:type: Please select service type
+    port: port required
+    autoScaler:
+      cpu: CPU utilization threshold can not be empty
+  portConflict: Port conflict
+  nodePort: Please enter a number in 30000 ~ 32767
+  positiveInt: ${name} must be a positive integer
+  smGtLg: ${lg} must be greater than ${sm}
+  version: 'The version number consists of three numbers, such as: 1.1.1'
+  versionUpdate: Must update version when update chart
+  quotaLimit: Quota request can not exceed the limit
+  imageEmpty: Image can not be empty
+  imageUserNameEmpty: Image repository user name can not be empty
+  imagePasswordEmpty: Image repository password can not be empty
+
+# revision properties
+revision: version
+revisions:
+  time: time
+
+# events properties
+event: event
+events:
+  reason: Reason
+  message: Message
+  timestamp: Occurrence time
+  count: ${count} times have occurred in ${time}
+  involvedObject:
+    kind: Resource Type
+
+autoScaler: Autoscaler
+autoScalers:
+  minReplicas: The minimum number of replicas
+  maxReplicas: The maximum number of replicas
+  currentReplicas: The current number of replicas
+  desiredReplicas: Expected number of replicas
+  totalReplicas: Total number of replicas
+  cpu: CPU utilization threshold
+  currentCPU: Current CPU utilization
+  have: Autoscaler exists
+  target: Target
+  currentTarget: Current Target
+  targetChart: Target Chart
+  unit: Unit
+  tips:
+    create: Creating autoscaler
+    createSuccess: Create successfully
+    update: Updating autoscale
+    updateSuccess: Update successfully
+    onDelete: Deleting autoscaler
+    deleteSuccess: Delete successfully
+    inputThreshold: Input threshold
+  metric:
+    container_fs_usage: container_fs_usage
+    cpu_usage: cpu_usage
+    memory_usage: memory_usage
+chart: Template
+charts:
+  library: Template library
+  name: Template name
+  libraryName: Library name
+  description: Template description
+  export: Export template
+  actions:
+    enterLibraryName: Please enter template name
+    add: Create
+    addLibrary: Create
+    update: Update template
+    select: Select a template library
+    delete: Delete this template
+  tips:
+    manageLibrary: Template library management
+    description: Add the description for the template, optional
+    libraryEmpty: Template library is empty
+    readonly: This template is read-only and can not be modified
+    enterDescription: Please fill template description
+    currentVersion: The latest version of the current template is ${currentVersion}, it is recommended to iterate up
+    create: Creating template library
+    createSuccess: Creating successfully
+    delete: Deleting template library
+    deleteSuccess: Delete successfully
+    createChartSuccess: Create successfully
+    deleteChartSuccess: Delete successfully
+    confirmDelChart: Are you sure to delete template ${chart}
+  validates:
+    libraryEmpty: Template library can not be empty
+    nameEmpty: Template name can not be empty
+    versionEmpty: Version number can not be empty
+    versionWrong: Version number format should follow SemVer rules, x.y.z for example, xyz should be numbers
+    descriptionEmpty: Template description can not be empty
+
+grayRelease: Canary release
+grayReleases:
+  status: status
+  weight: Weight
+  config: Config
+
+image:
+  name: Image name
+
+exporter: Exporter
+exporters:
+  config: Monitor Config
+  type: Type of exporter
+  custom: Use self-defined metrics
+  exporter: Use exporter
+  probeType: Probe type
+
+nodeAffinity:
+  title: Node Affinity
+  tags: Tags
+  strategy: Strategy
+  strategy:nolimit: No Limit
+  strategy:Required: Required
+  strategy:Prefered: Prefered
+  tips:
+    type:nolimit: Auto Schedule
+    type:Required: The application must run on node with the scheduling tag. If all nodes do not have these tags, the application will not be able to run.
+    type:Prefered: The application runs on the node that meets the scheduling label first. If all nodes do not have these scheduling tags, unlimited node scheduling will be initiated.
+  validates:
+    tagRequired: 请至少选择一个标签
+
+developerOptions: Developer Options
+exporterEnv:
+  auth_pass: Mongodb passowrd
+  auth_user: Mongodb username
+  mongodb_url: Mongodb connection url
+  redis_port: Redis port
+  redis_pass: Redis password
+  jmx_port: JMX connection port
+
+appStore: AppStore
+appStores:
+  intro: Introduce
+  manifest: Manifest
+  version: Version
+  comingSoon: Coming Soon
+  type: Type
+  types:
+    all: All
+    db: DB
+    tool: Tools
+    cache: Cache
+    middleware: Middleware
+    deeplearning: Deep Learning
+    bigdata: BigData
+    microservice: MicroService
+    other: Others

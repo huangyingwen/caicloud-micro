@@ -1,0 +1,83 @@
+teams:
+  tabTitles:
+    partition: Partition Auth
+    template: Template Group
+    balance: Load Balancing
+    config: Config Auth
+    manageCenter: Management Center
+    operator: Maintenance Rights
+    devops: Devops Auth
+    cargo: Cargo Auth
+    clever: Clever Platform Permissions
+  tips:
+    noSystemUser: No user
+    noUser: User Not Find!
+    selectUsers: Select members
+    filterName: Enter name for fuzzy filter
+    filter: Enter keyword for fuzzy filter
+    defaultTeamDescription: All members of this tenant are in this team. Default team can't be deleted.
+    optional: Optional, 200 words or less
+  validates:
+    enterTeamName: Please enter the team name
+    tooMuch: No more than 200 words.
+  # buttons, form titles
+  actions:
+    addMembers: Add members
+    addTeam: Create Team
+    modifyTeam: Modify Team
+
+roles:
+  base: Basic Role
+  roleTypes:
+    none: None
+    owner: Owner
+    user: User
+    guest: Guest
+    operator: Operator
+    workspaces: All Workspaces Owner
+  resourceNames:
+    singular:
+      partition: Partition
+      config: Config
+      devops: Devops
+      cargo: Cargo Project
+      template: Template Group
+    plural:
+      partition: Partitions
+      config: Configs
+      devops: Devops
+      cargo: Cargo projects
+      template: Template Group
+  tips:
+    base: After given the basic role, members of the team share permissions of ${resourceName}
+    workspaces: Contains cargo project's owner
+    cargo: The base role of devops is owner, the role of cargo project have been changed to owner, current role setting is invalid
+  actions:
+    chooseBaseRole: Choose basic role
+    chooseSingletonRole: Choose role
+  simpleAuth:
+    balance: Load Balancing
+    logging: Log Events
+    monitoring: Monitoring Alarm
+    operator: Maintenance Rights
+    notifyConfig: Notification configuration
+
+# clever平台访问相关
+clever:
+  title: Functional Permissions
+  access: Clever Platform Access：
+  stop: Clever Platform Access Barred
+  stopInfo: "After closing the platform access, the group's users will not be able to log in to the clever platform, but the resources that the user creates on the platform (jupyter instances, training jobs, TensorBoard instances, and model services) will continue to be retained. If we want to clean up, we need administrator to log on to clever platform to clean up. Are you sure you want to close the group to access the clever platform switch?"
+  tips:
+    developAdmin: Manage all user's Notebook instances
+    developOperator: Create and manage your own Notebook instance
+    developName: Model Development
+    developHelp: Provide online code development and debugging tools Notebook
+    trainingAdmin: Manage all users' training assignments and TensorBoard instances
+    trainingOperator: Submit and manage your own model training assignments; create and manage your own TensorBoard instances
+    trainingName: Model Training
+    trainingHelp: Submit a Model Training Assignment and Create a Learning Visualization Tool for TensorBoard
+    servingAdmin: Manage all user-deployed model services
+    servingOperator: Deploy and manage your own model service
+    servingName: Model Service
+    servingHelp: Deploy model services to provide model inference gRPC API

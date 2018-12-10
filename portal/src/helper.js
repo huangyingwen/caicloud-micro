@@ -1,18 +1,24 @@
 import * as singleSpa from "single-spa"; // waiting for this to be merged: https://github.com/CanopyTax/single-spa/pull/156
+import loadJs from "./loadJs";
 
-export function hashPrefix(prefix) {
+export function historyPrefix(prefix) {
   return function(location) {
-    return location.hash.startsWith(`#${prefix}`);
+    console.log(
+      location.pathname,
+      prefix,
+      location.pathname.startsWith(prefix)
+    );
+    return location.pathname.startsWith(prefix);
   };
 }
 
-function loadJs(url) {
-  return new Promise((resolve, reject) => {
-    window.requirejs([url], app => {
-      resolve(app);
-    });
-  });
-}
+// function loadJs(url) {
+//   return new Promise((resolve, reject) => {
+//     window.requirejs([url], app => {
+//       resolve(app);
+//     });
+//   });
+// }
 
 export async function loadApp(
   name,
@@ -22,7 +28,7 @@ export async function loadApp(
   globalEventDistributor
 ) {
   let storeModule = {},
-    customProps = { globalEventDistributor: globalEventDistributor };
+    customProps = { globalEventDistributor: globalEventDistributor, singleSpa };
 
   // try to import the store module
   try {
@@ -43,7 +49,7 @@ export async function loadApp(
   singleSpa.registerApplication(
     name,
     () => loadJs(appURL),
-    hashPrefix(hash),
+    historyPrefix(hash),
     customProps
   );
 }

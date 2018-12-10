@@ -1,0 +1,151 @@
+# storage properties
+name: storage
+
+# resources
+tips:
+  confirmDel: Are you sure to delete the storage class ${name}
+services:
+  name: Storage service
+  create: Create storage service
+  update: Update storage service
+  delete: Delete storage service
+  types: Storage type
+  action:
+    integrate: Integrate
+    delete:
+      deleting: Removing storage service ${name} 
+      success: Storage service ${name} deleted successfully
+  form:
+    title:
+      basicInfo: Basic Information
+      resturl: resturl
+    create:
+      creating: Creating storage service ${name} 
+      success: Storage service ${name} created successfully
+    update:
+      updating: Updating storage service ${name} 
+      success: Storage service ${name} updated successfully
+    glusterfs:
+      restauthenabled: restauthenabled
+      resturl: resturl
+      authMethod: Authentication method
+      restuser: restuser
+      restpassword: restpassword
+      restuserkey: restuserkey
+    nas-netapp:
+      backendType: backendType
+    nfs:
+      server: server
+      exportPath: exportPath
+  list:
+    identification: Identification
+    name: Name
+    description: Description
+    type: Type
+    clusterfs:
+      resturl: resturl
+  tips:
+    namePlaceholder: Storage service name
+    typePlaceholder: Storage type
+    resturlPlaceholder: Storage service interface node address, such as http://1.2.3.4:5 (multiple nodes please use commas
+     ',' separated)
+    confirmDel: Are you sure to delete the storage service ${service}
+    nameTip: Composed of chinese and special symbols, limited to 2-32 characters in length.
+    tip:
+      restuser: Support for uppercase and lowercase English fields, numbers, bars, can not start with numbers and bars.
+      secretName: Support for uppercase and lowercase English fields, numbers, bars, can not start with numbers and bars.
+      secretNamespace: default、kube-system、kube-default
+      server: "The format is as follows: http: //127.0.0.1:8081, or domain name"
+    tooltips:
+      resturl: Heketi address
+      secretName: Key name
+      secretNamespace: Partition where the key
+      server: Gluster REST service address or Heketi service address
+classes:
+  name: Storage class
+  create: Create a storage class
+  update: Update the storage class
+  number: Quantity
+  capacity: Volume
+  avail: Available storage classes
+  list:
+    identification: Identification
+    status: Status
+    name: Name
+    description: Description
+    type: Type
+    service: Storage Service
+  action:
+    delete:
+      deleting: Removing storage class ${name}
+      success: Storage class ${name} deleted successfully
+  form:
+    create:
+      creating: Creating storage class ${name} 
+      success: Storage class ${name} created successfully
+    cluster: Choose to a cluster
+    noCluster: No cluster available
+    service: Choose a storage service
+    customConfiguration: Custom Configuration
+    base: Basic Information
+    advanced: Advanced Options
+    glusterfs:
+      clusterid: clusterid
+      gidMax: gidMax
+      gidMin: gidMin
+      volumetype: volumetype
+      readOnly: readOnly
+    nas-netapp:
+      media: media
+      provisioningType: provisioningType
+      clones: clones
+      encryption: encryption
+      snapshots: snapshots
+      IOPS: IOPS
+      requiredStorage: requiredStorage
+    nfs:
+      readOnly: readOnly
+  tips:
+    namePlaceholder: Name of storage class
+    confirmDel: Are you sure to delete the storage class ${name}
+
+volumes:
+  name: Data volume
+  create: Create
+  update: Edit
+  action:
+    delete:
+      deleting: Removing data volume ${name} 
+      success: Data volume ${name} deleted successfully
+  list:
+    status: Status
+    name: Name
+    cluster: Cluster
+    partition: Partition
+    capacity: Capacity
+    creationTimestamp: Create time
+  form:
+    create:
+      creating: Creating data volume ${name} 
+      success: Data volume ${name} created successfully
+    clusterPartition: Deployment location
+    base: Basic Information
+    storageClass: Choose a storage class
+    size: Capacity size
+    noStorageClass: No Available Storage Class(Check if Cluster and Partition with quota Are Checked)
+    accessModes: Read and write strategy
+    ReadWriteOnce: Single node read-only
+    ReadOnlyMany: Multi-node read-only
+    ReadWriteMany: Multi-node read and write
+    advanced: Advanced Options
+    validation:
+      selectCluster: Please select a cluster
+      selectPartition: Please select a partition
+      selectStorageClass: Please choose a storage class
+      selectAccessModes: Please choose read and write strategy
+      name: Data volume name can not be empty
+      size: Size must be a positive integer, and no greater than the quota(and no more than 1024000 GiB)
+      selectStorageClassFirst: Please select an available Storage Class
+  tips:
+    namePlaceholder: Data volume name
+    confirmDel: Are you sure to delete the data volume ${volume}

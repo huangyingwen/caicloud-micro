@@ -1,0 +1,60 @@
+filter:
+  allTenants: All Tenants
+  allUsers: All Users
+  allResourcesType: All Resources Type
+  allOperationResult: All Operation Result
+  success: success
+  failure: failure
+  search: Search
+grid:
+  tenant: Tenant
+  user: User
+  operationType: Operation Type
+  operationResult: Operation Result
+  resourceType: Resource Type
+  resourceName: Resource Name
+  time: Time
+  detail: AuditLog Detail
+detail:
+  startTime: Start Time
+  endTime: End Time
+  submitData: Submit Data
+  responseData: Response Data
+  modifyContent: Modify Content
+optype:
+  # App
+  ApplicationRollback: Application Rollback
+  ApplicationExport: Application Export
+  # Cluster
+  CreateClusterRetry: Create Cluster Retry
+  UpdateClusterDisplayName: Update Cluster DisplayName
+  ClusterMachineBind: Bind Cluster Machine
+  ClusterMachineUnbind: Unbind Cluster Machine
+  ClusterMachineOnline: Online Cluster Machine
+  ClusterMachineOffline: Offline Cluster Machine
+  BulkCreateMachine: Bulk Create Machine
+  BulkDeleteMachine: Bulk Delete Machine
+  BulkCreateMachineFromFile: Bulk Create Machine From File
+  SetMachineTag: Set Machine Tag
+  UpdateMachineAuth: Update Machine Auth
+  ClusterNodeUnbind: Cluster Node Unbind
+  ClusterNodeOnline: Cluster Node Online
+  ClusterNodeOffline: Cluster Node Offline
+  SetNodeTag: Set Node Tag
+  # Config
+  CreateNewConfigVersion: Create New Config Version
+  # Devops
+  ModifyBasicConfig: Modify Basic Config
+  CacheCleanup: Cleanup Cache
+  # License
+  UpdateActivitionCode: Update Activition Code
+  # LB
+  CreateLBRule: Create LB Rule
+  UpdateLBRule: Update LB Rule
+  DeleteLBRule: Delete LB Rule
+  AssignLBToTenant: Assign LB To Tenant
+  EditTenantPortRange: Edit Tenant Port Range
+  BulkEditTenantLBAdmission: Bulk Edit Tenant LB Admission
+  # Notification
+  AddContacts: Add Contacts
+  RemoveContacts: Remove Contacts

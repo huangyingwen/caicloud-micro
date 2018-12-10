@@ -1,0 +1,243 @@
+# devops-admin error reasons, owner @乐金明 // TODO review
+# 400
+devops:WorkspaceNameError: 空间名字的长度必须是 2 到 30 之间，且第一个字符为字母或数字，所有字母必须小写
+devops:PipelineNameError: 流水线名字的长度必须是 2 到 30 之间，且第一个字符为字母或数字，所有字母必须小写
+devops:ScmTypeError: SCM 类型错误，只支持 gitlab 类型
+devops:ScmAuthorityError: 没有足够的权限操作 SCM
+devops:BuilderImageMissingError: 缺失构建环境镜像
+devops:StageMissingError: 缺失必须的的阶段 ${stage}
+devops:StageNotSupportedError: 阶段 ${stage} 不支持，仅支持 codeCheckout，unitTest，codeScan，package，imageBuild，integrationTest 和 imageRelease
+devops:ImageReleasePolicyError: 镜像发布策略 ${policy} 不支持，仅支持 Always 和 IntegrationTestSuccess
+devops:ReasonPRNotFound: 未找到对应 PR
+devops:ReasonCreateWebhookPermissionDenied: 无权限创建 webhook
+
+# 409
+devops:WorkspaceNameConflict: 冲突：空间 ${name} 已经存在
+devops:PipelineNameConflict: 冲突：流水线 ${name} 已经存在
+
+# cargo-admin error reasons, owner @李昂 // TODO review
+# 400
+cargo:UrlQueryParamUnexpectedType: url quey 中 ${param} 参数类型应为 ${expect} 类型, 是但实际却为 ${actaul} 类型"
+cargo.UrlQueryParamNotFound: '在 url quey 中找不到参数 ${param}'
+cargo.UrlPathParamNotFound: '在 url path 中找不到参数 ${param}'
+cargo.HeaderParamNotFound: '在 request header 中找不到参数 ${param}'
+cargo:BadUrl: 仓库地址无法解析
+cargo:IpNotAllowed: IP 地址不能作为镜像仓库地址
+cargo:BadScheme: 仓库地址只支持 https 协议
+cargo:RegistryExisted: 该仓库已经集成
+cargo:AccessRegistryFailed: 镜像仓库无效或账户信息错误
+cargo:UsedAlready: 该仓库已经集成到其他集群
+
+#401
+cargo.UnauthenticationFailed: '请求未认证'
+
+#403
+cargo.OnlySystemTenantAllowed: '只允许系统租户下的用户创建公开项目'
+cargo.NotAllowedDeletePublicWorkpace: '公开项目不能被任何用户删除, 因为这个一个十分危险的操作'
+cargo.NotAllowedDeletePublicWorkpaceRepo: '项目 ${workspace} 是一个公开项目, 此公开项目下的 repo 只能被系统租户下的用户删除'
+cargo.NotAllowedDeletePublicWorkpaceTag: '项目 ${workspace} 是一个公开项目, 此公开项目下的标签只能被系统租户下的用户删除'
+cargo:ProjectProtected: '受保护的项目 ${project}'
+cargo:ProjectHasReplications: '项目 ${project} 定义了同步策略，请先删除同步策略'
+
+#404
+cargo:ProjectNotExit: '项目 ${project} 不存在'
+
+#409
+cargo.ContentAlreadyExist: '冲突: ${content} 已经存在'
+cargo:ProjectAlreadyExist: '冲突: ${project} 已经存在'
+
+# 403
+monitoring:QueryRangeErr3: 'monitoring:QueryRangeErr3'
+
+# logging-admin error reasons, owner @黄智珩 // TODO review
+# 400
+logging:WebSocketHeaderErr1: 'logging:WebSocketHeaderErr1'
+
+# config-admin error reasons, owner @ 叶嘉雨
+# 400
+# group
+config:group.name.length: 分组名不能大于 50 个字符
+config:group.name.DNS1123: 分组名只能为数字, 小写英文字母, "-", 且必须以字母数字字符开始和结束
+
+# config
+config:config.type: 配置类型不合法
+config:config.name.length: 配置名不能大于 140 个字符
+config:config.name.DNS1123: 配置名称只能为数字, 小写英文字母, "-", 且必须以字母数字字符开始和结束
+
+# config data
+config:config.data.parseTLS: 不能解析 TLS 证书
+config:config.data.length: 配置不能为空
+config:config.data.key: 配置 key 不能为空
+config:config.data.value: 配置 value 不能为空
+config:config.data.size: 配置大小不能超过 800KB
+config:removeConfig: 有资源正在引用该配置, 不可删除
+
+# 409
+# group
+config:group.name.exists: 分组名已存在
+config:removeGroup: 有资源正在引用该分组下的配置, 不可删除
+
+# config
+config:config.name.exists: 配置名已存在
+
+# storage
+storage.resource:BadPageStartOrLimit: '分页参数错误'
+storage.resource:BadRequestBody: '请求内容格式不正确'
+storage.resource:TypeNotFound: '所属存储类型未找到'
+storage.resource:ServiceStatusNotActive: '存储服务不是正常状态'
+storage.resource:ObjectAlreadyExist: '对象已存在'
+storage.resource:ObjectNotFound: '对象未找到'
+storage.resource:ObjectBadName: '名称格式不正确'
+storage.resource:StorageSecretNotFound: '存储密钥对象未找到'
+storage.resource:MissParameter: '缺少参数'
+storage.resource:ClusterNotFound: '集群未找到'
+storage.resource:ClassStatusNotActive: '存储方案不是正常状态'
+storage.resource:MapParameterNotMatch: '参数不匹配'
+storage.resource:ClassNameTooLong: '存储方案名称过长'
+storage.resource:SystemObject: '该对象为系统对象'
+storage.resource:ObjectInSystemNamespace: '该对象位于系统分区'
+
+storage.resource:AuthFailed: '认证失败'
+storage.resource:InternalServerError: '内部错误'
+storage.resource:ClusterBadConfig: '集群配置错误'
+
+storage.resource:QuotaNotComplete: '分区配额未设置'
+storage.resource:QuotaExceeded: '请求超出分区配额限制'
+
+storage.resource:TotalExceeded: '同一数据卷最多创建 5 个快照'
+
+# cluster
+cluster.resource:BadPageStartOrLimit: 分页参数错误
+cluster.resource:BadRequestBody: 请求内容格式不正确
+cluster.resource:ObjectAlreadyExist: 添加节点已存在
+cluster.resource:ObjectNotFound: 节点未找到
+cluster.resource:Conflict: 版本过期冲突
+cluster.resource:MissParameter: 缺少参数
+cluster.resource:ClusterNotFound: 集群未找到
+cluster.resource:BadTagsFormat: 标签格式错误
+cluster.resource:MachinesAllNotBind: 节点加入集群全部失败
+cluster.resource:MachinesAllNotUnbind: 节点移出集群全部失败
+cluster.resource:ClusterBindMastersFailed: 集群标记控制节点失败
+cluster.resource:ClusterMastersNodesDuplicate: 集群控制节点与工作节点有重复
+cluster.resource:AuthFailed: 认证失败
+cluster.resource:InternalServerError: 内部服务错误
+cluster.resource:ClusterBadConfig: 集群配置信息错误
+cluster.resource:ClusterNotReady: 集群状态非正常
+cluster.resource:ClusterNotForBind: 集群状态无法添加节点
+cluster.resource:ClusterBadAuth: 集群配置信息错误
+cluster.resource:ClusterNotFailed: 节点未处于错误状态
+cluster.resource:MachineNotOffline: 节点未处于下线状态
+cluster.resource:MachineNotInited: 节点未处于初始化状态
+cluster.resource:MachineNotReady: 节点未处于正常状态
+cluster.resource:MachineNotForRemove: 节点未处于可删除状态
+cluster.resource:MachineAgentNotFound: 节点监控未启动
+cluster.resource:DelCtrlClusterNotAllowed: 控制集群不允许删除
+cluster.resource:TagsKeyDuplicate: 标签键有重复
+cluster.resource:ClusterEmptyMasters: 集群至少选择一个控制节点
+cluster.resource:ClusterMastersNotHA: 高可用开启时必须制定至少三个控制节点
+
+# auth
+auth:TokenFormatError: '无法识别的 token 格式'
+auth:AuthorizationError: '禁止访问 ${verb} ${path}'
+auth:UsernameOrPasswordError: '账户或密码错误'
+auth:InternalServerError: '内部错误: ${err}'
+auth:TokenNotBase64Error: 'token 格式错误'
+
+cauth:Duplicate: '${key} 已存在, 不可重复: ${value}'
+cauth:UsernameConflict: '用户名已存在'
+cauth:EmailConflict: '邮箱已存在'
+cauth:TenantConflict: '租户已存在'
+cauth:TeamConflict: '团队已存在'
+cauth:InternalServerError: '内部错误'
+cauth:BadRequest: '请求解析出错'
+cauth:UsernameOrSubjects: '只能指定 username 或者 subjects 之一'
+cauth:ResetPasswordCodeErr: '找不到用户名'
+cauth:PasswordError: '密码错误'
+cauth:InvalidUser: '用户格式错误'
+cauth:CannotUpdateAdmin: '无法修改系统保留的用户 admin'
+cauth:RoleTypeUndefined: '角色类型未定义'
+cauth:InvalidRole: '角色格式错误'
+cauth:CreateRoleError: '无法创建该角色'
+cauth:RoleConflict: '角色已存在'
+cauth:TeamError: '团队格式错误'
+cauth:UserUnactive: '加入了不活跃的用户'
+cauth:MemberNotInTenant: '成员不属于该租户'
+cauth:TenantError: '租户格式错误'
+cauth:UndefinedTenantRole: '无法识别的成员身份'
+cauth:UndefinedTeamRole: '无法识别的成员身份'
+cauth:MemberExists: '成员已存在'
+cauth:CreateMemberConflict: '添加成员失败，请重试'
+cauth:TooMuchCreateMemberOperation: '添加成员繁忙，请重试'
+cauth:AddTenantMemberError: 成员 ${info} 邀请失败
+
+license:LicenseInternalServerError: '内部错误，请联系技术支持'
+license:LicenseError: '平台许可证失效，请联系技术支持'
+license:UnsupportPlatformError: '不支持 ${platform} 平台'
+license:ResourcesInsufficientError: '资源不足，无法添加节点到资源池'
+
+# notify
+notification:DuplicatedContactName: '冲突: ${name} 已经存在'
+notification:DuplicatedContactGroupName: '冲突: ${name} 已经存在'
+notifiaction:CannotCreateSMTPConfig: '保存失败，请稍后重试！'
+notifiaction:CannotUpdateSMTPConfig: '保存失败，请稍后重试！'
+
+# lb
+lb:Ingress:Conflict: 域名不可重复！
+lb:L4Rule:Port:ExportedTwice: Service ${service} 上的端口 ${port} 已被使用！
+lb:L4Rule:Port:Conflict: 该外部端口已被使用！
+lb:PortRange:Conflict: 端口范围 [${start}, ${end}] 已被使用！
+lb:PortRange:Error: 错误的端口范围！
+lb:L7Rule:Forbidden: 你没有权限访问该 HTTP/HTTPS 规则！
+lb:LoadBalancer:Forbidden: 你没有权限访问该负载均衡器！
+lb:L4Rule:Port:NotFound: 该端口不存在！
+lb:L4Rule:Invalid: 无效的 TCP/UDP 规则！
+lb:L7Rule:Invalid: 无效的 HTTP/HTTP 规则！
+lb:VIP:Conflict: 该 VIP 已被使用！
+lb:InternalServerError: 负载均衡器内部错误！
+lb:Forbidden: 你没有权限进行该操作！
+lb:BadRequest: 错误请求！
+lb:LoadBalancer:Invalid: 数据格式错误！
+
+# kubernetes
+Kubernetes:ingresses:AlreadyExists: 该规则名称已经被使用！
+Kubernetes:Ingress:Invalid: 域名无效！
+
+# tenant
+tenant:ExceededRequest: 资源可能被移除或超出分配限额!
+
+# charts
+helm:charts.name.exists: 模版 ${name} 已存在
+helm:charts.invalidate: 模板名称 ${name} 不合法
+helm:charts.lock: 模板 ${name} 被锁定
+helm:version.invalidate: 版本信息 ${name} 不合法
+helm:version.lock: 模板版本 ${name} 被锁定
+helm:space.permission: 无权限创建模板组 ${name}
+helm:space.invalidate: 模板组名称 ${name} 不可用
+helm:space.lock: 模板组 ${name} 被锁定
+helm:param.error: 参数类型错误 ${name}
+helm:param.value: 参数值错误 ${name}
+helm:param.unfound: 参数未找到 ${name}
+helm:param.invalidate: 无效参数 ${name}
+helm:content.unfound: 内容未找到 ${name}
+helm:error.unknown: 未知错误：${name}
+
+app:container.unfound: 未找到容器 ${name}
+app:operator.unsupport: 不支持此操作：${name}
+app:replicas.max.min: 弹性伸缩最大副本数需大于最小副本数
+app:scaler.errorKind: 错误的弹性伸缩类型 ${kind}
+app:scaler.targetNil: 弹性伸缩目标名字为空
+app:json.error: json 解析错误 ${msg}
+app:service.kindError: 错误的 service 类型：${kind}
+app:service.conflict: service 已存在
+app:service.name.conflict: service 名称已经存在 ${name}
+app:service.nodeport.conflict: service Nodeport 已经存在 ${nodeport}
+app:anno.replicasNil: 未找到标签
+app:param.error: 参数类型错误：${param}
+app:param.nil: 参数未找到：${param}
+app:content.nil: 内容未找到：${content}
+app:wait.timeout: 等待超时
+app:status.unknown: 状态未知：${name}
+app:version.more: 版本信息 ${target} 不能大于一个
+app:canaryRelease.create.failed: 创建灰度发布失败
+app:clientset.create.failed: 创建k8s客户端失败
+app:k8s.error: k8s内部错误：${msg}

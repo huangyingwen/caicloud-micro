@@ -1,0 +1,48 @@
+.name {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #a0abbf;
+}
+
+.textIco {
+  margin-right: 8px;
+}
+
+.parentIco {
+  position: absolute;
+  right: 2px;
+  top: 8px;
+  transform: rotate(90deg);
+}
+
+.childs {
+  position: relative;
+  background: #253141;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    background-color: #253141;
+    border-top: 1px solid #2b384a;
+  }
+
+  &::before {
+    border-bottom: 1px solid #2b384a;
+    top: -5px;
+  }
+
+  &::after {
+    border-bottom: 1px solid #223044;
+    bottom: -5px;
+  }
+}

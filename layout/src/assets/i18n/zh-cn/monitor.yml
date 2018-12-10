@@ -1,0 +1,168 @@
+# monitor properties
+name: 监控名称
+detail: 监控详情
+# messages, placeholders
+dashboards:
+  name: 监控面板
+  dashboard.app: 应用
+  dashboard.cluster.component: 系统组件
+  dashboard.cluster.partition: 系统分区
+  dashboard.cluster.resources: 系统资源
+  dashboard.exporter.mongo: MongoDB
+  dashboard.lb-system: 系统服装均衡
+  dashboard.lb-user: 用户负载均衡
+  dashboard.node: 节点
+  dashboard.partition: 分区
+  dashboard.subapp: 子应用
+  dashboard.event-system: 事件
+  autoRefresh: 自动刷新（关闭）
+
+graphs:
+  # app
+  graph.app.cpu_usage: 应用 CPU 使用量
+  graph.app.mem_usage: 应用内存使用量
+  graph.app.sub.cpu_usage: 应用 CPU 使用量
+  graph.app.sub.mem_free: Pod 空闲内存
+  graph.app.sub.mem_usage: 应用内存使用量
+  graph.app.sub.network: 应用网络流量
+  # cluster
+  graph.cluster.component.apiserver.p95: API Server 请求延迟 p95 值
+  graph.cluster.component.apiserver.request_per_s: API Server 每秒请求数
+  graph.cluster.component.apiserver.cpu: API Server CPU 使用量
+  graph.cluster.component.apiserver.memory: API Server 内存使用量
+  graph.cluster.component.canal.cpu: Canal CPU 使用量
+  graph.cluster.component.canal.memory: Canal 内存使用量
+  graph.cluster.component.etcd-cluster.cpu: ETCD(cluster) CPU 使用量
+  graph.cluster.component.etcd-cluster.memory: ETCD(cluster) 内存使用量
+  graph.cluster.component.etcd-cluster.disk_sync: ETCD(cluster) Fsync 耗时
+  graph.cluster.component.etcd-event.cpu: ETCD(event) CPU 使用量
+  graph.cluster.component.etcd-event.memory: ETCD(event) 内存使用量
+  graph.cluster.component.etcd-event.disk_sync: ETCD(event) Fsync 耗时
+  graph.cluster.component.kube-controller-manager.cpu: KubeControllerManager CPU 使用量
+  graph.cluster.component.kube-controller-manager.memory: KubeControllerManager 内存使用量
+  graph.cluster.component.kube-proxy.cpu: KubeProxy CPU 使用量
+  graph.cluster.component.kube-proxy.memory: KubeProxy 内存使用量
+  graph.cluster.component.kube-scheduler.cpu: KubeScheduler CPU 使用量
+  graph.cluster.component.kube-scheduler.memory: KubeScheduler 内存使用量
+  # event
+  graph.event.system.other_warning_rate: 系统分区非 Pod 资源异常事件发生频率
+  graph.event.system.pod_warning_rate: 系统分区 Pod 异常事件发生频率
+  graph.event.system.app_warning_rate: 租户应用异常事件发生频率
+  graph.event.system.volume_warning_rate: 租户数据卷异常事件发生频率
+
+  graph.cluster.overview.cpu: 集群 CPU 使用量
+  graph.cluster.overview.fs: 集群文件系统使用量
+  graph.cluster.overview.memory: 集群内存使用量
+  graph.cluster.resources.node.cpu_used_top: 节点 CPU 使用量 Top 5
+  graph.cluster.resources.node.disk_read_top: 节点磁盘 Read Top 5
+  graph.cluster.resources.node.disk_write_top: 节点磁盘 Write Top 5
+  graph.cluster.resources.node.fs_used_top: 节点文件系统使用量 Top 5
+  graph.cluster.resources.node.mem_used_top: 节点内存使用量 Top 5
+  graph.cluster.resources.node.network_inbound_top: 节点网络接收速率
+    Top 5
+  graph.cluster.resources.node.network_outbound_top: 节点网络发送速率
+    Top 5
+  graph.cluster.resources.partition.cpu_used: 分区 CPU 使用量
+  graph.cluster.resources.partition.mem_used: 分区内存使用量
+  graph.cluster.resources.partition.pod_count: 分区运行 pod 数
+  # lb
+  graph.lb.2xx_rate: 每秒 2xx 请求数
+  graph.lb.3xx_rate: 每秒 3xx 请求数
+  graph.lb.4xx_rate: 每秒 4xx 请求数
+  graph.lb.5xx_rate: 每秒 5xx 请求数
+  graph.lb.connection_per_s: 每秒连接数
+  graph.lb.cpu_usage: CPU 使用量
+  graph.lb.memory_usage: 内存使用量
+  graph.lb.network_in: 网络 In
+  graph.lb.network_out: 网络 Out
+  graph.lb.request_per_s: 每秒请求数
+  graph.lb.upstream_response_avg: 服务平均响应延迟
+  # node
+  graph.node.load.cpu_usage: 节点 CPU 使用量
+  graph.node.load.disk_io: 节点磁盘 IO 状况
+  graph.node.load.fs_usage: 节点文件系统使用量
+  graph.node.load.load: 节点平均负载
+  graph.node.load.mem_usage: 节点内存使用量
+  graph.node.load.network: 节点网络 IO
+  graph.node.pod.cpu_usage: Pod CPU 使用量
+  graph.node.pod.cpu_used_top: Pod CPU 使用量 Top 5
+  graph.node.pod.mem_usage: Pod 内存使用量
+  graph.node.pod.mem_usage_top: Pod 内存使用量 Top 5
+  graph.node.pod.network: Pod 网络流量
+  graph.node.pod.network_received_top: Pod 输入流量 Top 5
+  graph.node.pod.network_sent_top: Pod 输出流量 Top 5
+  graph.node.pod.pod_count: 运行 Pod 数
+  # partition
+  graph.partition.cpu_usage: 分区 CPU 使用量
+  graph.partition.mem_usage: 分区内存使用量
+  graph.partition.pod_count: 运行 Pod 数
+  # exporter
+  graph.exporter.mongo.assertion_count: 断言触发次数
+  graph.exporter.mongo.connection_count: 连接数
+  graph.exporter.mongo.active_clients: 活跃客户端数
+  graph.exporter.mongo.global_lock_current_queue: 阻塞操作数
+  graph.exporter.mongo.op_count: Operation 总数
+
+  graph.exporter.nginx.2xx_rate: 每秒 2xx 请求数
+  graph.exporter.nginx.3xx_rate: 每秒 3xx 请求数
+  graph.exporter.nginx.4xx_rate: 每秒 4xx 请求数
+  graph.exporter.nginx.5xx_rate: 每秒 5xx 请求数
+  graph.exporter.nginx.connections_per_s: 每秒连接数
+  graph.exporter.nginx.network_in: 接收网络流量
+  graph.exporter.nginx.network_out: 发送网络流量
+
+  graph.exporter.redis.commands_per_s: 每秒执行命令数
+  graph.exporter.redis.connected_clients: 客户端连接数
+  graph.exporter.redis.expired_vs_evicted: 过期/回收 key 数
+  graph.exporter.redis.expiring_keys: 过期/未过期 key 数
+  graph.exporter.redis.hits_misses_per_s: 每秒 Hits/Misses 数
+  graph.exporter.redis.items_per_db: item 总数
+  graph.exporter.redis.network_io: 网路 I/O
+
+  graph.exporter.tomcat.busy_thread_count: Busy 线程数
+  graph.exporter.tomcat.bytes_sent: 发送字节数
+  graph.exporter.tomcat.max_time: 最大响应时间
+  graph.exporter.tomcat.processing_time: 平均请求处理时间
+  graph.exporter.tomcat.req_per_s: 每秒请求数
+  graph.exporter.tomcat.thread_count: 当前线程数
+# messages, placeholders
+validation:
+  panelNameEmpty: 监控面板名称不能为空
+  panelNameCount: 监控面板名称不能大于30个字符
+# buttons, form titles
+actions:
+  editPanel: 修改面板
+  addPanel: 新建面板
+  editCurrentPanel: 修改当面监控面板
+  addOnePanel: 新建一个监控面板
+  addMonitorPanel: 新建监控面板
+  addMonitor: 新建监控图
+  panelName: 面板名称
+tips:
+  createPanelSuccess: 创建成功
+  editPanelSuccess: 修改成功
+  deletePanelSuccess: 删除成功
+  addPinGraphSuccess: 添加成功
+  addPinGraphFailure: 添加失败
+  confirmDelMonitor: 确定删除监控图 ${monitor}
+  confirmDelPanel: 确定删除监控面板 ${panel}
+  monitorPanelName: 监控面板名称
+
+charts:
+  func:
+    # functions of chart
+    default: 不进行函数运算
+    rate: 对每条时间序列计算每秒的平均增长速率
+    p99: 计算 99% 分位数
+    p95: 计算 95% 分位数
+    p50: 计算 50% 分位数
+form:
+  monitorObject: 监控对象
+  metricInfo: 指标信息
+  chart: 图表
+  advancedOptions: 高级选项
+  areaChart: 面积图
+  lineChart: 折线图
+  node: 节点
+  preview: 预览
+  metric: 指标

@@ -1,0 +1,8 @@
+type: Type
+success: Success
+failed: Failed
+result: Result
+time: Period
+search: Search
+keywords: Fuzzy query
+syncing: Syncing

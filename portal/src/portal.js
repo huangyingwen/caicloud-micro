@@ -2,6 +2,8 @@ import * as singleSpa from "single-spa";
 import { GlobalEventDistributor } from "./globalEventDistributor";
 import { loadApp } from "./helper";
 
+window.singleSpa = singleSpa;
+
 async function init() {
   const globalEventDistributor = new GlobalEventDistributor();
 
@@ -14,31 +16,39 @@ async function init() {
     globalEventDistributor
   );
 
-  // // app2: The URL "/app2/..." is being redirected to "http://localhost:9002/..." this is done by the webpack proxy (webpack.config.js)
-  // await loadApp(
-  //   "app2",
-  //   "/app2",
-  //   "/app2/singleSpaEntry.js",
-  //   "/app2/store.js",
-  //   globalEventDistributor
-  // );
+  // app2: The URL "/app2/..." is being redirected to "http://localhost:9002/..." this is done by the webpack proxy (webpack.config.js)
+  await loadApp(
+    "app2",
+    "/app2",
+    "app2/singleSpaEntry",
+    "app2/store",
+    globalEventDistributor
+  );
 
-  // // app3: The URL "/app3/..." is being redirected to "http://localhost:9003/..." this is done by the webpack proxy (webpack.config.js)
-  // await loadApp("app3", "/app3", "/app3/singleSpaEntry.js", null, null); // does not have a store, so we pass null
+  // app4: The URL "/app4/..." is being redirected to "http://localhost:9004/..." this is done by the webpack proxy (webpack.config.js)
+  await loadApp("app4", "/app4", "app4/singleSpaEntry", null, null); // does not have a store, so we pass null
 
-  // // app3: The URL "/app4/..." is being redirected to "http://localhost:9004/..." this is done by the webpack proxy (webpack.config.js)
-  // await loadApp("app4", "/app4", "/app4/singleSpaEntry.js", null, null); // does not have a store, so we pass null
-
-  // // app5: The URL "/app5/..." is being redirected to "http://localhost:9005/..." this is done by the webpack proxy (webpack.config.js)
-  // await loadApp(
-  //   "app5",
-  //   "/app5",
-  //   "/app5/singleSpaEntry.js",
-  //   "/app5/store.js",
-  //   globalEventDistributor
-  // );
+  await loadApp(
+    "userweb",
+    "/user-web",
+    "user-web/build/singleSpaEntry",
+    null,
+    null
+  ); // does not have a store, so we pass null
 
   singleSpa.start();
+
+  const singleSpaNavigate = window.singleSpaNavigate;
+  window.singleSpaNavigate = url => {
+    var event = new CustomEvent("navigateToUrl", {
+      detail: {
+        url: url
+      }
+    });
+
+    window.dispatchEvent(event);
+    singleSpaNavigate(url);
+  };
 }
 
 init();

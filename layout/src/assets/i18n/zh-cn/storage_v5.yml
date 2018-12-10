@@ -1,0 +1,153 @@
+# storage properties
+name: 存储
+
+# resources
+tips:
+  confirmDel: 确定删除存储 ${name}
+services:
+  name: 存储服务
+  create: 集成存储服务
+  update: 更新存储服务
+  delete: 删除存储服务
+  types: 类型
+  action:
+    integrate: 集成
+    delete:
+      deleting: 正在删除存储服务 ${name}
+      success: 存储服务 ${name} 删除成功
+  form:
+    title:
+      basicInfo: 基本信息
+      resturl: 接入点
+    create:
+      creating: 正在创建存储服务 ${name}
+      success: 存储服务 ${name} 创建成功
+    update:
+      updating: 正在更新存储服务 ${name}
+      success: 存储服务 ${name} 更新成功
+    glusterfs:
+      restauthenabled: REST 接口认证是否开启
+      resturl: REST 接入点地址
+      authMethod: 鉴权方式
+      restuser: 用户名
+      restpassword: 密码
+      restuserkey: REST 认证用户密钥 key
+    nas-netapp:
+      backendType: 后端类型
+    nfs:
+      server: 服务地址
+      exportPath: 共享根目录
+  list:
+    identification: 标识
+    name: 名称
+    description: 描述
+    type: 类型
+    clusterfs:
+      resturl: 接入点
+    creationTimestamp: 创建时间
+  tips:
+    namePlaceholder: 存储服务名称
+    typePlaceholder: 存储类型
+    resturlPlaceholder: 节点地址，如 http://1.2.3.4:5 （多个节点请用英文逗号','隔开）
+    confirmDel: 确定删除存储服务 ${service}
+    nameTip: 支持中文和特殊符号，长度限制2-32个字符。
+    tip:
+      restuser: 支持大小写英文字段、数字、横杠，不能以数字和横杠开头。
+      secretName: 支持大小写英文字段、数字、横杠，不能以数字和横杠开头。
+      secretNamespace: default、kube-system、kube-default
+      server: '格式如下：http://127.0.0.1:8081,或者域名'
+    tooltips:
+      resturl: Heketi 地址
+      secretName: 密钥名称
+      secretNamespace: 密钥所在分区
+      server: Gluster REST 服务地址或 Heketi 服务地址
+
+classes:
+  name: 存储方案
+  create: 新建存储方案
+  update: 更新存储方案
+  number: 可创建数据卷数量
+  capacity: 可创建数据卷总容量
+  avail: 可选择的存储方案
+  list:
+    identification: 标识
+    status: 状态
+    name: 名称
+    description: 描述
+    type: 类型
+    service: 存储服务
+    creationTimestamp: 创建时间
+  action:
+    delete:
+      deleting: 正在删除存储方案 ${name}
+      success: 存储方案 ${name} 删除成功
+  form:
+    create:
+      creating: 正在创建存储方案 ${name}
+      success: 存储方案 ${name} 创建成功
+    cluster: 选择接入集群
+    noCluster: 无可用集群
+    service: 选择存储服务
+    customConfiguration: 自定义配置
+    base: 基本信息
+    advanced: 高级选项
+    glusterfs:
+      clusterid: gluster 集群 id
+      gidMax: GID 最大值
+      gidMin: GID 最小值
+      volumetype: 卷类型
+      readOnly: 是否只读
+    nas-netapp:
+      media: 硬件类型选择
+      provisioningType: 配置类型
+      clones: 是否支持克隆数据卷
+      encryption: 是否支持加密数据卷
+      snapshots: 是否支持数据卷快照
+      IOPS: IOPS 范围
+      requiredStorage: 存储强制选择
+    nfs:
+      readOnly: 是否只读
+  tips:
+    namePlaceholder: 存储方案名称
+    confirmDel: 确定删除存储方案 ${name}
+
+volumes:
+  name: 数据卷
+  create: 新建数据卷
+  update: 更新数据卷
+  action:
+    delete:
+      deleting: 正在删除数据卷 ${name}
+      success: 数据卷 ${name} 删除成功
+  list:
+    status: 状态
+    name: 名称
+    cluster: 所属集群
+    partition: 所属分区
+    capacity: 容量
+    creationTimestamp: 创建时间
+  form:
+    create:
+      creating: 正在创建数据卷 ${name}
+      success: 数据卷 ${name} 创建成功
+    clusterPartition: 部署位置
+    base: 基本信息
+    storageClass: 选择存储方案
+    noStorageClass: 暂无可用存储方案（请检查是否选中了有配额的集群分区）
+    size: 容量
+    accessModes: 读写策略
+    ReadWriteOnce: 单节点读写
+    ReadOnlyMany: 多节点只读
+    ReadWriteMany: 多节点读写
+    advanced: 高级选项
+    validation:
+      selectCluster: 请选择集群
+      selectPartition: 请选择分区
+      selectStorageClass: 请选择存储方案
+      selectAccessModes: 请选择读写策略
+      name: 数据卷名不能为空
+      size: 容量必须是正整数，且不大于配额（最大值为 1024000 GiB）
+      selectStorageClassFirst: 请先选择可用存储方案
+  tips:
+    namePlaceholder: 数据卷名称
+    confirmDel: 确定删除数据卷 ${volume}

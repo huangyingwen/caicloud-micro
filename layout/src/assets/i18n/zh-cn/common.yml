@@ -1,0 +1,85 @@
+# 通用名称／描述
+
+resources:
+  cluster: 集群
+  partition: 分区
+  memory: 内存
+  application: 应用
+  tenant: 租户
+  loadbalancer: 负载均衡
+  node: 主机
+  devops: DevOps
+  alerting: 报警
+  storage: 数据卷
+  configcenter: 配置中心
+  system: 系统
+  aliyun: 阿里云
+  anchang: 安畅云
+  setting: 设置
+  alarm: 告警
+  princple: 规则
+  cargo: 镜像仓库
+
+actions:
+  create: 创建
+  add: 添加
+  modify: 修改
+  delete: 删除
+  save: 保存
+  cancel: 取消
+  confirm: 确定
+  update: 更新
+  refresh: 刷新
+  close: 关闭
+  set: 设定
+  copy: 复制
+
+miscs:
+  name: 名称
+  email: 邮箱
+  createTime: 创建时间
+  identifier: 标识
+  noData: 暂无数据！
+  status: 状态
+  alarmMessage: 告警信息
+  noPerimission: 暂无权限
+  noVPC: 无可用的VPC
+
+time:
+  second: 秒
+  minute: 分钟
+  hour: 小时
+  day: 天
+  month: 月
+  year: 年
+
+unit:
+  station: 台
+  atomic: 核
+  times: 次
+  star: 颗
+
+tips:
+  confirmClose: 确认退出
+  cantSave: 当前修改将不会被保存
+  ok: 正常
+  update: 更新
+  warn: 异常
+  warning: 警告
+  unknown: 未知
+  pending: 等待中
+  empty: 暂无
+  createSuccess: 创建成功
+  modifySuccess: 修改成功
+  deleteSuccess: 删除成功
+  resource:
+    recommended: 推荐配额
+    custom: 自定义
+    wholeNode: 独占节点资源
+  filter:
+    name: 输入名称模糊过滤
+
+validations:
+  name: 由小写字母、数字、横杠、下划线组成，长度限制2-32个字符。只能以小写字母开头
+  email: 邮箱格式错误，请重新填写
+  check: 请检查输入格式

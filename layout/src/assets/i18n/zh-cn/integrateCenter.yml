@@ -1,0 +1,11 @@
+codescan:
+  name: 代码扫描
+  add: 集成代码扫描
+  instanceName: 实例名称
+  address: API 地址
+  tip:
+    nameExists: 实例名称已存在
+    address: sonarqube 服务端地址
+    token: 输入验证访问权限的用户 token
+    deleteConfirm: 确定删除 ${name}
+    deleteContent: 删除后会导致流水线使用不了该实例，已生成的流水线记录不受影响。

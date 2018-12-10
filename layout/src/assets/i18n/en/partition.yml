@@ -1,0 +1,90 @@
+name: Partition name
+cluster: Cluster
+noPartition: No partition
+networkConf: Network Configuration
+storage: Storage
+networkStr: Network strategy
+networkIsolation: Network isolation
+whitelist: Whitelist
+list: Other partitions in the cluster
+noStorage: Storage has not been allocated in the cluster
+cpuRequestValue: CPU request
+cpuCap: CPU limit
+CPUQuota: CPU Quota
+memoryQuota: Memory Quota
+GPUQuota: GPU Quota
+request: Request Value
+limit: Limit Value
+memoryRequestValue: Memory request
+memoryCap: Memory limit
+select: Select the partition
+storageScheme: Storage Scheme
+volumeNumber: Volume number
+volumeCapacity: Volume capacity
+createTime: Create Time
+deleteTime: Delete Time
+status:
+  active: Active
+  terminating: Deleting
+  failed: Deleting Failed
+  deleteTimeout: Delete time out
+actions:
+  create: Create
+  openNetworkIsolation: Open network isolation
+  closeNetworkIsolation: Close network isolation
+  manageWhitelist: Edit whitelist
+  modify: Edit the partition quota
+  select: Select the partition
+tips:
+  name: You can enter lowercase English alphabet、number、underline, but cannot start with underline and cannot exceed 16 characters
+  restCPU: Rest of quota ${rest}
+  restMemory: Rest of quota ${rest}
+  restGPU: Rest of quota ${rest}
+  storageNum: Number of volumes ${num}
+  storageSize: Size of volumes ${size}
+  nameWrong: Wrong format
+  exceed: Exceed!
+  deleting: Removing
+  deletingFailed: Deleting failed due to cluster error, please contact system admin
+  confirmDelete: Confirm to delete partition ${name}
+  deleteHint1: applications in partition will be deleted
+  changeNetworkConf: Edit the network configuration
+  changeNetworkIsolation: Edit network isolation
+  changeNetworkTip: Edit network isolation and policy configuration may lead to applications outside the partition can not access the services of the current partition, please be careful.
+  whitelistTip: Partition network is isolated. Only partitions in the white list can visit current partition.
+  allowService: Allow ${d} partition to access services of the current partition.
+  networkIsolationTurnoff: Network isolation is down. Other partitions can access the current partition.
+  networkIsolationTurnon: Network isolation is on. Only partitions which are allowed by network strategy can visit the current district.
+  onDelete: Removing partition
+  submitDelRequestSuccess: Submitted successfully
+  addSuccess: Created successfully
+  onRemoveNetworkPolicy: Closing network isolation
+  removeNetworkPolicySuccess: Closed successfully
+  onAddNetworkPolicy: Opening network isolation
+  addNetworkPolicySuccess: Opened successfully
+  onUpdateNetworkPolicy: Updating network whitelist
+  updateNetworkPolicySuccess: Updated successfully
+  saveNetwork: Changed successfully
+  onEditQuota: Changing partition quota
+  editQuotaSuccess: Edited successfully
+  used: Used
+  currentQuota: Current quota
+  onLoadList: Loading partitions
+  fuzzyFilterPlaceholder: Enter keyword for fuzzy filter
+  empty: There is no partition in the cluster
+  number: Number
+  summation: Total capacity
+  description: Description
+  recycled: Recycled
+  deleteRecycled: Please delete resource recycled
+
+validation:
+  name: Partition name consists of letters, numbers, dash, and can only begin with lower English letter or number, can't start with a dash
+  whitelist: Only partitions in the white list can visit current one.
+  networkIsolation: When network isolation is off, applications in other partitions can access current partition.
+  lessThanCluster: Can not exceed the total number of clusters
+  moreThanRequest: Can not be less than the request
+  moreThanQuota: Can not be less than the used quota
+  pleaseEnterSmallerThan1024: Please enter number less than 1024
+  stroageNumThenAssign: The number of volume can not exceed the quota
+  stroageSizeThenAssign: The capacity of volume can not exceed the quota

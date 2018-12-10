@@ -1,0 +1,23 @@
+
+name: Customized appearance
+form: 
+  title: Platform information customization。Can set the name and icon of the platform,Icon support jpg / jpeg / png / gif 
+file format（Recommended png format）,File size within 2M.
+  platformName: Platform name
+  companyName: Company name
+  loginLogo: Login interface icon
+  navBarLogoExpand: Navigation bar icon(expand)
+  navBarLogoShrink: Navigation bar icon(closed)
+  browserLogo: Browser icon
+  resetSetting: Restore default settings
+  action:
+    setSuccessfully: Saved successfully
+    setFailed: Save fail
+  upload:
+    warn: You can upload files within 2M only. Please try again!
+    uploadFail: upload fail, please try again
+    uploadSuccess: Uploaded
+    clickReplaceIcon: replace icon
+  valid:
+    platformName: Platform name format is incorrect
+    companyName: Company name format is incorrect

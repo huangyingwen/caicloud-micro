@@ -1,0 +1,117 @@
+# cluster properties
+name: Name of cluster
+resources: Cluster resources
+select: Select a cluster
+creationTime: Creation time
+availableQuotas: Available quotas
+userdResources: Used resources
+appStatistics: Application statistics
+overview: Overview
+allTenants: All tenants
+allClusters: All clusters
+appNum: The number of applications
+monitor: Monitor
+pod: Node
+operationRecord: Operation record
+event: Event
+applicationPartition: Application partition
+tag: Tag
+CPURequest: CPU request
+CPULimit: CPU upper limit
+storageRequest: Storage request
+storageLimit: Storage upper limit
+ram: RAM
+runningStatus: Running status
+clusterId: Cluster ID
+basicInfo: Basic information
+networkScheme: Network scheme
+cloudService: Cloud service
+controlNode: Control node
+workNode: Work node
+highAvailability: High availability
+action: Action
+actionRole: Operator
+time: Time
+systemPartiton: System partition
+actions:
+  add: Add
+  appStatistics: Application statistics
+  addNodes: Add nodes
+  modifyName: Modify name
+  retry: Retry
+  createPartition: create partition
+tips:
+  disable: Cluster resources not enabled yet, please contact the administrator
+  enable: Assigning a cluster resource to a tenant requires that this cluster be enabled in the tenant now
+  creating: Cluster is being created
+  closing: Cluster resources closing
+  failedText: Cluster deployment failed
+  notReadyText: Cluster is not ready
+  deletingClusterText: Removing cluster
+  addingText: The cluster is adding nodes
+  deletingText: The cluster is deleting nodes
+  stopText: Cluster is not running
+  partitionUsage: Partition already in use
+  systemUsage: The system is in use
+  availableQuotasText: "The total amount of scheduled resources that can be managed by the user currently. Note: The nodes that used for control are not included in schedulable resources list"
+  usedResourcesText: The amount of physical resources used by all the machines in the cluster
+  onCreate: Creating cluster
+  createSuccess: Create cluster successfully!
+  removeFromTeamSuccess: Bind removed successfully
+  applyToClusterSuccess: Bind success!
+  selectProvider: Choose a basic service provider
+  editOverConfigSuccess: Overuse configuration modified successfully!
+  onSetAlert: Setting threshold alarm
+  setAlertSuccess: Threshold alarm set successfully!
+  closeAlertSuccess: Turn off threshold alarm success!
+  selectClusterAndPartition: Choose a cluster and partition
+  failed: Deployment failed
+  success: Deployment success
+  scalingUp: Nodes adding
+  scalingDown: Nodes deleting
+  used: Used
+  unused: Unused
+  unavailable: Unavailable
+  sysRequest: System request
+  userRequest: User request
+  sysLimit: System limit
+  userLimit: User limit
+  availableLeft: Available left
+  dimention:tenant: By tenant dimension
+  dimention:cluster: By cluster dimension
+  seeErrorLog: Please see log for error information
+  resolveArtificial: Please contact the operation and maintenance personnel to solve
+  seeLog: See log
+  deletingTip: It takes about 10 minutes to delete the cluster. Please wait patiently
+  installingTip: It takes about 20 minutes to deploy the cluster. Please wait patiently
+healthCheck:
+  healthCheck: Health Check
+  component: Component
+  time: Sync Time
+  status: Status
+detail:
+  physicalResource: Physical resource
+  physicalResourceDesc: The actual machine resources owned by the cluster
+  logicalResource: Logical resource
+  logicalResourceDesc: Virtually allocatable resources after the cluster is oversold, not affected by cluster operating status
+highAvailableStatus:
+  open: Open
+  close: Close
+
+status:
+  ready: Ready
+  failed: Deployment failed
+  deleting: Deleting
+  installing: Deploying
+  notReady: Not ready
+statistics:
+  node: Nodes
+  app: Apps
+  containerGroup: Container group
+  tenant: Tenants
+menuConfirm:
+  confirmDelete: Make sure to delete the cluster ${name}
+  deleteTips1: All partitions, applications, nodes, load balancing, and storage schemes in the cluster will be deleted
+  deleteTips2: All running services and services in the cluster are deleted
+  deleteTips3: Cannot be restored after deletion, please exercise caution
+  inputNameAgain: Please enter the cluster name again

@@ -1,0 +1,106 @@
+name: 主机名称
+type: 主机类型
+count: 主机数量
+configuration: 主机配置
+SSHInfo: 主机 SSH 信息
+workNode: 工作节点
+hostNode: 控制节点
+containerVersion: 容器版本
+list: 同集群下主机列表
+no: 暂无主机
+runningContainerGroup: 运行中的容器组
+lastHeartbeatTime: 最后心跳时间
+tag: 标签
+online: 上线
+offline: 下线
+status: 节点状态
+creationTime: 创建时间
+runStatus: 运行状态
+overview: 概览
+monitor: 监控
+containerGroup: 容器组
+image: 镜像
+operationLog: 操作纪录
+events: 事件
+journal: 日志
+cpuRequest: CPU 总量
+memRequest: 内存总量
+bindCluster: 所属集群
+allSchedulableStatus: 全部调度状态
+allTag: 全部标签
+select: 选择节点
+# node detail tab
+tab:
+  type: 类型
+  time: 时间
+  action: 动作
+
+overViewTab:
+  systemInfo: 系统信息
+  hardwareInfo: 硬件信息
+  diskInfo: 磁盘信息
+  nicInfo: 网卡信息
+  serveInfo: 服务信息
+
+podTab:
+  status: 状态
+  name: 名称
+  containerImage: 容器镜像
+  restartCount: 重启次数
+  updateTime: 更新时间
+  runningTime: 运行时长
+
+eventTab:
+  associationObject: 关联对象
+  info: 信息
+
+operateTab:
+  field: 位置
+  operator: 操作者
+
+actions:
+  add: 添加主机
+  create: 创建主机
+  modifyTags: 修改标签
+  addNode: 添加节点
+  bindCluster: 加入集群
+  unbind: 移除
+  cleanImages: 清理镜像
+tips:
+  diskOut: 磁盘溢出
+  memoryNotEnough: 内存不足
+  diskNotEnough: 磁盘不足
+  nodeError: 节点异常
+  numPlaceHolder: 目前支持主机数量为2-15台
+  schedule: 不能调度
+  configuration: 采用 Inter Xecon CPU，DDR3 的内存。
+  addNodeSuccess: 添加成功
+  beginDelNode: 开始删除主机
+  confirmDel: 确定删除主机 ${node}
+  confirmUnbind: 确定将主机 ${node} 从集群 ${cluster} 中移除
+  confirmOffline: 确定下线主机 ${node}
+  confirmOnline: 确定上线主机 ${node}
+  cantResetDel: 删除操作不可撤回
+  backupHint: 删除前请备份好需要的数据
+  delAliYunHint: 删除阿里云主机同时会删除对应的虚拟机
+  influence: 租户内的应用可能会受影响
+  cleanImages: 确定清理 ${node} 上的镜像吗
+  cleanImagesInfluence: 该节点上未被使用的镜像会被删除
+validation:
+  numberEmpty: 主机数量不能为空
+  numberWrong: 主机数量必须为2-15(含2和15)的正整数
+cluster: 集群
+searchByIP: 输入 IP 模糊过滤
+scheduleStatus: 调度状态
+nodeStatus: 状态
+schedule: 调度
+IPAddress: IP 地址
+storage: 内存
+disk: 磁盘
+freeNode: 空闲节点
+schedulable: 可调度
+noschedulable: 不可调度
+add: 新建
+
+tags:
+  placeholder: 名称只能包含字母数字字符，'-'，'_'或'.'，并且必须以字母数字字符开头和结尾

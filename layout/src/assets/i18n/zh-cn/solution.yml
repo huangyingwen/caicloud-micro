@@ -1,0 +1,23 @@
+name: 解决方案名称
+actions:
+  add: 添加解决方案
+  create: 新增解决方案
+
+tips:
+  addSuccess: 解决方案 ${name} 新增成功！
+  deleteSuccess: 解决方案 ${solution} 删除成功！
+  onCreateSpace: 正在创建方案组 ${data.spaceName}
+  createSpaceNameSuccess: 创建方案组 ${data.spaceName} 成功
+  onDeleteSpace: 正在删除模版组 ${spaceName}
+  deleteSpaceSuccess: 删除模版组成功 ${spaceName}
+  nodeNameRepeat: "方案结构中的依赖节点名称（${repeat.join('、')}）不能重复。"
+  nodeNameEmpty: 方案结构中的依赖节点名称不能为空。
+  onDeleteChartVersion: 正在删除方案 ${chart} 版本 ${version}
+  deleteChartVersionSuccess: 删除方案 ${chart} 版本 ${version} 成功
+  onDeleteChart: 正在删除方案 ${chart}...
+  deleteChartSuccess: 删除方案成功 ${chart}
+  confirmDelSolution: 确定删除解决方案 ${solution}
+  confirmDel: 确定删除 ${solution}
+  confirmDelCulsterEnv: 确定删除集群 ${cluster} 下的开发环境
+  confirmDelServing: 确定删除 ${service}
+  confirmDelSpace: 确定删除模版组 ${space}

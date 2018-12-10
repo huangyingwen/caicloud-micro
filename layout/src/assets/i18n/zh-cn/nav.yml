@@ -1,0 +1,82 @@
+group:
+  resources: 资源中心
+  app: 应用中心
+  operations: 运维中心
+  manager: 管理中心
+  deliveryCenter: 交付中心
+  pluginCenter: 插件中心
+  paltformExtend: 平台扩展
+  userCenter: 用户中心
+
+node: 节点
+machine: 主机资源池
+cluster: 集群
+storage:
+  name: 存储
+  service: 存储服务
+  class: 存储方案
+  volume: 数据卷
+network:
+  name: 网络
+  lb: 负载均衡器
+app:
+  name: 应用
+  partition: 应用分区
+  orchestration: 模板管理
+  chartGroup: 模版组
+  chart: 应用模版
+  store: 应用商店
+  grayRelease: 灰度发布
+  deployment: 无状态服务
+job:
+  name: 任务
+statefulsets:
+  name: 有状态服务
+lb: 负载均衡
+config: 配置管理
+configCenter:
+  group: 配置组
+  config: 配置
+cargo: 镜像仓库
+cargo_v2:
+  name: 镜像仓库
+  registry: 仓库管理
+  image: 镜像管理
+devops:
+  name: 持续集成
+  workspace: 流水线组
+  pipeline: 流水线
+journal: 日志
+event: 事件
+monitor: 监控
+alerting:
+  name: 报警
+  record: 报警记录
+  rule: 报警策略
+notice:
+  group: 通知分组
+  address: 通知地址
+pluginCenter:
+  GPU: GPU 管理
+tenant: 租户管理
+user:
+  name: 用户中心
+  users: 用户管理
+  myGroup: 我的团队
+  profile: 个人中心
+  teams:
+    managerView: 团队管理
+    userView: 用户详情
+eventLog: 审计日志
+configurations:
+  name: 设置
+  addcloudsecret: 新建公用云 API 密钥
+pluginConfig: 模块管理
+license: 许可证
+notify:
+  name: 通知管理
+  contactGroups:
+    name: 联系人组
+  contacts:
+    name: 联系人
+integrateCenter: 集成中心

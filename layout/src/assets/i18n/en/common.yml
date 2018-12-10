@@ -1,0 +1,83 @@
+# Common Name／Description
+
+resources:
+  cluster: Clusters
+  partition: Partitions
+  memory: Memory
+  application: Applications
+  tenant: Tenants
+  loadbalancer: Load Balancing
+  node: Nodes
+  devops: DevOps
+  alerting: Alerting
+  storage: Volumes
+  configcenter: Configuration Center
+  system: System
+  aliyun: Aliyun
+  anchang: 51IDC
+  setting: Setting
+  alarm: Alarm
+  princple: Rules
+  cargo: Cargo
+
+actions:
+  create: Create
+  add: Add
+  modify: Modify
+  delete: Delete
+  save: Save
+  cancel: Cancel
+  confirm: Confirm
+  update: Update
+  refresh: Refresh
+  close: Close
+  set: Set
+  copy: Copy
+
+miscs:
+  name: Name
+  email: Email
+  createTime: CreateTime
+  identifier: Identifier
+  noData: No data!
+  status: Status
+  alarmMessage: Alarm information
+  noPerimission: Permission Forbidden
+  noVPC: No available VPC
+
+time:
+  second: second
+  minute: minute
+  hour: hour
+  day: day
+  month: month
+  year: year
+
+unit:
+  station: " "
+  atomic: core
+  times: Times
+
+tips:
+  confirmClose: Do you confirm to exit
+  cantSave: Current changes will not be saved.
+  ok: Normal
+  update: Update
+  warn: Warn
+  warning: Warning
+  unknown: Unknown
+  pending: Pending
+  empty: Empty
+  createSuccess: Create Successfully
+  deleteSuccess: Delete Successfully
+  modifySuccess: Modify Successfully
+  resource:
+    recommended: Recommended
+    custom: Custom
+    wholeNode: Whole Node
+  filter:
+    name: Fuzzy filter by name
+
+validations:
+  name: It is made up of English letters, numbers, and crossbars. It can only begin with English letters, not the beginning or end of the bar, and the length of 2-32 characters
+  email: Unsupported email address, please try another one

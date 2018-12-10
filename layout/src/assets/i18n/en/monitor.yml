@@ -1,0 +1,160 @@
+name: Monitor name
+detail: Monitor details
+dashboards:
+  name: Monitor Dashboard
+  dashboard.app: application
+  dashboard.cluster.component: System Components
+  dashboard.cluster.partition: System Partition
+  dashboard.cluster.resources: System Resource
+  dashboard.exporter.mongo: MongoDB
+  dashboard.lb-system: System Loadbalancer
+  dashboard.lb-user: User Loadbalancer
+  dashboard.node: Node
+  dashboard.partition: Partition
+  dashboard.subapp: Sub Application
+  dashboard.event-system: Event
+  autoRefresh: Auto Refresh(Close)
+graphs:
+  # app
+  graph.app.cpu_usage: Application CPU Usage
+  graph.app.mem_usage: Application Memory Usage
+  graph.app.sub.cpu_usage: Application CPU Usage
+  graph.app.sub.mem_free: Pod Free Memory
+  graph.app.sub.mem_usage: Application Memory Usage
+  graph.app.sub.network: Application Network Traffic
+  # cluster
+  graph.cluster.component.apiserver.p95: API Server P95 Latency
+  graph.cluster.component.apiserver.request_per_s: API Server Requests
+  graph.cluster.component.apiserver.cpu: API Server CPU Usage
+  graph.cluster.component.apiserver.memory: API Server Memory Usage
+  graph.cluster.component.canal.cpu: Canal CPU Usage
+  graph.cluster.component.canal.memory: Canal Memory Usage
+  graph.cluster.component.etcd-cluster.cpu: ETCD CPU Usage
+  graph.cluster.component.etcd-cluster.memory: ETCD Memory Usage
+  graph.cluster.component.etcd-cluster.disk_sync: ETCD(cluster) Fsync Duration
+  graph.cluster.component.etcd-event.cpu: ETCD(event) CPU Usage
+  graph.cluster.component.etcd-event.memory: ETCD(event) Memory Usage
+  graph.cluster.component.etcd-event.disk_sync: ETCD(event) Fsync Duration
+  graph.cluster.component.kube-controller-manager.cpu: KubeControllerManager CPU Usage
+  graph.cluster.component.kube-controller-manager.memory: KubeControllerManager Memory Usage
+  graph.cluster.component.kube-proxy.cpu: KubeProxy CPU Usage
+  graph.cluster.component.kube-proxy.memory: KubeProxy Memory Usage
+  graph.cluster.component.kube-scheduler.cpu: KubeScheduler CPU Usage
+  graph.cluster.component.kube-scheduler.memory: KubeScheduler Memory Usage
+  # event
+  graph.event.system.other_warning_rate: Non-Pod Resource Warning Event Frequency
+  graph.event.system.pod_warning_rate: System Pod Warning Event Frequency
+  graph.event.system.app_warning_rate: Tenant Application Warning Event Frequency
+  graph.event.system.volume_warning_rate: Tenant Volume Warning Event Frequency
+
+  graph.cluster.overview.cpu: Cluster CPU Usage
+  graph.cluster.overview.fs: Cluster Filesystem Usage
+  graph.cluster.overview.memory: Cluster Memory Usage
+  graph.cluster.resources.node.cpu_used_top: Node CPU Usage Top 5
+  graph.cluster.resources.node.disk_read_top: Node Disk Read Top 5
+  graph.cluster.resources.node.disk_write_top: Node Disk Write Top 5
+  graph.cluster.resources.node.fs_used_top: Node Filesystem Usage Top 5
+  graph.cluster.resources.node.mem_used_top: Node Memory Usage Top 5
+  graph.cluster.resources.node.network_inbound_top: Node Network Inbound Traffic Top 5
+  graph.cluster.resources.node.network_outbound_top: Node Network Outbound Traffic Top 5
+  graph.cluster.resources.partition.cpu_used: Partition CPU Usage
+  graph.cluster.resources.partition.mem_used: Partition Memory Usage
+  graph.cluster.resources.partition.pod_count: Partition Running Pods Count
+  # lb
+  graph.lb.2xx_rate: 2xx Requests
+  graph.lb.3xx_rate: 3xx Requests
+  graph.lb.4xx_rate: 4xx Requests
+  graph.lb.5xx_rate: 5xx Requests
+  graph.lb.connection_per_s: Connections
+  graph.lb.cpu_usage: CPU Usage
+  graph.lb.memory_usage: Memory Usage
+  graph.lb.network_in: Network In
+  graph.lb.network_out: Network Out
+  graph.lb.request_per_s: Requests
+  graph.lb.upstream_response_avg: Upstream Average Response Latency
+  # node
+  graph.node.load.cpu_usage: Node CPU Usage
+  graph.node.load.disk_io: Node Disk IO Status
+  graph.node.load.fs_usage: Node filesystem Usage
+  graph.node.load.load: Node Average Load
+  graph.node.load.mem_usage: Node Memory Usage
+  graph.node.load.network: Node Network IO
+  graph.node.pod.cpu_usage: Pod CPU Usage
+  graph.node.pod.cpu_used_top: Pod CPU Usage Top 5
+  graph.node.pod.mem_usage: Pod Memory Usage
+  graph.node.pod.mem_usage_top: Pod Memory Usage Top 5
+  graph.node.pod.network: Pod Network Status
+  graph.node.pod.network_received_top: Pod Inbound Traffic Top 5
+  graph.node.pod.network_sent_top: Pod Outbound Traffic Top 5
+  graph.node.pod.pod_count: Running Pods Count
+  # partition
+  graph.partition.cpu_usage: Partition CPU Usage
+  graph.partition.mem_usage: Partition Memory Usage
+  graph.partition.pod_count: Running Pods Count
+  # exporter
+  graph.exporter.mongo.assertion_count: Mongo assertion count
+  graph.exporter.mongo.connection_count: Mongo connection count
+  graph.exporter.mongo.active_clients: Mongo active clients
+  graph.exporter.mongo.global_lock_current_queue: Mongo global lock current queue
+  graph.exporter.mongo.op_count: Mongo Operation Count
+
+  graph.exporter.nginx.2xx_rate: 2xx requests per second
+  graph.exporter.nginx.3xx_rate: 3xx requests per second
+  graph.exporter.nginx.4xx_rate: 4xx requests per second
+  graph.exporter.nginx.5xx_rate: 5xx requests per second
+  graph.exporter.nginx.connections_per_s: Connections per second
+  graph.exporter.nginx.network_in: Inbount network traffic
+  graph.exporter.nginx.network_out: Outbound network traffic
+
+  graph.exporter.redis.commands_per_s: Command Calls / sec
+  graph.exporter.redis.connected_clients: Connected Clients
+  graph.exporter.redis.expired_vs_evicted: Expired / Evicted
+  graph.exporter.redis.expiring_keys: Expiring vs Not-Expiring Keys
+  graph.exporter.redis.hits_misses_per_s: Hits / Misses per Sec
+  graph.exporter.redis.items_per_db: Total Items per DB
+  graph.exporter.redis.network_io: Network I/O
+
+  graph.exporter.tomcat.busy_thread_count: Tomcat Busy Thread Count
+  graph.exporter.tomcat.bytes_sent: Tomcat Bytes Sent
+  graph.exporter.tomcat.max_time: Tomcat Max Time"
+  graph.exporter.tomcat.processing_time: Tomcat Average Processing Time
+  graph.exporter.tomcat.req_per_s: Tomcat Requests
+  graph.exporter.tomcat.thread_count: Tomcat Current Thread Count
+validation:
+  panelNameEmpty: Dashboard name can not be empty
+  panelNameCount: Dashboard name can not exceed 30 characters
+actions:
+  editPanel: Edit dashboard
+  addPanel: Add dashboard
+  editCurrentPanel: Edit current dashboard
+  addOnePanel: Add new dashboard
+  addMonitorPanel: Add Monitor Panel
+  addMonitor: Add Monitor
+  panelName: Dashboard name
+tips:
+  createPanelSuccess: Created success
+  editPanelSuccess: Updated successfully
+  deletePanelSuccess: Removed successfully
+  addPinGraphSuccess: Added successfully
+  addPinGraphFailure: Added failed
+  confirmDelMonitor: OK to delete dashboard ${monitor}
+  confirmDelPanel: OK to delete graph ${panel}
+  monitorPanelName: Monitor Panel Name
+
+charts:
+  func:
+    # functions of chart
+    default: no function will be applied
+    rate: calculate the per-second average rate of increase of the time series
+    p99: calculate 99th percentile
+    p95: calculate 95th percentile
+    p50: calculate 50th percentile
+form:
+  monitorObject: Monitor Object
+  metricInfo: Metric Informations
+  chart: Chart
+  advancedOptions: Advanced Options
+  areaChart: Area Chart
+  node: Node
+  preview: Preview
+  metric: Metric

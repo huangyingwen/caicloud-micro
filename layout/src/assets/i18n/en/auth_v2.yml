@@ -1,0 +1,250 @@
+auth: Permissions
+tenant: Tenant
+name: Username
+nickname: Nickname
+email: Email
+phone: Phone
+createTime: Create Time
+joinTime: Join Time
+account: Account
+storageNum: Volumes Numbers
+storageTotalCapacity: Volumes Total Capacity
+availStorageNum: Available Volumes Number
+availStorageTotalCapa: Available Volumes Total Capacity
+cpuRequest: CPU Request
+memoryRequest: Memory Request
+application: Application
+all: All
+allUsers: All
+search: Search
+remove: Remove
+set: Set to
+tenantList: Tenants
+systemTenant: System Tenant
+resource: Resource Quotas
+reUpdate: Edit
+distribute: distribution
+noMember: No data
+select: select
+none: none
+content: content
+enable: enabled
+lbPorts: L4 protocol port range
+lbPortsRange: L4 protocol port range
+modifyTenantlb: ${clusterName} loadbalancers
+modifyTenantStorage: ${clusterName} volumes
+requestNum: request
+limitNum: limit
+startPort: Start Port
+endPort: End Port
+loadbalancerAvail: optional
+defaultGroup: Default
+appStatistics: App Stats
+partitionStatistics: Partition Stats
+
+# 用户管理，团队管理（详情），租户管理（详情）中有关用户的概念文案放这里
+users:
+  systemAdmin: System Admin
+  normalUser: Normal User
+  owner: Owner
+  member: Member
+  allMembers: All Members
+  userUnit: people
+  membersCount: Num of Members
+  registerTime: Registration time
+  password: Password
+  resetPassword: Restore initial password
+  resetPasswordSuccess: Password recovery succeeded
+  active: active
+  notActive: not active
+  modifyPassword:
+    old: old password
+    new: new password
+    confirmNew: Confirm the new password
+    tip:
+      old: Please enter the old password
+      new: Please enter an 8-30 character password
+      confirmNew: Please confirm the password again
+
+  role: role
+  remote: Account source
+  remoteEnum:
+    haier: haier
+    unionpay: unionpay
+  validate:
+    emailError: Bad mailbox format
+    passwordError: The password you entered does not meet the requirements, please re-enter
+    confirmPasswordError: Inconsistent password entered twice
+  tip:
+    accountValidate: Consists of letters, numbers, bars, and underscores. The length is limited to 5-24 characters.
+
+# 角色相关的概念文案
+roles:
+  roleType: Role Type
+
+tenants:
+  detail:
+    defaultDescription: No content
+  quotas:
+    requestsNum: Request
+    limitsNum: Limit
+
+# buttons, form titles
+actions:
+  selectMembers: Select Members
+  addMembers: Add
+  invite: Invite
+  addTenant: Create
+  updateInfo: Edit information
+  nowAdd: Add now
+  addGroup: Create
+  distribute: Distribute immediately
+  seeAll: view all
+  enable: Enable
+  stayOn: Stay
+  rolesTab: Roles
+  membersTab: Members
+  teamTabs:
+    partition: Partition Auth
+    config: Config Auth
+    devops: Devops Auth
+    cargo: Cargo Auth
+  modifyQuotas: Modify Quotas
+  turnOffCluster: Close Cluster
+  setOwner: Set to owner
+  setNormalUser: Set to normal user
+  setLater: Set Later
+  saveAndChooseMembers: Save and select members
+  saveAndSetQuota: Save and set quota
+
+# messages, placeholders
+tips:
+  tenantExist: Tenant name already exists, please rename it
+  enterTenant: Please fill in the tenant name
+  tenantWrong: Tenants must start with letters or Chinese characters, support Chinese and special symbols, and limit the length of 2-32 characters.
+  filterBy:auth: Filter by permission
+  filterBy:tenant: Filter by tenant
+  choose:tenant: Choose a tenant
+  choose:role: Choose a role of the member
+  member:roleInTenant: Roles of Members in the tenant
+  member:name: Member's username
+  inputMultipleUsers: Enter multiple usernames, separated by ','
+  setUser: add user into tenants
+  selectUser: Please select user
+  selectRegistedUser: Please select registered user
+  search: Enter keywords for fuzzy search
+  selectTenantAdmin: select admin for ${tenantName}
+  needTenantAdmin: A tenant needs at least one admin;
+  setUserSelect: Admins can choose tenant members, and can also set a new admin;
+  setUserDistribute: Adminis can assign memberships within tenants.
+  noTenantAdmin: No tenant admin
+  chooseTenantAdmin: Set Admin
+  addResource: Add ${description} resource
+  giveBasicRole: Give all ${description} basic roles
+  displayBasicRole: All ${description} basic roles
+  noDestribute: ${Current.description} doesn't have permission ${permissionItem.description}
+  filter: Enter keyword for fuzzy filter
+  canSelected: Optional
+  haveSelected: Chosen
+  contactSystemAdmin: No resources have been allocated yet, please contact your system admin
+  noResource: Resource has not been allocated,
+  setSuccess: Set up successfully!
+  editTenantSuccess: Edit tenant ${name} successfully!
+  addUserFailure: Failed to add user
+  addUserSuccess: Added successfully
+  removeMemberSuccess: Remove successfully
+  tenantSetSuccess: "Seted successfully"
+  addMembersSuccess: Add member successfully!
+  invideEmailSended: Invitation email has been sent
+  changeUserRoleSuccess: Edit role successfully!
+  changePasswordSuccess: Password is modified successfully, please login again 
+  delTeamHint: Deleting the team will cancel the resource permissions granted to the members of the team
+  delRoleConfirm:  Confirm to remove role ${role}?
+  delRoleHint: Deleting this role will cancel the resource permissions granted to the members of the team
+  confirmDelTeam:  Confirm to remove team ${team}?
+  deleteAccountConfirm:  Confirm to remove account ${account}?
+  confirmRemoveUser:  Confirm to remove ${name}?
+  confirmDelUser:  Confirm to delete ${name}?
+  confirmDelPowerGroup:  Confirm to delete ${name}?
+  delPowerGroupHint: Deleting this team will cancel the resource permissions granted to the members of the team
+  setLowValueWarning: The new value is lower than the current tenant's usage value!
+  afterEdit: "After modification:"
+  afterClose: "After closing:"
+  cantInfluenceApp: Running applications in the current tenant will not be affected
+  useMoreThanQuota: Current tenant usage will exceed the quota
+  cantDeployNewApp: Current tenant will not be able to create applications
+  confirmCloseCluster: Confirm to shut down the cluster ${cluster}?
+  deploiedAppDelHint: All applications and services in current tenant will be deleted
+  cantWatchClusterHint: Members in The current tenant can not visit the cluster
+  setMembersSuccess: Seted successfully
+  chooseMembersSuccess: Choosed successfully
+  confirmRemoveMember: Confirm to remove ${member}?
+  rmUserFromTenantConfirm:  Confirm to remove member ${name} from tenant?
+  cantUseProductHint: The user will not be able to continue using the product in the current tenant
+  afterRemove: "After removing:"
+  afterDelete: "After deleting:"
+  afterChange: "After the change:"
+  rmAdminFromTenantConfirm:  Confirm to remove admin ${admin} from tenant?
+  haveNoAdminRole: The user will no longer have the current tenant admini privileges
+  confirmAddToAdmin: Confirm to change ${name} to admin?
+  haveAdminRoleHint: This user will have admin privileges for the current tenant
+  haveUserRoleHint: This user will have user privileges for the current tenant
+  canUseProductHint: The user can continue to use the product in the tenant
+  backToUserConfirm: Confirm to change ${name} to user?
+  addSystemAdminConfirm: Confirm to change ${name} to system admin?
+  haveSysAdminRoleHint: This user will have system administrator privileges
+  canUseSysProductHint: The user can continue using the product in the system tenant
+  depriveSystemAdminConfirm: Confirm to change ${name} to user?
+  haveNoSysAdminRoleHint: This user will no longer have system administrator privileges
+  canUseProductInTenant: The user can still continue to use the product in the joined tenant
+  defaultGroupCantDel: The default group can't be removed
+  giveClusterRoleHint: Given the basic role, all the partitions under the cluster will have the corresponding role permissions by default
+  giveTeamRoleHint: After giving the basic role, all the configurations in this group will have the corresponding role's permission by defualt
+  storageNumAddToTenant: The number of volumes that can be added to tenant
+  sumOfStorageCapacity: The sum of volumes capacity that can be added to tenant
+  defaultOpenL7: Load balancing assigned to tenants opens L7 layer protocol by default, such as Http, Https
+  defaultOpenL4: Load balancing assigned to tenants opens L4 layer protocol by default, such as TCP, UDP
+  portRangeOfL4: L4 protocol port range 20000-29999
+  alreadyUsed: Tenant already used
+  leftAvailableQuotas: Left available quotas
+  destriRelatedResToTenant: Cluster ${clusterName} is turned on, please destribute some resources for ${tenantName} tenant
+  confirmSetUserActive:
+    header: Are you sure you want to set the state of ${name} to be active?
+  confirmSetUserNotActive:
+    header: Are you sure you want to set the state of ${name} to be inactive?
+    tips: ${name} will not be able to use the platform
+  resetPassword:
+    header: Are you sure you want to restore the initial password for ${name}?
+    tips1: The user's current password will be invalid.
+    tips2: "The user's new password: ${initialPassword}"
+  tenant:
+    createTenantSuccess: Create successfully
+    enableQuotaSuccess: Enable quota successfully
+    disableQuotaSuccess: Disable quota successfully
+    editResourceSuccess: Edit resource quota successfully
+    deleteTenantSuccess: Delete successfully
+    confirm:
+      deleteTenant: Confirm to delete ${name}?
+    lowerThanActual:
+      alert: ${name} request is lower than actual used quota!
+      tipNoEffect: Apps which already deployed will not be affected
+      tipExceed: Usage of current tenant will exceeds quota
+      tipEnableDeploy: Enable to deploy new apps in current tenant
+
+# validates
+validates:
+  storageNum: Number of volume can't be greater than 1000
+  setQuota: Please set limit
+  setQuotaPositive: The limit must be an integer greater than zero
+  moreThanTotal: The limit exceeds quota
+  requestQuota: Please set request
+  requestQuotaPositive: The request must be an integer greater than zero
+  requestQuotaMore: The request exceeds quota
+  restQuota: The remaining ${displayType} quotas
+  selectPartition: Please select the cluster, then add the partition resources
+  setGroupName: Please set the team name
+  tooMuch: Please not exceed 200 words
+  portsRange: Please enter in range (1024, 30000)
+  cpuMemoryResourcesLimits: request should be less than limit
+  required:
+    users: Please select a member

@@ -1,0 +1,42 @@
+{
+  "name": "single-spa-portal-example-react",
+  "version": "1.0.0",
+  "description": "React App that will be bundled into a library to be loaded on demand by a simpleSPA Portal App",
+  "scripts": {
+    "watch:portal": "webpack-dev-server --port 9010",
+    "build:portal": "webpack -p --progress"
+  },
+  "keywords": [],
+  "author": "Michael Ruecker",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.2.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.4.0",
+    "babel-loader": "^8.0.4",
+    "caicloud-i18n": "^1.0.8",
+    "classnames": "^2.2.6",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "single-spa-react": "^2.6.0",
+    "snowy": "^0.5.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "yml-loader": "^2.1.0"
+  },
+  "dependencies": {}
+}

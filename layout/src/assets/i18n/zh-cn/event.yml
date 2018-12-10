@@ -1,0 +1,8 @@
+type: 类型
+success: 成功
+failed: 失败
+result: 结果
+time: 时间段
+search: 查询
+keywords: 模糊查询
+syncing: 同步中

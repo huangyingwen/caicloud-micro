@@ -1,0 +1,180 @@
+auth: Permissions
+tenant: Tenant
+name: Username
+nickname: Nickname
+email: Email
+phone: Phone
+createTime: Create Time
+all: All
+allUsers: All
+search: Search
+remove: Remove
+set: Set to
+tenantList: Tenants
+resource: Resource Quotas
+reUpdate: Edit
+distribute: distribution
+noMember: No data
+select: select
+none: none
+content: content
+group: Groups
+enable: enabled
+lbPorts: L4 protocol port range
+lbPortsRange: L4 protocol port range
+modifyTenantlb: ${clusterName} loadbalancers
+modifyTenantStorage: ${clusterName} volumes
+requestNum: request
+limitNum: limit
+startPort: Start Port
+endPort: End Port
+loadbalancerAvail: optional
+defaultGroup: Default
+members: Members
+
+roles:
+  roleType: role type
+  systemOwner: system admin
+  notSystemOwner: user
+  owner: admin
+  normalUser: user
+  member: member
+  basic: basic role
+  cancelBasic: cancel
+  resource: resource role
+
+# buttons, form titles
+actions:
+  addMembers: Add
+  addTenant: Create
+  updateInfo: Edit information
+  nowAdd: Add now
+  addGroup: Create
+  distribute: Distribute immediately
+  seeAll: view all
+  enable: Enable
+  stayOn: Stay
+  rolesTab: Roles
+  membersTab: Members
+
+# messages, placeholders
+tips:
+  tenantExist: Tenant name already exists, please rename it
+  enterTenant: Please fill in the tenant name
+  tenantWrong: Tenant name must be 4-12 length, beginning with a lowercase letter and containing only lowercase letters, digits, and '-' sign
+  filterBy:auth: Filter by permission
+  filterBy:tenant: Filter by tenant
+  choose:tenant: Choose a tenant
+  choose:role: Choose a role of the member
+  member:
+  member:roleInTenant: Roles of Members in the tenant
+  member:name: Member's username
+  inputMultipleUsers: Enter multiple usernames, separated by ','
+  setUser: add user into tenants
+  selectUser: Please select user
+  noUser: User Not Find!
+  selectRegistedUser: Please select registered user
+  search: Enter keywords for fuzzy search
+  selectTenantAdmin: select admin for ${tenantName}
+  needTenantAdmin: A tenant needs at least one admin;
+  setUserSelect: Admins can choose tenant members, and can also set a new admin;
+  setUserDistribute: Adminis can assign memberships within tenants.
+  optional: Optional, 200 words or less
+  noTenantAdmin: No tenant admin
+  chooseTenantAdmin: Set Admin
+  addResource: Add ${description} resource
+  giveBasicRole: Give all ${description} basic roles
+  displayBasicRole: All ${description} basic roles
+  roleResource: "Roles for each resource are as follows:"
+  noGroup: Under the current tenant, you have not joined any groups yet
+  noDestribute: ${Current.description} doesn't have permission ${permissionItem.description}
+  inGroup: The members in this tenant are in this group by default.
+  cantDelete: This team can't be deleted.
+  # TODO: deprecate inGroup, cantDelete
+  defaultTeamDescription: All members of this tenant are in this group. Default team can't be deleted.
+  noMember: No member in team
+  enterTeamName: Please enter the team name
+  filter: Enter keyword for fuzzy filter
+  selectUsers: Select members
+  noSystemUser: No user
+  contactSystemAdmin: No resources have been allocated yet, please contact your system admin
+  noResource: Resource has not been allocated,
+  setSuccess: Set up successfully!
+  createTenantSuccess: Create tenant ${name} successfully!
+  editTenantSuccess: Edit tenant ${name} successfully!
+  addUserFailure: Failed to add user ${info}
+  addUserSuccess: Add user successfully!
+  removeMemberSuccess: Remove member ${users} successfully!
+  tenantSetSuccess: "Tenant ${users} is set to ${role === 'owner'? 'Admin': 'User'} Success!"
+  addUserGroupSuccess: Add team ${name} successfully!
+  editUserGroupSuccess: Edit user group ${name} successfully!
+  deleteUserGroupSuccess: Delete user group ${name} successfully!
+  addMembersSuccess: Add member successfully!
+  editAuthSuccess: Edit ${messageName} role successfully!
+  addAuthSuccess: New ${messageName} role Successfully!
+  deleteAuthSuccess: Remove ${messageName} role successfully!
+  enableClusterSuccess: Enable cluster successfully!
+  closeResourceSuccess: Close resource quota successfully
+  editResourceSuccess: Edit resource quota successfully!
+  createTeamSuccess: Add team ${name} successfully!
+  deleteTeamSuccess: Remove Team "${name}" successfully!
+  invideEmailSended: Invitation email has been sent
+  changeUserRoleSuccess: Edit role successfully!
+  changePasswordSuccess: Password is modified successfully, please login again 
+  delTeamHint: Deleting the team will cancel the resource permissions granted to the members of the team
+  delRoleConfirm:  Confirm to remove role ${role}?
+  delRoleHint: Deleting this role will cancel the resource permissions granted to the members of the team
+  confirmDelTeam:  Confirm to remove team ${team}?
+  deleteAccountConfirm:  Confirm to remove account ${account}?
+  confirmRemoveUser:  Confirm to remove ${name}?
+  confirmDelUser:  Confirm to delete ${name}?
+  confirmDelPowerGroup:  Confirm to delete ${name}?
+  delPowerGroupHint: Deleting this team will cancel the resource permissions granted to the members of the team
+  setLowValueWarning: The new value is lower than the current tenant's usage value!
+  afterEdit: "After modification:"
+  afterClose: "After closing:"
+  cantInfluenceApp: Running applications in the current tenant will not be affected
+  useMoreThanQuota: Current tenant usage will exceed the quota
+  cantDeployNewApp: Current tenant will not be able to create applications
+  confirmCloseCluster: Confirm to shut down the cluster ${cluster}?
+  deploiedAppDelHint: All applications and services in current tenant will be deleted
+  cantWatchClusterHint: Members in The current tenant can not visit the cluster
+  confirmRemoveMember: Confirm to remove ${member}?
+  rmUserFromTenantConfirm:  Confirm to remove member ${name} from tenant?
+  cantUseProductHint: The user will not be able to continue using the product in the current tenant
+  afterRemove: "After removing:"
+  afterChange: "After the change:"
+  rmAdminFromTenantConfirm:  Confirm to remove admin ${admin} from tenant?
+  haveNoAdminRole: The user will no longer have the current tenant admini privileges
+  confirmAddToAdmin: Confirm to change ${name} to admin?
+  haveAdminRoleHint: This user will have admin privileges for the current tenant
+  canUseProductHint: The user can continue to use the product in the tenant
+  backToUserConfirm: Confirm to change ${name} to user?
+  addSystemAdminConfirm: Confirm to change ${name} to system admin?
+  haveSysAdminRoleHint: This user will have system administrator privileges
+  canUseSysProductHint: The user can continue using the product in the system tenant
+  depriveSystemAdminConfirm: Confirm to change ${name} to user?
+  haveNoSysAdminRoleHint: This user will no longer have system administrator privileges
+  canUseProductInTenant: The user can still continue to use the product in the joined tenant
+  defaultGroupCantDel: The default group can't be removed
+  giveClusterRoleHint: Given the basic role, all the partitions under the cluster will have the corresponding role permissions by default
+  giveTeamRoleHint: After giving the basic role, all the configurations in this group will have the corresponding role's permission by defualt
+
+# validates
+validates:
+  storageNum: Number of volume can't be greater than 1000
+  enterTeamName: Please enter the team name
+  setQuota: Please set limit
+  setQuotaPositive: The limit must be an integer greater than zero
+  moreThanTotal: The limit exceeds quota
+  requestQuota: Please set request
+  requestQuotaPositive: The request must be an integer greater than zero
+  requestQuotaMore: The request exceeds quota
+  restQuota: The remaining ${displayType} quotas
+  selectPartition: Please select the cluster, then add the partition resources
+  setGroupName: Please set the team name
+  tooMuch: Please not exceed 200 words
+  portsRange: Please enter in range (1024, 30000)
+  cpuMemoryResourcesLimits: request should be less than limit
+  required:
+    users: Please select a member

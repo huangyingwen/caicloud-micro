@@ -1,0 +1,34 @@
+
+search: 查询
+reason: 原因
+relatedObj: 关联对象
+notify: 通知
+warn: 告警
+normal: 正常
+
+event:
+  type: 事件类型
+  content: 事件内容
+  tips:
+    selectType: 选择事件类型
+    selectObj: 选择关联对象
+    noRelated: 无相关事件
+    noInfo: 暂无可用集群，无法获取事件信息
+actions:
+  seeContext: 点击查看上下文
+tips:
+  happen: ${time}内发生了 ${count} 次
+  downloading: 下载中
+  downloadLog: 下载日志
+  search: 输入关键词搜索
+  startDownload: 开始下载
+  searchTarget: 查询对象必须选到应用一级
+  logContent: 查看日志上下文
+  loadMore: "加载更多${type === 'prev' ? '上' : '下'}文"
+  noLog: 暂无日志信息
+  searchBtn: 搜索
+validates:
+  clusterSelectedRequired: 请至少选择搜索目标集群
+  selectCluster: 请选择集群
+  selectPartition: 请选择分区
+  selectApp: 请选择应用

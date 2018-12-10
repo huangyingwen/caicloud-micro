@@ -1,0 +1,48 @@
+contactGroups:
+  name: ContactGroups
+  action:
+    delete: Make sure to delete the contact group ${name}
+  form:
+    optional: (Optional)
+    nameTip: Support Chinese and special characters, no more than 32 characters in length
+
+contacts:
+  name: Contacts
+  action:
+    delete: Make sure to delete the contact ${name}
+
+smtp:
+  name: SMTP
+  action:
+    delete: Make sure to delete the SMTP config ${name}
+    setSuccessfully: Set Successfully
+    sendSuccessfully: Send Successfully
+    sendFailure: Send Failure
+    send: Send
+    sending: Sending
+  mailServer: Mail Server
+  valid:
+    servicehost: The domain name or Ip address is in the wrong format
+    serviceport: Can only enter numbers
+    email: Incorrect mailbox format
+  sendTestEmail: Send A Test Email
+  sendTestEmailTip: Only send to the recipient address you entered, you should check if received the mail.
+  emailTip: Fill in the avalibale recipient address and verify the email configuration
+  form:
+    title: Notification mail server for sending mail for notification information
+    serviceHost: SMTP Address
+    serviceHostTip: Domain or ip address, eg：smtpdomain.com or 192.168.1.1
+    servicePort: SMTP Port
+    username: SMTP Account
+    usernameTip: SMTP Account
+    passwordTip: If empty will not modify the password
+    useSSL: Use SSL
+    testEmail: Test email
+grid:
+  updateTime: Update Time
+  member: Member
+  selectMember: Select Member
+  notifyAddress: Notify Address
+tips:
+  search: Search Contact Name
+  searchGroup: Search Contact Group Name

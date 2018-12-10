@@ -1,0 +1,10 @@
+title:
+  deploy: 新建
+
+tips:
+  onDeploy: 正在创建任务
+  deploySuccess: 创建成功
+  updateApplicationConfig: 正在更新任务配置
+  updateApplicationConfigSuccess: 更新成功
+  deletingApplication: 正在删除任务
+  deleteApplicationSuccess: 删除成功

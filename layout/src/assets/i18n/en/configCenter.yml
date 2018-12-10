@@ -1,0 +1,91 @@
+tips:
+  editFile: Edit uploaded file
+  enterName: Enter configuration name
+  optional: Optional
+  cert: Certificate summary
+  labelFilter: Filter by labels
+  noConfigInfo: No config for the current group
+  searchByName: Query by config name
+  updateSuccess: Update successfully, Reference list may be hysteretic
+  addConfigSetSuccess: Added config set successfully!
+  addConfigTemplateSuccess: Add config template success!
+  updateConfigSuccess: Update config successfully!
+  updateConfigSetSuccess: Update config set successfully!
+  updateTemplateSuccess: Update config template successfully!
+  deleteTagSuccess: Tag ${Name} is deleted!
+  addOrEditTagSuccess: "Tag ${name} is ${o._id === ''? 'added': 'edited'}!"
+  confirmDelFile: Are you sure to delete file ${file}
+  confirmDelConfig: Are you sure to delete config ${name}
+  confirmDelGroup: Are you sure to delete config group ${name}
+  saveSuccess: Saved, new version is generated!
+  versionSuccessHint: Current references is using previous version of config. If you want to update references, please edit reference list.
+  emptyGroup: Please create group first.
+
+actions:
+  createGroup: Create Group
+  create: Create
+  replace: Replace
+  drop: Click or drag to upload the file
+  addcert: Add certificate
+  addPrivateKey: Add private key
+  change: Edit content
+  changeFile: Edit file
+  reUpload: re-upload
+  editReference: Edit reference list
+  selectAll: select all
+  apply: apply
+  saveAndBack: Save and back
+  editcert: Replace certificate
+  saveAndGenerate: Save and generate a new version
+  editK/V: Edit key-value pairs
+  editList: Edit reference list
+validates:
+  nameWrong: Names can only have numbers, lowercases and "-", and start with numbers and lowercases. The length of names is between 1 and 20.
+  key: consists of letters, Numbers, underscores, short lines, and dots beginning, with a length limit of 253 characters
+tag: tag
+tags:
+  name: Tag name
+  manage: Tag management
+  empty: Tag name can not be empty
+  new: New Tag
+  noTag: No Tag
+  allTags: All tags
+name: Config name
+desc: description
+group: Group
+groups:
+  name: Group Name
+  manage: Group management
+  new: New group
+  allGroup: All groups
+type: Type
+k/v: Key-value pairs
+file: file
+cert: certificate
+key: key
+value: value
+encrypt: encrypt
+privateKey: Private key
+noConfig: No config
+versionList: Version list
+or: or
+publishingAgency: Issuer
+domain: Common name
+startTime: Issued on
+endTime: Expires on
+content: Config content
+fileContent: file content
+overview: Overview
+referenceList: Reference list
+loadbalancer: Load balancer
+c/p/l: Cluster / Partition / Load Balancer
+noDesc: No description yet
+search: search
+baseConfig: Basic config
+middleConfig: Middle config
+highConfig: High config
+creationTime: Creation time
+uploadFileTip: Please upload file
+encryptFile: Encrypt config file
+all: All
+modify: Modify

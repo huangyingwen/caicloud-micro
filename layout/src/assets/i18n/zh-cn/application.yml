@@ -1,0 +1,624 @@
+# application properties
+status: 应用状态
+application: 应用
+workPayloadType: 类型
+appPayloadType:
+  deploymentApp: 无状态服务
+  jobApp: 任务
+  statefulSetApp: 有状态服务
+updateTime: 更新时间
+runningTime: 运行时长
+runningStatus: 运行状态
+grayReleaseSts: 灰度发布状态
+autoScalingSts: 弹性伸缩状态
+userName: 用户名
+password: 密码
+partition: 分区
+weights: 权重
+name: 应用名称
+deployPosition: 部署位置
+deployPositionVal: 集群 ${cname} / 分区 ${pname}
+baseInfo: 基本信息
+controller: 控制器
+config: 配置
+monitor: 监控
+createTime: 创建时间
+monitorProbe: 监控探针
+DNSStrategy: DNS策略
+clusterDNS: 使用ClusterFirst ，Pod的DNS解析将依赖于是否配置了存根域和上游DNS服务器。
+nodeDNS: 使用Default，Pod将会从所在节点上继承DNS解析配置
+clusterWithNodeDNS: 对于使用主机网络的Pod,应使用ClusterFirstWithHostNet
+resourceRequest: 资源请求
+storageRequest: 容量请求
+method: 方法
+project: 项目
+imageName: 镜像名称
+imageTag: 镜像标签
+devRepo: 开发仓库
+deployWay: 选择部署方式
+afterStartup: 启动后
+beforeExit: 退出前
+lifecycle: 生命事件钩子
+outData: 外挂数据
+timeInterval: 时间间隔
+unknowType: 未知类型
+compare: 实例数／期望数
+deployControll: 部署控制
+waitTime: 初始等待时间
+outTime: 超时
+successTime: 连续成功次数
+wrongTime: 连续出错次数
+instanceList: 服务实例列表
+select: 选择应用
+baseConfig: 基本配置
+containerBaseInfo: 容器基本信息
+images: 镜像
+configFile: 配置文件
+mountConfigFile: 挂载配置文件
+logCollection: 日志收集
+fileLog: 文件日志
+advance: 高级
+storage: 存储
+mountFileName: 挂载文件名
+mountCatalog: 挂载目录
+selectCluster: 选择集群
+selectPartition: 选择分区
+privilegeMod: 特权模式
+overview: 概要
+accessConfig: 访问配置
+workConfig: 运行配置
+chartRepo: 模版组
+monitorOpen: 开启监控
+controllers:
+  type: 实例类型
+  instanceCtrl: 实例控制
+  controllerType: 控制器类型
+  config: 控制器配置
+  deployment: 无状态实例
+  statefulSet: 有状态实例
+  job: 任务实例
+  cronjob: 定时任务实例
+  daemonset: 守护型实例
+  replica: 实例数
+  readyReplica: 可用实例数
+  currentReplica: 当前版本实例数
+  currentAvaliableReplica: 当前版本可用实例数
+  declaredReplica: 声明实例数
+  strategy: 滚动更新策略
+  strategyType: 策略类型
+  strategy:unavailable: 最大不可用
+  strategy:surge: 最大超量
+  strategy:RollingUpdate: 滚动更新
+  strategy:Recreate: 重新创建
+  strategy:tips:RollingUpdate: 以滚动更新方式更新现有 pod
+  strategy:tips:Recreate: 创建新 pod 之前将会销毁掉现有 pod
+  name: 实例前缀名
+  domain: 实例域名
+  number: 实例数量
+  conditions: 健康状况
+  conditions:type: 类型
+  conditions:reason: 动作
+  conditions:lastUpdateTime: 最近更新时间
+  conditions:message: 描述
+  creationTimestamp: 创建时间
+  runningTime: 运行时长
+  metadata:
+    name: 名称
+
+appType:
+  common: 无状态
+  hasState: 有状态
+  batch: 任务
+  protect: 守护型
+
+chartConfig:
+  appType: 应用类型
+  service: 访问
+  volume: 存储
+  name: 名称
+  version: 版本
+  description: 描述
+  versionList: 列表
+  detail: 配置详情
+
+title:
+  deploy: 新建
+  chartDeploy: 从模版新建
+  storeDeploy: 从应用商店新建
+
+no: 暂无应用
+container: 容器
+# container properties
+containers:
+  port: 端口
+  name: 容器名称
+  customName: 自定义容器名称
+  config: 容器配置
+  allocated: 系统分配
+  image: 镜像地址
+  imagePullPolicy: 镜像拉取策略
+  args: 启动参数
+  command: 启动命令
+  command:help: 此处的命令可以替代 Dockerfile 中默认的 ENTRYPOINT 命令。
+  status: 状态
+  resource: 资源配置
+  resourceConfig: 配额
+  resources:
+    requests:
+      cpu: CPU 请求
+      cpuCore: 'CPU 请求: ${name} Core'
+      memory: 内存请求
+      memoryGb: '内存请求: ${name}'
+    limits:
+      cpu: CPU 上限
+      cpuCore: 'CPU 上限: ${name} Core'
+      memory: 内存上限
+      memoryGb: '内存上限: ${name}'
+    gpuSuffix: 个
+  volumeMounts:
+    name: 挂载点
+    path: 挂载路径
+  mount: 挂载数据卷
+  mounts:
+    path: 容器内路径
+    name: 数据卷名称
+  probe:
+    liveness: 健康检查
+    readiness: 可用性检查
+    delay: 初始等待时间
+    timeout: 超时时间
+    period: 检查间隔
+    useHTTPS: 使用 HTTPS
+    thresholds: 阈值
+    threshold:
+      success: 成功阈值
+      failure: 失败阈值
+    handler:
+      type: 检查方式
+      portAndPath: 端口路径
+      checkAddress: 检查地址
+      method:
+        command: 执行命令
+        scheme: 协议
+        host: 在大多数情况下，您不想设置检查地址。有一种情况下您可以设置它：假设容器在 127.0.0.1 上侦听，并且 Pod 设置了 hostNetwork，此时检查地址应该设置为 127.0.0.1。 如果您的 pod 依赖于虚拟主机，这可能是更常见的情况，您应该在 HTTP 请求头中设置 Host
+        port: 容器端口
+        path: 路径
+        header: HTTP 请求头
+        header:name: 请求头名称
+        header:value: 请求头值
+
+volume: 数据卷
+# volume properties
+volumes:
+  baseInfo: 基本信息
+  extraInfo: 扩展信息
+  name: 存储名称
+  type: 存储类型
+  status: 状态
+  status:success: 已挂载
+  status:pending: 正在挂载
+  status:error: 异常
+  path: 路径
+  server: 服务器
+  endpoint: 端点
+  scratch: 临时数据卷
+  dynamic: 动态数据卷
+  static: 静态数据卷
+  dedicated: 专用数据卷
+  mountToContainer: 挂载到容器
+  source:
+    class: 存储方案
+    mode: 读写模式
+    target: 数据卷名称
+    modes:
+      ReadWriteOnce: 单节点读写
+      ReadOnlyMany: 多节点只读
+      ReadWriteMany: 多节点读写
+  storage: 容量
+  storages:
+    basicPerformance: 基础性能
+    commonPerformance: 一般性能
+    highPerformance: 高级性能
+    custom: 自定义
+    request: 请求容量
+    limit: 容量上限
+    allocated: 分配容量
+  tips:
+    select: 选择数据卷
+    have: 已有数据卷
+    mount: 填写之后即可到容器中挂载
+    scratch: 每个实例副本的临时数据卷相互独立，每个实例副本仅能访问自己的临时数据卷，但一个实例副本内的多个容器可以共享一个临时数据卷。临时数据卷内的数据在实例副本更新或销毁后丢失，使用该类型数据卷时请确保数据丢失不会影响当前业务的正常运行。
+    dynamic: 动态数据卷会根据存储方案创建一个数据卷，该数据卷被所有实例副本共享。动态创建的数据卷在应用删除后会保留下来，数据不会被删除，之后可通过静态数据卷的方式挂载。
+    static: 选择一个已经存在的数据卷。数据卷被所有实例副本共享。应用删除后该数据卷继续保留，数据不会被删除。
+    dedicated: 专用数据卷只能用于有状态实例。专用数据卷会为每个实例副本创建一个独立的数据卷，实例副本之间数据卷相互独立。这些数据卷在应用删除后会保留下来，数据不会被删除。
+  validates:
+    sameName: 已存在相同名称的数据卷
+    tooSmall: 该数据卷容量小于容量请求
+    exceedCap: 超过上限
+    mountRequired: 添加的数据卷需挂载到容器
+
+env: 环境变量
+# env properties
+envs:
+  key: 键
+  value: 值
+
+service: 服务
+# service properties
+services:
+  name: 服务名
+  serviceType: 服务类型
+  type: 访问类型
+  clusterIP: 集群内访问
+  nodePort: 节点端口访问
+  export: 是否导出
+  signExport: 标记服务是否导出
+  internalService: 内部服务
+  externalService: 外部服务
+  accessPort: 访问端口
+  ports:
+    protocol: 协议
+    targetPort: 容器端口
+    port: 服务端口
+    nodePort: 节点端口
+    hostPort: 主机端口
+    address: 访问地址
+    nodePortTip: 系统自动分配端口
+
+terminal: 终端
+
+log: 日志
+
+# buttons, form titles
+actions:
+  deploy: 新建服务
+  restartApp: 重启应用
+  update: 更新应用
+  updateGrayRelease: 更新灰度发布
+  upgradeGrayRelease: 发布此配置
+  chooseVolumeSource: 选择存储方案
+  chooseCharts: 选择模版
+  chooseChartsRepo: 选择模版组
+  chooseAppFromStore: 从应用商店选择应用
+  chooseAppStore: 从应用商店部署
+  chooseVersion: 选择版本
+  addService: 添加服务端口
+  addVolume: 添加数据卷
+  addEnv: 添加环境变量
+  prevStep: 上一步
+  nextStep: 下一步
+  doneStep: 完成
+  operation: 操作
+  rollback: 回滚
+  rollbackLastVersion: 恢复此前版本
+  addAutoScaler: 开启弹性伸缩
+  updateAutoScaler: 更新配置
+  save: 保存
+  qucikDeploy: 一键部署
+  grayRelease: 创建灰度发布
+  exportImageConfig: 导出镜像配置
+  updateReplica: 修改实例数
+  updateImages: 更新镜像
+  updateAppConfig: 修改配置
+  delCurrentVersion: 删除当前版本
+  delCurrentChart: 删除当前模版
+  editChart: 修改模版
+
+pods: 实例
+pod:
+  image: 容器镜像
+  podsCount: 容器组数量
+  podsConfig: 容器组配置
+  podsNetwork: 容器组网络
+  restartCount: 重启次数
+  times: 次
+  runningTime: 运行时长
+  ipAddress: IP 地址
+  status:
+    running: 运行中
+    pending: 部署中
+    error: 异常
+  restart: 重启策略
+  dns: DNS 策略
+  hostname: 主机名
+  subdomain: 子域名
+  termination: 优雅退出时间
+  host:
+    network: 与主机共享
+    net: 与主机共享网络
+    pid: 与主机共享 pid
+    ipc: 与主机共享 ipc
+    yes: 是
+    no: 否
+  tips:
+    fromGrayRelease: 来自灰度发布
+    newest: 最新版本容器组
+
+# messages, placeholders
+tips:
+  envKey: 只能使用英文字母，数字和下划线，不能以数字开头
+  mountFilePath: 请输入合法路径，且不能是根路径
+  nodePortRange: 端口范围必须在 30000 - 32767 之间
+  targetPortRange: 端口范围必须在 0 - 65535 之间
+  uniqServiceName: 集群内访问和节点端口访问以及 Headless Service 的服务名不能重复
+  serviceName: 由小写字母，连字符，数字。以字母开头，以字母或数字结尾，分区内唯一，长度 1 - 63 个字符。
+  termination: 范围 0-360，0 表示立即删除
+  quickDeploy: 只需要一个镜像地址，就可以部署。
+  completeDeploy: 从零开始，一步一步配置信息。
+  chartDeploy: 从模版组选择应用模版，快速部署。
+  storeDeploy: 从应用商店选择应用模版，快速部署。
+  appName: 支持中文和特殊符号，长度限制 2 - 32 个字符。
+  statefulsetsName: 名称长度1-63之间。支持数字、小写字母、连字符“-”，以数字或小写字母作为开头、结尾 。
+  pullMirror: 强制拉取镜像
+  onDeploy: 正在创建服务
+  deploySuccess: 创建成功
+  addSuccess: 应用 ${application} 添加成功！
+  deleteSuccess: 应用 ${name} 删除成功！
+  exportChart: 导出模版
+  deployFromChart: 从模版部署
+  deployQuickly: 快速部署
+  search: 输入关键词进行模糊搜索
+  optional: 选填
+  clusterIP: （集群内部）
+  currentRevision: 当前版本
+  preRevision: 上一版本
+  onRollBack: 正在回滚服务
+  rollBackSuccess: 回滚成功
+  onExportChart: 正在导出模版
+  exportChartSuccess: 导出成功
+  onSaveChart: 正在保存模版
+  saveChartSuccess: 保存成功
+  deleteChart: 正在删除模版
+  deleteChartSuccess: 删除成功
+  onDelApp: 正在删除应用 ${appName}
+  delAppSuccess: 删除应用成功 ${appName}
+  confirmDelApp: 确定删除应用 ${appName}
+  confirmDelDeployment: 确定删除无状态服务 ${appName}
+  confirmDelStatefulsets: 确定删除有状态服务 ${appName}
+  confirmDelJob: 确定删除任务 ${appName}
+  onRestart: 正在重启
+  confirmRestartApp: 确定重启应用 ${appName}
+  confirmRestartDeployment: 确定重启无状态服务 ${appName}
+  confirmRestartStatefulsets: 确定重启有状态服务 ${appName}
+  confirmStopApp: 确定停止应用 ${appName}
+  confirmStopDeployment: 确定停止无状态服务 ${appName}
+  confirmStopStatefulsets: 确定停止有状态服务 ${appName}
+  confirmStartApp: 确定启动应用 ${appName}
+  confirmStartDeployment: 确定启动无状态服务 ${appName}
+  confirmStartStatefulsets: 确定启动有状态服务 ${appName}
+  confirmDelAutoScaler: 确定删除弹性伸缩 ${name}
+  delAutoScalerTip: 删除弹性伸缩不会删除伸缩后的实例。如需恢复配置中初始实例数量，请执行更新操作。
+  confirmCloseAutoScaler: 确定关闭弹性伸缩 ${appName}
+  confirmUpdateTotalApp: 确定全量更新应用 ${appName}
+  confirmRollBack: 确定回滚 ${appName} 到版本 ${version} 吗
+  containerList: 容器列表
+  selectPod: 请选择容器组
+  noVolumes: 暂无绑定数据卷
+  fetchinglogBottom: 实时获取中
+  fetchinglogStart: 正在获取日志
+  appsOfPartition: 分区下所有应用
+  noApplicaiton: 暂无服务
+  openMonitor: 是否开启监控
+  useExporter: 是否使用监控探针
+  configCPUAndMemory: 可配置 CPU 和内存资源请求
+  mirror: 镜像拉取策略，默认为 Always, 关闭则设置为 IfNotPresent
+  imagePullPolicyHelp: IfNotPresent 策略表示当 pod 被调度的节点上已存在该镜像时，不再重新拉取镜像。如果需要pod每次重调度都重新拉取镜像请把策略设置为 Always。
+  grayReleasing: 正在创建灰度发布
+  grayReleaseSuccess: 创建成功
+  grayReleaseUpdating: 正在更新灰度发布
+  confirmGrayRelease: 确定发布 ${subApp}
+  grayReleaseUpdated: 更新成功
+  grayReleaseDeleting: 正在删除灰度发布
+  confirmDelGrayRelease: 确定删除服务 ${appName} 的灰度发布
+  grayReleaseDeleted: 删除成功
+  confirmCancelGrayDeploy: 确定取消 ${appName} 应用的灰度部署
+  confirmDelSubGrayRelease: 确定删除应用 ${appName} 子应用 ${subApp} 的灰度发布
+  upgradeGrayRelease: 正在发布新版
+  upgradeGrayReleaseSuccess: 发布成功
+  updateApplicationConfig: 正在更新应用配置
+  updateApplicationConfigSuccess: 更新成功
+  deletingApplication: 正在删除应用
+  deleteApplicationSuccess: 删除成功
+  updatingResource: 正在更新 ${resource}
+  updateResourceSuccess: 更新 ${resource} 成功
+  addImageToQueueSuccess: 镜像已成功添加至导出队列！
+  onCreateGrayRelease: ${application} 的子应用 ${subapp} 正在创建灰度发布
+  createGrayReleaseSuccess: ${application} 的子应用 ${subapp} 创建灰度发布成功
+  onUpdateGrayRelease: 应用 ${application} 的子应用 ${subapp} 正在更新灰度发布
+  updateGrayReleaseSuccess: 应用 ${application} 的子应用 ${subapp} 更新灰度发布成功
+  onDeleteGrayRelease: 应用 ${application} 的子应用 ${subapp} 正在删除灰度发布
+  deleteGrayReleaseSuccess: 应用 ${application} 的子应用 ${subapp} 删除灰度发布成功
+  grayReleaseUpdate: 应用 ${application} 的子应用 ${subapp} 正在发布新版
+  grayReleaseUpdateSuccess: 应用 ${application} 的子应用 ${subapp} 发布新版成功
+  serviceNamePlaceholder: 服务的名称
+  ok: 运行中
+  update: 正在更新
+  warn: 运行失败
+  confirmDelTag: 确定删除标签 ${tag}
+  configError: 当前配置无法正常运行 ${msg}
+  unKnown: 未知状态
+  overdue: 过期应用
+  podsConfigEmpty: 容器组配置为空
+  controllerConfigEmpty: 控制器配置为空
+  noController: 该版本模版没有配置控制器
+  fromAppStore: 来自应用商店
+  statefulAutoScaler: 有状态实例不可添加弹性伸缩
+  statefulGrayRelease: 有状态实例不可添加弹性伸缩
+  status:
+    success: 运行正常
+    error: 运行异常
+    pending: 部署中
+  notfound: 服务不存在
+  backToAppList: 返回服务列表
+  clusterDNS: 只使用集群配置的 DNS
+  nodeDNS: 只使用容器组运行的节点的 DNS
+  clusterWithNodeDNS: 同时使用集群配置的 DNS 和节点的 DNS，优先使用集群配置的 DNS，如果容器组 （Pod）使用了 Hostnetwork，推荐使用这个模式
+  replicaDenyInAutoScaler: 服务处于弹性伸缩中，实例数以弹性伸缩的结果为准。修改实例数不会生效。
+  configMapReadOnly: 服务不可修改配置文件，否则可能导致容器重启。
+validates:
+  addStorageFirst: 请先添加存储
+  updateVersion: 请更新版本
+  updateWeight: 请更新权重
+  weightNumber: 请输入 1 - 99 范围内的正整数
+  isRequired: ${name} 不能为空
+  spaceName: 以大小写字母、数字开头，可以包含大小写字母、数字、短横线和下划线
+  required:
+    application: 请填写应用名称
+    chart: 请选择模版
+    source:class: 请选择存储方案
+    source:target: 请选择已有数据卷
+    mount:path: 请填写容器内路径
+    storage: 请填写容量
+    containerName: 请填写容器名称
+    image: 请填写镜像地址
+    service:name: 请填写服务名称
+    service:type: 请选择服务类型
+    port: 请填写端口
+    autoScaler:
+      cpu: CPU 利用率阈值不能为空'
+  portConflict: 端口冲突
+  nodePort: 请输入 30000~32767 内的数字
+  positiveInt: ${name}必须为正整数
+  smGtLg: ${lg}必须大于${sm}
+  version: '版本号由三个数字组成，如: 1.1.1'
+  versionUpdate: 更新时必须修改版本号
+  quotaLimit: 配额请求不能超过上限
+  imageEmpty: 镜像不能为空
+  imageUserNameEmpty: 镜像仓库用户名不能为空
+  imagePasswordEmpty: 镜像仓库密码不能为空
+
+# revision properties
+revision: 版本
+revisions:
+  time: 时间
+
+# events properties
+event: 事件
+events:
+  reason: 动作
+  message: 事件内容
+  timestamp: 发生时间
+  count: ${time} 内发生了 ${count} 次
+  involvedObject:
+    kind: 资源类型
+
+autoScaler: 弹性伸缩
+autoScalers:
+  minReplicas: 最小副本数量
+  maxReplicas: 最大副本数量
+  currentReplicas: 当前副本数量
+  desiredReplicas: 期望副本数量
+  totalReplicas: 综合期望副本数
+  cpu: CPU 利用率阈值
+  currentCPU: 当前 CPU 利用率阈值
+  have: 已有弹性伸缩
+  target: 参考指标
+  currentTarget: 当前指标
+  targetChart: 参考指标图例
+  unit: 单位
+  tips:
+    create: 正在创建弹性伸缩
+    createSuccess: 创建成功
+    update: 正在为更新弹性伸缩
+    updateSuccess: 更新成功
+    onDelete: 正在删除弹性伸缩
+    inputThreshold: 输入阈值
+    deleteSuccess: 删除成功
+  metric:
+    container_fs_usage: 容器文件系统使用量
+    cpu_usage: CPU 使用量
+    memory_usage: 内存使用量
+chart: 模版
+charts:
+  library: 模版组
+  name: 模版名称
+  version: 模版版本
+  libraryName: 模版组名称
+  description: 模版描述
+  export: 导出模版
+  manifest: 模版详情
+  actions:
+    enterLibraryName: 请输入模版组名称
+    add: 新建模版
+    addLibrary: 新建模版组
+    update: 更新模版
+    select: 选择模版组
+    delete: 删除此模版
+  tips:
+    manageLibrary: 模版组管理
+    description: 添加该模版的描述信息，选填
+    libraryEmpty: 模版组为空
+    readonly: 此模版属于只读模版组, 不可修改
+    enterDescription: 请填写模版描述
+    currentVersion: 当前模版的最新版本为${currentVersion}, 建议向上迭代
+    create: 正在创建模版组
+    createSuccess: 创建成功
+    delete: 正在删除模版组
+    deleteSuccess: 删除成功
+    createChartSuccess: 创建成功
+    deleteChartSuccess: 删除成功
+    confirmDelChart: 确定删除模版 ${chart}
+  validates:
+    libraryEmpty: 模版组不能为空
+    nameEmpty: 模版名不能为空
+    versionEmpty: 版本号不能为空
+    versionWrong: 版本号格式应遵循 SemVer 规范，即 x.y.z，xyz必须为数字
+    descriptionEmpty: 模版描述不能为空
+
+grayRelease: 灰度发布
+grayReleases:
+  status: 状态
+  weight: 权重
+  config: 配置
+
+image:
+  name: 镜像名
+
+exporter: 监控探针
+exporters:
+  config: 监控配置
+  type: 监控类型
+  custom: 自定义
+  exporter: 监控探针
+  probeType: 探针类型
+
+nodeAffinity:
+  title: 亲和性调度
+  tags: 调度标签
+  strategy: 调度策略
+  strategy:nolimit: 不限节点调度
+  strategy:Required: 强制调度
+  strategy:Prefered: 优先调度
+  tips:
+    type:nolimit: 平台调度器会根据每个节点的负载情况，自动为服务选择某个节点。此选项会忽略节点上的调度标签。
+    type:Required: 服务必须运行在特定调度标签的节点上。如果所有节点都没有这些调度标签，服务将无法运行。
+    type:Prefered: 服务优先运行在符合调度标签的节点上。如果所有节点都没有这些调度标签，将启动不限节点调度。
+  validates:
+    tagRequired: 请至少选择一个标签
+
+developerOptions: 开发者选项
+exporterEnv:
+  auth_pass: Mongodb 密码
+  auth_user: Mongodb 用户名
+  mongodb_url: Mongodb 数据库地址
+  redis_port: Redis 端口
+  redis_pass: Redis 密码
+  jmx_port: JMX 连接端口
+
+appStore: 应用商店
+appStores:
+  intro: 应用介绍
+  manifest: 配置信息
+  version: 版本
+  comingSoon: 即将推出
+  type: 类型
+  types:
+    all: 所有类型
+    db: 数据库
+    tool: 工具
+    cache: 缓存
+    middleware: 中间件
+    deeplearning: 深度学习
+    bigdata: 大数据
+    microservice: 微服务
+    other: 其它

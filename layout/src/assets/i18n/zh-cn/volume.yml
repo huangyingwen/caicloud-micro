@@ -1,0 +1,66 @@
+validates:
+  selectCluster: 必须选择一个集群
+  selectPartition: 必须选择一个分区
+  nameEmpty: 数据卷名称不能为空
+  nameWrong: 名称由字母、数字、横杠组成，只能以英文字母开头，不能以横杠开头和结尾
+  storageQuotaEmpty: 容量配额不能为空
+  storageQuotaWrong: 容量配额必须大于等于10，小于等于1000，且是10的倍数
+  storageQuotaPositive: 容量配额必须是正整数
+  selectProgram: 需选择一个已存在的方案
+  serverEmpty: 服务器不能为空
+  pathEmpty: 路径不能为空
+  endpointEmpty: 端点不能为空
+  ipEmpty: ip不能为空
+  storageName: 存储方案的名称不能为空
+tips:
+  selectBuildedAliyun: 选择已建好的阿里云云盘
+  enterIp: 请填写IP地址
+  enterEndPoint: 请填写已存在的端点名
+  selectDeploy: 请先选择部署位置
+  restuser: 开启验证时的授权用户
+  gidMin: 'GlusterFS gid 最小值, 如： 40000'
+  gidMax: 'GlusterFS gid 最大值, 如： 50000'
+  volumetype: 'GlusterFS volume 类型, 如: replicate:3'
+  noCluster: 当前租户没有集群资源！请尽快联系管理员分配！
+  noTenant: 当前用户没有权限，暂时无法使用平台！请尽快联系管理员！
+  enterProgram: 请输入存储方案名称
+  onCreateProgram: 正在创建存储方案
+  createProgramSuccess: 创建成功
+  onDeleteProgram: 正在删除存储方案
+  deleteProgramSuccess: 删除成功
+  onCreate: 正在创建数据卷
+  createSuccess: 创建成功
+  onDelete: 正在删除数据卷
+  deleteSuccess: 删除成功
+  confirmDelYunHardDisk: 确定删除云硬盘 ${name}
+  confirmDel: 确定删除数据卷 ${volume}
+  dataLostHint: ${volume} 数据卷如果已被使用，删除后会导致数据丢失
+actions:
+  createAliyun: 新建阿里云云盘
+  createEndpoint: 创建端点
+  create: 新建数据卷
+  useEndPoint: 使用已有端点
+  createStorage: 新建存储方案
+currentProgram: 现有方案
+aliyun: 阿里云云盘
+server: 服务器
+endpoint: 端点
+path: 路径
+nodeRW: 单节点读写
+nodesRW: 多节点读写
+nodesR: 多节点只读
+deploy: 部署位置
+storageProgram: 存储方案
+RWStrategy: 读写策略
+errorReason: 异常原因
+message: 消息
+notUse: 未被使用
+user: 使用者
+noVolume: 暂无数据卷!
+search: 输入名称模糊搜索
+filter: 过滤
+clear: 清空
+storageType: 存储类型
+programName: 方案名称
+type: 类型
+noStorage: 暂无存储方案

@@ -1,0 +1,168 @@
+# devops-admin error reasons, owner @乐金明 // TODO review
+# 400
+devops:WorkspaceNameError: The length of the space name must be between 2 and 30, and the first character is a letter or number, all letters must be lowercase.
+devops:PipelineNameError: The length of the pipeline name must be between 2 and 30, and the first character is a letter or number, all letters must be lowercase.
+devops:ScmTypeError: The SCM type error, only support gitlab type.
+devops:ScmAuthorityError: There is not permission to operate the SCM.
+devops:BuilderImageMissingError: Missing the build environment image.
+devops:StageMissingError: 'Missing necessary stage ${stage}.'
+devops:StageNotSupportedError: 'The stage ${stage} is not supported, only codeCheckout, unitTest, codeScan, package, imageBuild, integrationTest and imageRelease are supported.'
+devops:ImageReleasePolicyError: 'The image release policy ${policy} is not supported, only Always and IntegrationTestSuccess are supported.'
+devops:ReasonPRNotFound: 'Failed to get pull request, please check if it exists.'
+devops:ReasonCreateWebhookPermissionDenied: 'failed to create webhook of pipeline pipeline-1542177604, please check your account permissions.'
+
+#409
+devops:WorkspaceNameConflict: 'Conflict: the space ${name} already exists.'
+devops:PipelineNameConflict: 'Conflict: the pipeline ${name} already exists.'
+
+# cargo-admin error reasons, owner @李昂
+# 400
+cargo:UrlQueryParamUnexpectedType: param ${param} type should be ${expect} in url query, but got ${actaul}"
+cargo.UrlQueryParamNotFound: "can't find param ${param} in request url query"
+cargo.UrlPathParamNotFound: "can't find param ${param} in request url path"
+cargo.HeaderParamNotFound: "can't find param ${param} in request header"
+cargo.NotAllowedDeletePublicWorkpace: "public workspace can't not be deleted by anyone, because it is very dangerous operation"
+cargo.NotAllowedDeletePublicWorkpaceRepo: 'workspace ${workspace} is public workspace, the repos in public workspace can only be deleted by system-admin tenant'
+cargo.NotAllowedDeletePublicWorkpaceTag: 'workspace ${workspace} is public workspace, the tags in public workspace can only be deleted by system-admin tenant'
+cargo:BadUrl: Url cannot be parsed
+cargo:IpNotAllowed: IP cannot be used as Image address
+cargo:BadScheme: URL only supports https protocol
+cargo:RegistryExisted: The warehouse has been integrated
+cargo:AccessRegistryFailed: Unable to access using the provided account
+cargo:UsedAlready: The warehouse has been integrated into other clusters
+
+#401
+cargo.UnauthenticationFailed: 'Unauthorized'
+
+#403
+cargo:ProjectProtected: 'project ${project} is protected'
+cargo:ProjectHasReplications: 'project ${project} has replication policies defined, please remove them first'
+cargo.OnlySystemTenantAllowed: 'only system-tenant users allowed to create public workspace'
+
+#404
+cargo:ProjectNotExit: '${project} not exist'
+
+#409
+cargo.ContentAlreadyExist: 'conflict: ${content} already exist'
+
+# monitoring-admin error reasons, owner @蔡通 // TODO review
+# 400
+monitoring:QueryRangeErr1: null
+monitoring:QueryRangeErr2: null
+
+#403
+monitoring:QueryRangeErr3: null
+
+# logging-admin error reasons, owner @黄智珩 // TODO review
+# 400
+logging:WebSocketHeaderErr1: null
+
+# config-admin error reasons, owner @ 叶嘉雨
+# 400
+# group
+config:group.name.length: The group name can't be longer than 50 characters.
+config:group.name.DNS1123: The group names should only be numbers, lowercase English letters, or "-", must begin and end with alphanumeric characters.
+
+# config
+config:config.type: 'The configuration type is illegal.'
+config:config.name.length: The configuration name can not be longer than 140 characters.
+config:config.name.DNS1123: The configuration name should only be numbers, lowercase English letters, "-", must begin and end with alphanumeric characters.
+
+# config data
+config:config.data.parseTLS: "The system can't parse TLS certificate."
+config:config.data.length: The configuration can't be empty.
+config:config.data.key: The key can't be empty.
+config:config.data.value: The value can't be empty.
+config:config.data.size: The configuration size can't exceed 800KB.
+config:removeConfig: The configuration has the resources to be used, can not remove
+
+# 409
+# group
+config:group.name.exists: 'The group name already exists.'
+config:removeGroup: The group has config that being referenced, can not be removed
+
+# config
+config:config.name.exists: 'The configuration name already exists.'
+
+# storage
+storage.resource:BadPageStartOrLimit: 'Bad page start or limit'
+storage.resource:BadRequestBody: 'Bad request body'
+storage.resource:TypeNotFound: 'Storage type not found'
+storage.resource:ServiceStatusNotActive: 'Storage service status not active'
+storage.resource:ObjectAlreadyExist: 'Object already exist'
+storage.resource:ObjectNotFound: 'Object not found'
+storage.resource:ObjectBadName: 'Object name in bad format'
+storage.resource:StorageSecretNotFound: 'Storage secret not found'
+storage.resource:MissParameter: 'Miss parameter'
+storage.resource:ClusterNotFound: 'Cluster not found'
+storage.resource:ClassStatusNotActive: 'Storage class status not active'
+storage.resource:MapParameterNotMatch: 'Map parameter not match'
+storage.resource:ClassNameTooLong: 'Storage class name too long'
+storage.resource:SystemObject: 'System object'
+storage.resource:ObjectInSystemNamespace: 'Object in system namespace'
+
+storage.resource:AuthFailed: 'Auth failed'
+storage.resource:InternalServerError: 'Internal server error'
+storage.resource:ClusterBadConfig: 'Cluster bad config'
+
+storage.resource:QuotaNotComplete: 'Quota not complete'
+storage.resource:QuotaExceeded: 'Quota exceeded'
+
+# cluster
+cluster.resource:BadPageStartOrLimit: Paging params are incorrect
+cluster.resource:BadRequestBody: Bad Request body
+cluster.resource:ObjectAlreadyExist: 'Conflict: Machine already exists'
+cluster.resource:ObjectNotFound: Oject is not found
+cluster.resource:Conflict: There's conflict in the version
+cluster.resource:MissParameter: Parameters are missing
+cluster.resource:ClusterNotFound: Cluster is not found
+cluster.resource:BadTagsFormat: 'Mal-formated tag'
+cluster.resource:MachinesAllNotBind: Adding machine to the cluster is failed
+cluster.resource:MachinesAllNotUnbind: Remove machine from the cluster are all failed
+cluster.resource:ClusterBindMastersFailed: Adding control cluster failed
+cluster.resource:ClusterMastersNodesDuplicate: Master node and normal are duplicated
+cluster.resource:AuthFailed: Athentication failed
+cluster.resource:InternalServerError: Internal server error
+cluster.resource:ClusterBadConfig: Cluster cluster error
+cluster.resource:ClusterNotReady: Cluster is not ready
+cluster.resource:ClusterNotForBind: Cluster is not abled to add machine
+cluster.resource:ClusterBadAuth: Cluster bad authentication
+cluster.resource:ClusterNotFailed: Machine status is not failed
+cluster.resource:MachineNotOffline: Machine status is not offlined
+cluster.resource:MachineNotInited: Mahicne is not inited
+cluster.resource:MachineNotReady: Machine is not ready yet
+cluster.resource:MachineNotForRemove: Machine is not allowed to remove
+cluster.resource:MachineAgentNotFound: Machine agent is not started
+cluster.resource:DelCtrlClusterNotAllowed: Control cluster is not allowed to delete
+cluster.resource:TagsKeyDuplicate: Tags keys are deplicated
+
+# notify
+# 409
+notification:DuplicatedContactName: 'Conflict: ${name} already exist'
+notification:DuplicatedContactGroupName: 'Conflict: ${name} already exist'
+notifiaction:CannotCreateSMTPConfig: Save falied, please try again later.
+notifiaction:CannotUpdateSMTPConfig: Save falied, please try again later.
+
+# lb
+lb:Ingress:Conflict: Domain name cannot be duplicate！
+lb:L4Rule:Port:ExportedTwice: The port ${port} on service ${service} has been used!
+lb:L4Rule:Port:Conflict: The external port has been used!
+lb:PortRange:Conflict: The port range [${start}, ${end}] has been used!
+lb:PortRange:Error: Error port range!
+lb:L7Rule:Forbidden: You don't have permission to access this http/https rule!
+lb:LoadBalancer:Forbidden: You don't have permission to access this loadbalancer！
+lb:L4Rule:Port:NotFound: Port not found!
+lb:L4Rule:Invalid: Invalid tcp/udp rule!
+lb:L7Rule:Invalid: Invalid http/https rule!
+lb:VIP:Conflict: The VIP has been used!
+lb:InternalServerError: Internal server error!
+lb:Forbidden: You don't have permission to do this！
+lb:BadRequest: Bad request!
+lb:LoadBalancer:Invalid: Wrong data format!
+
+# kubernetes
+Kubernetes:ingresses:AlreadyExists: The ingress name has been used!
+Kubernetes:Ingress:Invalid: Invalid domain name!
+
+# tenant
+tenant:ExceededRequest: Resource could be removed or exceed the limit allocated!

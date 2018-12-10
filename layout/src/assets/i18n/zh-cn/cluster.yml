@@ -1,0 +1,119 @@
+# cluster properties
+name: 集群名称
+resources: 集群资源
+select: 选择集群
+creationTime: 创建时间
+availableQuotas: 可用配额
+userdResources: 已用资源
+appStatistics: 应用统计
+overview: 概览
+allTenants: 全部租户
+allClusters: 全部集群
+appNum: 应用数量
+monitor: 监控
+pod: 节点
+operationRecord: 操作记录
+event: 事件
+applicationPartition: 应用分区
+tag: 标签
+CPURequest: CPU 请求
+CPULimit: CPU 上限
+storageRequest: 内存请求
+storageLimit: 内存上限
+ram: 内存
+runningStatus: 运行状态
+clusterId: 集群标识
+basicInfo: 基本信息
+networkScheme: 网络方案
+cloudService: 云服务
+controlNode: 控制节点
+workNode: 工作节点
+highAvailability: 高可用
+action: 动作
+actionRole: 操作者
+time: 时间
+systemPartiton: 系统分区
+scalingGroup: 伸缩组
+actions:
+  add: 新建
+  appStatistics: 应用统计
+  addNodes: 添加节点
+  modifyName: 修改名称
+  retry: 重试
+  createPartition: 新建分区
+tips:
+  disable: 集群资源暂未启用，请联系管理员
+  enable: 给租户分配集群资源，需要先在租户内启用此集群
+  creating: 集群正在创建中
+  closing: 正在关闭集群资源中
+  failedText: 集群部署失败
+  notReadyText: 集群未就绪
+  deletingClusterText: 集群正在删除中
+  addingText: 集群正在添加主机
+  deletingText: 集群正在删除主机
+  stopText: 集群未在运行中
+  partitionUsage: 分区已使用
+  systemUsage: 系统已使用
+  availableQuotasText: 当前可被用户管理应用的调度资源总和。注：默认控制节点所在主机不纳入可调度资源
+  usedResourcesText: 集群内已使用的物理资源
+  onCreate: 正在创建集群
+  createSuccess: 创建集群成功
+  removeFromTeamSuccess: 解除绑定成功
+  applyToClusterSuccess: 加入成功
+  selectProvider: 选择基础服务提供商
+  editOverConfigSuccess: 超用配置修改成功！
+  onSetAlert: 正在设置阈值告警
+  setAlertSuccess: 阈值告警设置成功！
+  closeAlertSuccess: 关闭阈值告警成功
+  selectClusterAndPartition: 请选择集群、分区
+  confirmDelete: 确定删除集群 ${name} 吗
+  failed: 部署失败
+  success: 部署成功
+  scalingUp: 正在添加主机
+  scalingDown: 正在删除主机
+  used: 已使用
+  unused: 未使用
+  unavailable: 不可用
+  sysRequest: 系统请求
+  userRequest: 用户请求
+  sysLimit: 系统上限
+  userLimit: 用户上限
+  availableLeft: 剩余可用
+  dimention:tenant: 按租户维度
+  dimention:cluster: 按集群维度
+  seeErrorLog: 错误信息请查看日志
+  resolveArtificial: 请联系运维人员解决
+  seeLog: 查看日志
+  deletingTip: 集群删除大约需要 10 分钟左右，请耐心等待
+  installingTip: 集群部署大约需要 20 分钟左右，请耐心等待
+healthCheck:
+  healthCheck: 健康检查
+  component: 组件
+  time: 检查时间
+  status: 健康状态
+detail:
+  physicalResource: 物理资源
+  physicalResourceDesc: 集群实际拥有的机器资源
+  logicalResource: 逻辑资源
+  logicalResourceDesc: 集群超卖后虚拟的可分配资源, 不受集群运行状态影响
+highAvailableStatus:
+  open: 打开
+  close: 关闭
+
+status:
+  ready: 正在运行
+  failed: 部署失败
+  deleting: 正在删除
+  installing: 正在部署
+  notReady: 未就绪
+statistics:
+  node: 节点
+  app: 应用
+  containerGroup: 容器组
+  tenant: 租户
+menuConfirm:
+  confirmDelete: 确定删除集群 ${name} 吗
+  deleteTips1: 该集群下的所有分区、 应用、 节点、 负载均衡、 存储方案都会被删除
+  deleteTips2: 集群下所有运行的服务、业务都会被删除
+  deleteTips3: 删除后不可恢复, 请慎重操作
+  inputNameAgain: 请再次输入集群名称

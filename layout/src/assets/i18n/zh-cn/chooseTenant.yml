@@ -1,0 +1,10 @@
+# buttons, form titles
+actions:
+  userEntrance: 使用者入口
+  adminEntrance: 管理员入口
+  enter: 开始使用
+
+# messages, placeholders, tips
+tips:
+  enterAdminPlatformSuccess: 正在进入系统管理平台
+  enterUserPlatformSuccess: 正在进入用户平台

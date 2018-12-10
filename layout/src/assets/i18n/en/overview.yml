@@ -1,0 +1,50 @@
+title: Overview
+alert:
+  record: Alert Record
+  time: Time
+  tip: Alarming in the last 10 minutes
+  total: Total
+  unit: Items
+  statistics: Alert Statistics
+platform:
+  team: Team
+  user: User
+  header: Platform Info
+cargo:
+  header: Cargo Statistics
+kubernetes:
+  header: Kubernetes Component Status
+cluster:
+  header: Cluster Component Status
+audit:
+  header: User Operation Audit
+loadbalance:
+  out: Outbound
+  in: Inbound
+  nomal: Running normally in nearly 30 minutes
+  error: Abnormal
+  tip: Nearly 30 minutes
+  header: Load Balancing Statistics
+  tag: Build In
+storage:
+  used: Allocated
+  volumeUsed: Allocated Capacity
+  header: Storage Statistics
+node:
+  percent: Percent
+  header: Node Statistics
+  tip: TOP5 CPU high load node
+clusterInfo:
+  logicalResourceSystemRequest: Logical resource system request
+  logicalResourceSystemCap: Logical resource system cap
+ci:
+  header: Ci Statistics
+  recent: Recent
+  tip: pipeline group execution record
+app:
+  header: Application Statistics
+  running: Running
+common:
+  unit: Item
+status:
+  offline: Offline

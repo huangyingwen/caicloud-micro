@@ -1,0 +1,61 @@
+filter:
+  allTenants: 全部租户
+  allUsers: 全部用户
+  allResourcesType: 全部资源类型
+  allOperationResult: 全部操作结果
+  success: 成功
+  failure: 失败
+  search: 查询
+grid:
+  tenant: 租户
+  user: 用户名
+  operationType: 操作类型
+  operationResult: 操作结果
+  resourceType: 资源类型
+  resourceName: 资源名称
+  time: 时间
+  detail: 审计日志详情
+detail:
+  startTime: 开始时间
+  endTime: 结束时间
+  submitData: 提交数据
+  responseData: 返回数据
+  modifyContent: 修改内容
+optype:
+  # App
+  ApplicationRollback: 应用回滚
+  ApplicationExport: 应用导出
+  # Cluster
+  CreateClusterRetry: 重试创建集群
+  UpdateClusterDisplayName: 更新集群名
+  ClusterMachineBind: 绑定主机
+  ClusterMachineUnbind: 解绑主机
+  ClusterMachineOnline: 上线主机
+  ClusterMachineOffline: 下线主机
+  BulkCreateMachine: 批量创建主机
+  BulkDeleteMachine: 批量删除主机
+  BulkCreateMachineFromFile: 批量从文件创建主机
+  SetMachineTag: 设置主机标签
+  UpdateMachineAuth: 设置主机认证信息
+  ClusterNodeUnbind: 解绑节点
+  ClusterNodeOnline: 上线节点
+  ClusterNodeOffline: 下线节点
+  SetNodeTag: 设置节点标签
+  # Config
+  CreateNewConfigVersion: 新建配置版本
+  # Devops
+  ModifyBasicConfig: 修改配置
+  CacheCleanup: 清理缓存
+  # License
+  UpdateActivitionCode: 更新激活码
+  # LB
+  CreateLBRule: 创建负载均衡规则
+  UpdateLBRule: 更新负载均衡规则
+  DeleteLBRule: 删除负载均衡规则
+  AssignLBToTenant: 为租户分配负载均衡器
+  EditTenantPortRange: 修改租户负载均衡配置
+  BulkEditTenantLBAdmission: 批量修改租户负载均衡权限
+  # Notification
+  AddContacts: 组内新增联系人
+  RemoveContacts: 组内删除联系人
+

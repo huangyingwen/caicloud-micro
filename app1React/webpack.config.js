@@ -10,7 +10,7 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "release"),
     libraryTarget: "umd",
-    library: "reactApp"
+    library: "reactApp1"
   },
 
   module: {
@@ -36,8 +36,7 @@ module.exports = {
 
   externals: {
     react: "react",
-    "react-dom": "react-dom",
-    "redux-form": "redux-form"
+    "react-dom": "react-dom"
   },
 
   mode: "development",

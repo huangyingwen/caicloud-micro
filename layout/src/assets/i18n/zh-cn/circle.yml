@@ -1,0 +1,13 @@
+# messages, placeholders
+tips:
+  addCodeBaseSuccess: 代码库 ${name} 新增成功！
+  deleteCodeBaseSuccess: 代码库删除成功！
+  deleteCodeBaseDenied: 此代码库被用于工程中，暂无法删除
+  accountCanceled: ${o} 账户已注销
+  configCodeBaseSuccess: 代码库配置设置成功
+  addVersionSuccess: 版本 ${name} 新增成功！
+  cancelVersionBuildSuccess: 版本构建取消成功！
+  createDeployPlanSuccess: 部署方案创建成功！
+  deleteDeployPlanSuccess: 部署方案删除成功！
+  configResourceSuccess: 资源配置设置成功
+  editCodeBaseTypeSuccess: "代码库${type === 'dockerfile' ? 'dockerfile' : 'yaml'}成功"

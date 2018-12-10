@@ -1,0 +1,142 @@
+#altering properties
+noticeGroup: 通知组
+noticeName: 通知名称
+noticeMethod: 通知方式
+noticeAddress: 通知地址
+noticeGroupBy: 通知分组
+key: 键
+value: 阈值值
+item: 条
+alertInfo: 报警信息
+alertRule: 报警规则
+alertObj: 报警对象
+alertValue: 报警值
+alertTime: 报警时间
+alertTarget: 报警指标
+alertNotice: 报警通知
+alertLabel: 报警标签
+alertState: 报警状态
+alertCondition: 报警条件
+alertStrategyList: 报警策略列表
+todoAlert: 待处理报警
+alertHis: 报警记录
+alertHistory: 历史报警记录
+handleTime: 处理时间
+creatTime: 创建时间
+target: 指标
+threshold: 阈值
+condition: 阈值条件
+eventList: 事件列表
+time: 时间
+state: 状态
+operator: 操作人
+strategy: 策略
+monitorObj: 监控对象
+# buttons, form titles
+actions:
+  editContacts: 修改联系人
+  editContactsInfo: 修改联系人信息
+  emailAddress: 邮箱地址
+  addContacts: 添加新的联系人
+  address: 名称
+  editName: 编辑名称
+  noticeType: 通知类型
+  addNoticeAddress: 新建通知地址
+  addContactAddress: 添加联系地址
+  addGroup: 新建分组
+  editGroup: 修改分组
+  addNoticeGroup: 新建通知组
+  search: 搜索
+  newAddress: 新地址
+  saveAndBack: 保存并返回
+  modify: 修改
+  addLabel: 添加标签
+  removeFromGroup: 从通知组中移除
+  showMore: 展开更多
+  hide: 收起
+  addImmediately: 立即添加
+  selectContactsAddress: 选择联系地址
+  firing: 正在报警
+  noAlert: 当前无报警
+  inactive: 未触发
+  resolved: 已解决
+  query: 查询
+  addAlertStrategy: 新建
+  greaterThan: 大于
+  equalTo: 等于
+  lessThan: 小于
+  duration: 阈值持续时间
+  selectNoticeGroup: 选择通知分组
+  ruleDetail: 查看规则详情
+  belongToGroup: 改变所属分组
+# messages, placeholders
+validation:
+  contactsNameEmpty: 联系人名称不能为空！
+  emailAddressEmpty: 邮箱地址不能为空
+  emailAddressWrong: 邮箱地址格式不正确
+  slackApiUrlEmpty: API url 不能为空
+  slackApiUrlWrong: API url 必须以 http:// 或 https:// 开始
+  webhookUrlEmpty: url 不能为空
+  webhookUrlWrong: url 必须以 http:// 或 https:// 开始
+  groupNameEmpty: 分组名称不能为空
+  labelNameEmpty: 标签名称不能为空
+  labelNameWrong: 标签名称由数字、字母和下划线组成，必须以字母开头
+  labelValueEmpty: 标签值不能为空
+  strategyNameEmpty: 请填写策略名称
+  strategyNameWrong: 策略名称由数字和字母组成，必须以字母开头
+  selectAlertId: 请选择报警指标
+  selectCluster: 请选择集群
+  selectPartition: 请选择分区
+  selectNode: 请选择主机
+  selectApp: 请选择应用
+  conditionValEmpty: 阈值不能为空
+  groups: 请选择通知分组
+tips:
+  webhookUrlPlaceholder: 输入 Webhook url 地址
+  emailAddressPlaceholder: 输入邮箱地址
+  addressPlaceholder: 通知地址名称
+  contactsEmpty: 暂无联系人，请先添加联系人
+  addressNotFound: 没有找到联系地址!
+  addressEmpty: 暂无可选联系地址，请添加新的联系地址。
+  addressEmptyCurrent: 当前暂无联系地址,
+  groupNamePlaceholder: 填写分组名称
+  alertStrategyNamePlaceholder: 请输入报警策略名称
+  closed: 已关闭
+  mute: 静音
+  spaceFull: 磁盘空间利用率达到97%
+  spaceCloseToFull: 磁盘空间利用率(%)最大值 >= 80
+  solvedTime: 解决时间：
+  noMatchGroup: 无匹配的分组
+  selectGroup: 请选择分组
+  labelMatchGroup: 标签匹配分组
+  autoMatchGroup: 根据已选择分组的标签，系统会自动匹配上新的分组
+  alertAutoTaged: 每条报警会自动打上以上标签，这些标签目前来源于已选择的通知分组
+  noNoticeGroup: 暂无通知分组
+  mustHaveLabel: 选择的分组必须要有标签，不能同时选择有相同标签名，但不同标签值的分组。
+  deletedApplication: 已删除的应用，无法查看详情
+  deletedRule: 已删除的规则，无法查看详情
+  monitorApplicationName: 集群：${clusterName} 分区：${namespace} 应用：${name}
+  monitorNodeName: 集群：${clusterName} 主机：${name}
+  monitorPartitionName: 集群：${clusterName} 分区：${namespace}
+  monitorObjHadRemove: 监控对象已经被删除，无法查看
+  creatingAlertStrategy: 正在创建报警策略
+  addAlertStrategySuccess: 新建成功
+  deletingStrategy: 正在删除策略
+  deleteAlertStrategySuccess: 删除成功
+  deletingContactsGroup: 正在删除联系人组
+  deleteContactsGroupSuccess: 删除成功
+  addSuccess: 添加成功
+  deleteSuccess: 删除成功
+  contactsDeleted: 联系人已删除
+  closeConfirm: 确定关闭 ${name} 的阈值告警
+  confirmDelRule: 确定删除策略 ${rule}
+  confirmDelGroup:  确定删除分组 ${name}
+  confirmAddressRemove: 确定从 ${name} 分组移除 ${address}
+  confirmDelAddress: 确定删除联系人 ${name}
+  delAddressHint: 联系人会被删除，不可恢复
+  confirmDelTag: 确定删除标签 ${tag}
+  confirmAddContactToGroup: 确定添加该通知地址至通知组 ${name}
+  addContactToGroupHint: 将通知地址 ${name} 添加至通知组 ${group}
+  delContactFromGroupConfirm: 确定从通知组 ${name} 删除该通知地址
+  delContactFromGroupHint: 将通知地址 ${name} 从通知组 ${group} 删除
+  searchPlaceholder: 输入名称搜索

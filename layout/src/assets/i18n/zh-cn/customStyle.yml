@@ -1,0 +1,25 @@
+
+name: 外观定制
+form: 
+  title: 平台信息定制化。可以设置平台的名称和图标，图标支持 jpg / jpeg / png / gif 格式（推荐 png 格式），文件大小 2 MB 以内。
+  platformName: 平台名称
+  companyName: 公司名称
+  loginLogo: 登录界面图标
+  navBarLogoExpand: 导航栏图标(展开)
+  navBarLogoShrink: 导航栏图标(收缩)
+  browserLogo: 浏览器图标
+  resetSetting: 恢复默认设置
+  action:
+    setSuccessfully: 保存成功
+    setFailed: 保存失败
+  upload:
+    warn: 仅可上传 2M 以内文件，请重试！
+    uploadFail: 上传失败,请重试
+    uploadSuccess: 已上传
+    clickReplaceIcon: 替换
+    loginLogoTip: 用于显示在登录界面，建议尺寸
+    navBarLogo: 用于显示在左侧导航栏，建议尺寸
+    browserLogoTip: 用于显示在浏览器标签页，建议尺寸
+  valid:
+    platformName: 平台名称仅支持中文，英文，数字，横杠和下划线
+    companyName: 公司名称仅支持中文，英文，数字，横杠和下划线

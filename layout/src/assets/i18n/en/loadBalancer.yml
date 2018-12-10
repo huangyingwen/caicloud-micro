@@ -1,0 +1,149 @@
+name: name
+lb:
+  update: Edit
+  rr: Round Robin
+  lc: Least Connections
+  lblc: Locality-Based Least Connections
+  dh: Destination Hashing
+  sh: Source Hashing
+  cluster: Cluster
+  visitIP: Access IP
+  arithmetic: Algorithm
+  limitResource: Resource used by antiProxy
+  whiteList: Whitelist
+  limitZone: Flow object control
+  clientIP: Client IP
+  domain: Domain name
+  status: Status
+  usable: Available
+  useless: Unavailable
+  node: Node
+  nodeNumber: The number of nodes
+  nodeCount: The number of nodes
+  reason: The reason
+  providor: Provider
+  replicas: Replicas
+  proxy: Proxy
+  resource: Quota
+  cpuLimit: CPU limit
+  cpuRequest: CPU request
+  memoryLimit: Memory limit
+  memoryRequest: Memory request
+  advanced: Advanced
+  whiteListClosed: Unopened
+  createTime: Create time
+  desc: Description
+  updateTime: Update time
+  antiProxy: Reverse proxy
+  networkIn: Network（in）
+  networkOut: Network（out）
+  copyName: Name of copy
+  selectable: Selectable
+  selected: Selected
+  subnetMask: Subnet mask
+  recommendQuota: Recommend quota
+  wholeNode: Monopolize node resource
+  mark: Identifier
+  resourceQuota: Resource Quotas
+  manual: Manual management
+ingress:
+  add: Create
+  update: Edit
+  L7: L7 layer protocol
+  L4: L4 layer protocol
+  portRangeOfL4: Port range of L4 layer protocol
+  cert: Certificate
+  lb: LoadBalancer
+  protocol: Protocol
+  partition: Partition
+  name: Rule name
+  domain: Domain
+  path: Path
+  port: External port
+  application: Application
+  service: Service
+  servicePort: Service port
+  visitAddress: Visit address
+  L4PortRange: Port range
+  unlimited: Unlimited
+  passthrough: SSL Passthrough
+  enableCors: Enable CORS
+  limitConnections: Limit connections
+  clientDomain: Client Domain
+  ip: Client IP
+  limitRps: Limit rps
+  whitelist: Whitelist
+  forceSSLRedirect: Force SSL Redirect
+  secureBackends: Secure backends
+actions:
+  openManual: Already open manual
+  moreDetail: Learn more
+  addWhiteList: Add a white list
+  position: Deployment location
+  baseInfo: Basic Information
+  nodeSelect: Select a node
+  advanced: Advanced options
+  service: Distribution service
+  addService: Add a distribution service
+  lbList: Loadbalancer list in the same cluster
+  config: Configuration
+  configInfo: Config info
+  overview: Overview
+  rule: Rule
+  userMonitor: User monitoring
+  systemMonitor: System monitoring
+  updateIngress: Update the rule
+  removeIngress: Delete the rule
+tips:
+  search: Enter name and start fuzzy filter
+  addressableIp: Only IP in the list can access the loadbalancer and the IPs only take effect for seven level ingress.
+  ingressWhiteList: The list will override the global white list
+  notExitNodes: The selected ${nodes} node does not exist in the currently available nodes list. You should select other available nodes to update loadbalancer.
+  noNodes: No node information
+  empty: No content matches the search condition
+  notExitApplication: Application ${appName} no longer exists. Please select another application again.
+  portPlaceholder: the available port range is ${port.start} - ${port.end}
+  noIngress: No rules now
+  vip: virtual IP
+  limitZone: It will influence flow controll in ingress. It can determine the flow controll method, IP or domain name
+  wholeNode: Using this option, it will take up the resources of the entire node, causing other applications not to run on the node
+  onCreate: Creating loadbalancer
+  addSuccess: Created successfully
+  onUpdate: Updating loadbalancer
+  updateSuccess: Updated successfully
+  onDelete: Deleting loadbalancer
+  deleteSuccess: Deleted successfully
+  onUpdateOrAddRule: "${update ? 'Updating': 'Adding'} rules"
+  updateOrAddRuleSuccess: "${update ? 'Updated': 'Added'} successfully"
+  deleteRuleSuccess: Deleted successfully
+  confirmDelLoadBalancer: Are you sure to delete ${name}
+  willDelAllLoadBalancer: All rules belonging to the loadbalancer will be deleted
+  releaseNodeResource: Release the occupied node resource for scheduling
+  confirmDelRule: Are you sure to delete the rule ${rule}
+  confirmDelCertificate: Are you sure to delete the certificate ${name}
+  confirmDelPlan: Are you sure to delete the deployment plan ${plan}
+  confirmDelCircle: Are you sure to delete the codebase ${circle}
+  confirmDelProject: Are you sure to delete item ${proName}
+  confirmRebuild: Are you sure to build the mirror again
+  sslTip: Pass SSL certificate through to back-end services. (This option invalidates all the other available L7 layer's options)
+  limitConnections: Number of concurrent connections allowed from a single ${name}
+  limitConnectionsPlaceholder: Custom Limit Connections
+  limitRps: Number of connections that may be accepted from a given ${name} each second
+  limitRpsPlaceholder: Custom Maximum connections
+  forceSSLRedirect: Enforce redirect (301) a HTTP request to HTTPS
+  secureBackendTip: By default PROXY uses http to reach the services. Adding this option changes the protocol to https
+validate:
+  name: Be composed of the letters, numbers, rails, can only begin with English letters, can not start and end with a rail
+  required: Required
+  ip: IP can not be empty
+  ipError: The IP address is incorrect
+  cidrs: The valid range of CIDRs' the prefix length 0-32
+  number: Please input number
+  node: Node can not be empty
+  noEmpty: ${name} can not be empty
+  ingressName: The rule name consists of lowercase letters, numbers, rails, can only begin with an English letter, can not start and end with a rail
+  ingressUrlError: Rule path format does not conform to specifications e.g. mydir.com
+  servicePort: Service port format is illegal
+  limitConnect: The number of restrictions on the connection is required
+  limitRps: The maximum number of requests is required
+  portRange: External port range is ${range}

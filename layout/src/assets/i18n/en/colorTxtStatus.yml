@@ -1,0 +1,112 @@
+# cluster actionsMap
+clusterAction:
+  ClusterCreate: Create
+  ClusterDelete: Delete
+  ClusterCreateRetry: Retry
+  ClusterUpdateName: Rename
+  ClusterMachinesBind: Machine Bind
+  ClusterMachinesUnbind: Machine Unbind
+  ClusterMachineOffline: Machine Offline
+  ClusterMachineOnline: Machine Online
+
+# machine actionsMap
+machineAction:
+  ClusterMachinesBind: Bind Cluster
+  ClusterMachinesUnbind: Unbind Cluster
+  ClusterMachineOffline: Offline
+  ClusterMachineOnline: Online
+  MachineDelete: Delete
+  MachineCreate: Create
+  MachineUpdateAuth: Modify
+
+# posStatus
+podsStatus:
+  Pending: Pending
+  Running: Running
+  Succeeded: Succeeded
+  Failed: Failed
+  Unknown: Unknown
+
+# tenants
+tenantStatus:
+  Deleting: Deleting
+
+# cluster detail Event tab Status
+clusterEventsAction:
+  ClusterNew: ClusterNew
+  ClusterInstallMaster: ClusterInstallMaster
+  ClusterInstallMasterFailed: ClusterInstallMasterFailed
+  ClusterInstallAddon: ClusterInstallAddon
+  ClusterInstallAddonFailed: ClusterInstallAddonFailed
+  ClusterReady: ClusterReady
+  ClusterDeleting: ClusterDeleting
+  ClusterDeletingFailed: ClusterDeletingFailed
+  ClusterMachineBinding: ClusterMachineBinding
+  ClusterMachineBindFailed: ClusterMachineBindFailed
+  ClusterMachineBindDone: ClusterMachineBindDone
+  ClusterMachineUnbinding: ClusterMachineUnbinding
+  ClusterMachineUnbindFailed: ClusterMachineUnbindFailed
+  ClusterMachineUnbindDone: ClusterMachineUnbindDone
+  ClusterMachineSetOnline: ClusterMachineSetOnline
+  ClusterMachineSetOnlineFailed: ClusterMachineSetOnlineFailed
+  ClusterMachineSetOnlineDone: ClusterMachineSetOnlineDone
+  ClusterMachineSetOffline: ClusterMachineSetOffline
+  ClusterMachineSetOfflineFailed: ClusterMachineSetOfflineFailed
+  ClusterMachineSetOfflineDone: ClusterMachineSetOfflineDone
+
+# cargo sync tactics record status
+tacticsRecordStatus:
+  Syncing: Syncing
+  Succeeded: Succeeded
+  Failed: Failed
+
+# devops pipeline record status
+pipelineRecord:
+  Pending: Waiting
+  Running: Running
+  Aborted: Aborted
+  Success: Success
+  Failed: Failed
+
+lbStatus:
+  usable: usable
+  unusable: unusable
+
+jobStatus:
+  Pending: Pending
+  Deploying: Deploying
+  Updating: Updating
+  Scaling: Scaling
+  Suspending: Suspending
+  Suspended: Suspended
+  Starting: Starting
+  Restarting: Restarting
+  RollingBack: RollingBack
+  Error: Error
+  Succeeded: Succeeded
+  Failed: Failed
+  Running: Running
+
+appStatus:
+  Pending: Pending
+  Deploying: Deploying
+  Updating: Updating
+  Scaling: Scaling
+  Suspending: Suspending
+  Suspended: Suspended
+  Starting: Starting
+  Restarting: Restarting
+  RollingBack: RollingBack
+  Error: Error
+  Succeeded: Succeeded
+  Failed: Failed
+  Running: Running
+  Preparing: Preparing
+  pod:
+    Normal: Normal
+    Uncertain: Uncertain
+    Abnormal: Abnormal
+  container:
+    Waiting: Waiting
+    Running: Running
+    Terminated: Terminated

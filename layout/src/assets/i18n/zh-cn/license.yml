@@ -1,0 +1,23 @@
+tips:
+  update: 更新许可证限制条件，请点击更新许可证。
+  update1:
+    a: 请前往
+    b: 更新许可证
+
+error:
+  expired: 当前许可证已于 ${date} 过期，Compass平台无法使用
+
+secretKey: 许可证密钥
+platformIdentify: 平台标识码
+check: 校验
+deadline: 截止时间
+connected: 已接入
+accessible: 可接入
+availablePlatform: 可用平台
+accessibleResources: 可接入资源
+updateSuccessful: license 更新成功，请重新登录
+currentLicense: 当前许可证
+latestLicense: 最新许可证
+
+
+

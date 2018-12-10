@@ -3,13 +3,14 @@ const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ContextReplacementPlugin = require("webpack/lib/ContextReplacementPlugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WriteFilePlugin = require("write-file-webpack-plugin");
 
 module.exports = {
   entry: {
     main: "src/portal.js"
   },
   output: {
-    publicPath: "",
+    publicPath: "/public",
     filename: "[name].js",
     path: path.resolve(__dirname, "release")
   },
@@ -29,8 +30,13 @@ module.exports = {
     modules: [__dirname, "node_modules"]
   },
   plugins: [
+    new WriteFilePlugin(),
     CopyWebpackPlugin([
-      { from: path.resolve(__dirname, "src/index.html") },
+      {
+        from: path.resolve(__dirname, "src/index.html"),
+        copyUnmodified: true,
+        force: true
+      },
       { from: path.resolve(__dirname, "src/style.css") },
       {
         from: path.relative(
@@ -45,44 +51,23 @@ module.exports = {
         )
       },
       { from: path.relative(__dirname, "node_modules/requirejs/require.js") }
-    ]),
-    new CleanWebpackPlugin(["release"])
+    ])
+    // new CleanWebpackPlugin(["release"])
   ],
   devtool: "source-map",
   externals: [],
   mode: "development",
   devServer: {
-    contentBase: "./release",
+    contentBase: path.join(__dirname, "./release"),
     historyApiFallback: true,
+    hot: false,
+    inline: false,
     watchOptions: { aggregateTimeout: 300, poll: 1000 },
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers":
         "X-Requested-With, content-type, Authorization"
-    },
-    // Proxy config for development purposes. In production, you would configure you webserver to do something similar.
-    proxy: {
-      "/app1": {
-        target: "http://localhost:9001",
-        pathRewrite: { "^/app1": "" }
-      },
-      "/app2": {
-        target: "http://localhost:9002",
-        pathRewrite: { "^/app2": "" }
-      },
-      "/app3": {
-        target: "http://localhost:9003",
-        pathRewrite: { "^/app3": "" }
-      },
-      "/app4": {
-        target: "http://localhost:9004",
-        pathRewrite: { "^/app4": "" }
-      },
-      "/app5": {
-        target: "http://localhost:9005",
-        pathRewrite: { "^/app5": "" }
-      }
     }
   }
 };

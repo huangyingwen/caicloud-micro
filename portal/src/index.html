@@ -1,62 +1,35 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>caicloud-micro</title>
+    <!-- Static navbar -->
+    <link rel="stylesheet" href="/public/style.css" />
+    <script src="/public/require.js"></script>
+    <script>
+      requirejs.config({
+        baseUrl: "/",
+        paths: {
+          react: "/public/react.development",
+          "react-dom": "/public/react-dom.development"
+        }
+      });
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>caicloud-micro</title>
-	<script src="./react.development.js"></script>
-	<script src="./react-dom.development.js"></script>
-	<script src="require.js"></script>
-	<script>
-		requirejs.config({
-			baseUrl: "/",
-			paths: {
-				"react": "/react.development",
-				"react-dom": "/react-dom.development"
-			},
-		})
-	</script>
-</head>
+      window.token = "<%= token %>";
+      window.uid = "<%= uid %>";
+      window.BASE_PATH = "/user-web";
+    </script>
+  </head>
 
-<body>
+  <body>
+    <div id="root"></div>
+    <!-- <%- oidcHtml %> -->
 
-
-	<!-- Load the application -->
-	<script src="./main.js"></script>
-
-	<!-- Static navbar -->
-	<link rel="stylesheet" href="./style.css">
-
-	<div class="navbar">
-		<ul>
-			<a href="#/app1">
-				<li>
-					App 1 (React)
-				</li>
-			</a>
-			<a href="#/app2">
-				<li>
-					App 2 (Angular 6)
-				</li>
-			</a>
-			<a href="#/app3">
-				<li>
-					App 3 (Angular 1)
-				</li>
-			</a>
-			<a href="#/app4">
-				<li>
-					App 4 (Vue)
-				</li>
-			</a>
-			<a href="#/app5">
-				<li>
-					App 5 (Angular 6)
-				</li>
-			</a>
-		</ul>
-	</div>
-</body>
-
+    <script>
+      requirejs(["http://localhost:9010/singleSpaEntry.js"]);
+    </script>
+    <!-- Load the application -->
+    <script src="/public/main.js"></script>
+  </body>
 </html>

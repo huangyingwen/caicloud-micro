@@ -1,0 +1,11 @@
+title:
+  quickDeploy: 快速部署有状态应用
+  completeDeploy: 完整部署有状态应用
+
+tips:
+  onDeploy: 正在创建有状态应用
+  deploySuccess: 创建成功
+  updateApplicationConfig: 正在更新有状态应用配置
+  updateApplicationConfigSuccess: 更新成功
+  deletingApplication: 正在删除有状态应用
+  deleteApplicationSuccess: 删除成功

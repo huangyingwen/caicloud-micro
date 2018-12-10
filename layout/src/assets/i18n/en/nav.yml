@@ -1,0 +1,76 @@
+group:
+  resources: RESOURCE
+  app: APPLICATION
+  operations: OP CENTER
+  manager: MANAGMENT
+  deliveryCenter: Delivery Center
+  pluginCenter: Plugin Center
+
+node: Nodes
+machine: Machines
+cluster: Clusters
+storage:
+  name: Storage
+  service: Services
+  class: Classes
+  volume: Volumes
+network:
+  name: Network
+  lb: Load balancing
+app:
+  name: Applications
+  partition: Partitions
+  orchestration: Orchestration
+  chartGroup: templates library
+  chart: App templates
+  store: App Store
+  grayRelease: Gray Release
+job:
+  name: Job Tasks
+statefulsets:
+  name: StatefulSet
+lb: Load balancing
+config: Configs
+configCenter:
+  group: Groups
+  config: Configs
+cargo: Container Registry
+cargo_v2:
+  name: Registry
+  registry: Cargos
+  image: Images
+devops:
+  name: DevOps
+  workspace: Workspaces
+  pipeline: Pipelines
+journal: Logging
+event: Events
+monitor: Monitor
+alerting:
+  name: Alerting
+  record: Alerts
+  rule: Alert rules
+notice:
+  group: Notify groups
+  address: Addresses
+pluginCenter:
+  GPU: GPU Manage
+tenant: Tenants
+user:
+  name: Access Control
+  users: Users
+  myGroup: Group
+  teams:
+    managerView: Groups
+    userView: User Detail
+eventLog: Audit logs
+configurations: Platform Configurations
+pluginConfig: Plugin Config
+license: License
+notify:
+  name: Notify Management
+  contactGroups:
+    name: Contact Groups
+  contacts:
+    name: Contacts
+integrateCenter: Integrate Center

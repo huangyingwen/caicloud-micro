@@ -1,0 +1,307 @@
+#devops public properties
+name: 名称
+description: 描述
+creationTime: 创建时间
+custom: 自定义
+default: 系统分配
+noSetting: 暂无设置
+mark: 标识
+# pipeline properties
+pipeline:
+  name: 流水线
+  alias: 别名
+  latestVersion: 最新版本
+  latestVersionStatus: 最近版本状态
+  latestSuccessVersion: 最近成功版本
+  imageName: 镜像名称
+  image: 镜像
+  selectTemplate: 选择模版
+  default: 默认
+  custom: 自定义
+  checkoutRepo: 检出代码库
+  imageUrl: 镜像地址
+  unitTest: 单元测试命令
+  compile: 编译命令
+  output: 输出文件路径
+  deployWay: 配置方式
+  serverName: 服务名
+  startCommand: 启动命令
+  testImage: 测试镜像
+  testCommand: 测试命令
+  pipelineList: 流水线列表
+  envs: 环境变量
+  task: 任务
+  codeCheckout: 检出代码
+  package: 构建代码
+  codeScan: 代码扫描
+  build: 构建代码
+  imageBuild: 镜像构建
+  imageBuildTask: 镜像构建任务
+  context: 镜像构建 Context
+  integrationTest: 集成测试
+  imageRelease: 发布仓库
+  buildTool: 构建工具
+  piplineState: 流水线执行概况
+  aborted: 停止
+  failed: 失败
+  success: 成功
+  total: 执行
+  overview: 近一个月概况
+  implementTotal: 执行记录总数
+  pipelineTask: 流水线任务
+  setting: 设置
+  autoTrigger: 自动触发
+  notify: 通知
+  autoTriggerConfig: 自动触发
+  trigger: 触发
+  preview: 预览
+  selectPublishImage: 选择发布镜像
+  publishImage: 发布到仓库的镜像
+  environmental: 环境声明
+  microservice: 微服务
+  owner: 创建者
+  configuration: 配置信息
+  existImage: 已构建镜像
+  basicInfo: 基本信息
+  notifyPolicy: 通知策略
+  notifyGroup: 通知分组
+  notifyMethod: 通知方式
+  contactInfo: 联系方式
+  always: 全部
+  executionSucceed: 执行成功通知
+  executionFailed: 执行失败通知
+  email: 邮件
+# workspace properties
+workspace:
+  name: 流水线组
+  serverAddress: 服务地址
+  authentication: 验证方式
+  project: 项目
+  projectName: 项目名称
+  custom: 自定义
+  default: 系统分配
+  username: 用户名
+  password: 密码
+  oauthPassword: 用户名密码
+  serverType: 服务类型
+  cargoProject: 镜像组
+  repository: 镜像仓库
+  workspaceList: 流水线组列表
+  check: 校验
+  workspaceState: 流水线执行概况
+  aborted: 停止
+  failed: 失败
+  success: 成功
+  total: 执行
+  overview: 近 1 个月概况
+  piplineTotal: 流水线总数
+  userName: 用户名
+  sourceType: 类型
+
+# record properites
+record:
+  branch: 分支
+  tag: 标签
+  pullRequest: PR
+  version: 版本
+  setVersion: 版本号设置
+  autoTag: 自动 Tag
+  timeConsuming: 耗时
+  status: 状态
+  useCache: 使用缓存
+  name: 构建纪录
+  configuration: 配置方式
+  codeAddress: 代码地址
+  running: 正在执行
+  failed: 失败
+  success: 成功
+  aborted: 停止
+  rebuild: 重新构建
+  runPipeline: 执行流水线
+  noQuota: 资源不足，无法创建 worker
+  outQuota: 资源不足，worker 所需资源已超出剩余资源
+  log: 日志记录
+  executeParams: 执行参数
+  triggerMan: 触发者
+  source: 源码
+  pushImage: 推送的镜像
+
+# chart
+chart:
+  seven: 最近 7 天
+  thirty: 最近 30 天
+
+#buttons, form titles
+actions:
+  baseInfo: 基础信息
+  codeSource: 代码源
+  repository: 镜像仓库
+  createWorkspace: 新建流水线组
+  updateWorkspace: 更新流水线组
+  selectWorkspace: 选择流水线组
+  configTitle: 配置
+  tenantConfigPartition: 选择执行流水线任务的应用分区
+  createPipeline: 新建流水线
+  updatePipeline: 更新流水线
+  runPipeline: 执行
+  stepCodeSource: 选择代码源
+  stepFlowLine: 流水线任务
+  addServer: 添加依赖的微服务
+  downloadLog: 下载日志
+  showLog: 查看日志
+  abortPipeline: 停止流水线
+  cancelEdit: 取消修改
+  saveEdit: 保存编辑
+  saveTask: 保存任务
+  addTask: 添加任务
+  addFlow: 添加流程
+  recordTitle: 版本：${record} 的日志
+  stepTitle: ${step}相关日志
+  recordList: 执行记录
+  triggerConfig: 触发配置
+  open: 开启
+  close: 关闭
+  buildSpeedup: 构建加速
+  cleanup: 清空 ${name} 环境
+  selectRegistry: 选择仓库
+  detail: 查看详情
+  addService: 添加微服务
+  addBranch: 添加分支
+  addTag: 添加标签
+
+# tips, placeholders
+tips:
+  cargoWorkspaceTip: 在本流水线组内构建的镜像，只能推送到指定的镜像组里
+  cargoWorkspaceDefaultTip: 在镜像仓库里创建一个与本流水线组名字一致的镜像组。
+  cargoWorkspaceCustomTip: 选择镜像仓库中的镜像组
+  descriptionPlaceholder: 选填，描述不可超过100个字符
+  serverTip: 输入地址
+  OAuthTip: 如 ${name} 有 two-factor authentication，请使用 Token 验证方式
+  namePlaceholder: 由小写字母或者数字开头，可包含. - _长度不可超过30个字符
+  aliasTip: 用于流水线的界面显示
+  aliasPlaceholder: 支持中文名
+  usernameTip: 填写正确的用户名及密码，以保证可授权
+  pipelineBrief: 持续集成流水线可从源码管理工具拉取代码，依次执行单元测试、代码扫描镜像构建、集成测试、镜像发布、部署应用等工作流提供最优的 DevOps 解决方案，极大的降低 DevOps 实践门槛。
+  emptyWorkspace: 请先创建流水线组
+  dockerfileTip: 默认情况下，使用代码库中的 Dockerfile
+  dockerfilePlaceholder: Dockerfile 文件路径
+  imageNamePlaceholder: 请输入 repo name
+  commandPlaceholder: 多个命令以回车换行分割
+  outputPlaceholder: 需要从代码构建环境中输出拷贝到构建镜像中的文件，非当前目录下的输出文件或文件夹
+  publishTip: 下列镜像会被发布至镜像仓库
+  defaultVersion: 系统自动分配版本号
+  versionTip: 输入版本号
+  autoTagTip: (自动在 ${name} 上打 Tag)
+  emptyTip: 暂无符合条件的任务
+  recordSearchTip: 输入版本号模糊过滤
+  envKeyPlaceholder: 键
+  envValuePlaceholder: 值
+  buildImageTip: 镜像地址：${imageUrl}
+  taskTip: 任务不能为空
+  recordError: 发生错误
+  branchTip: 获取 branch 失败，请确认流水线组是否授权成功及 repo 是否可用。
+  flowAddTip: 任务依赖于 ${flowName}，需先添加 ${flowName} 任务
+  delFlowHint: 删除构建代码会同时删除集成测试、发布仓库流程
+  delWorkspaceHint: 流水线组下的流水线将一并删除
+  githubTokenCreate: 新建 Token，并勾选 repo 权限，然后将生成的 Token 复制粘贴到这里。
+  githubPassword: 密码不会存储，仅用来动态产生 Token，后续所有操作都是基于 Token。
+  githubToken: 一套账号密码不能在多个地方同时使用，此场景下请使用 Token 验证方式。
+  gitlabPassword: 使用 password 时，会动态产生新的 Token，老的 Token 继续有效
+  tokenAccess: Token 必须具备获取 repo 的权限
+  gitlabTokenCreate: 新建 Token，并勾选 api 权限，然后将生成的 Token 复制粘贴到这里。
+  OAuthChecking: 正在校验
+  OAuthCheckFailed: 校验失败
+  OAuthCheckSuccess: 校验成功
+  pleaseClick: 请点击
+  cleanupCache: 清空 ${name} 数据
+  switchQuicken: ${operate} ${name} 的构建加速
+  useCache: 开启使用缓存，如已存在缓存，则使用数据卷中的缓存依赖包，不存在的缓存的情况下会将依赖缓存至数据卷用于下次构建使用，关闭缓存需重新下载依赖
+  context: 请输入与源码库中构建的 context 相对应的路径
+  speedup: 未开启 ${name} 工具构建加速选项
+  noSpeedup: 未开启任何构建加速选项
+  existTag: tag ${name} 已存在, 请保证 tag 的唯一性
+  description: 100 个字符以内
+  numberExceeded: 最多可添加 5 个${name}
+  enterTag: 输入标签，回车提交
+  noBranch: 无可选分支
+# action messages
+messages:
+  addPipeline: 正在新建流水线
+  addPipelineSuccess: 新建成功
+  updatePipeline: 正在更新流水线
+  updatePipelineSuccess: 更新成功
+  deletePipeline: 正在删除流水线
+  deletePipelineSuccess: 删除成功
+  addRecordSuccess: 新建成功
+  deleteRecordSuccess: 删除成功
+  abortRecord: 正在停止任务纪录
+  abortRecordSuccess: 任务记录停止成功
+  addWorkspace: 正在新建工作区
+  addWorkspaceSuccess: 新建成功
+  updateWorkspace: 正在更新工作区
+  updateWorkspaceSuccess: 更新成功
+  deleteWorkspace: 删除成功
+  tenantConfig: 修改成功
+  addTenantConfig: 正在配置持续集成
+  addTenantConfigSuccess: 配置成功
+  updateTenantConfig: 正在更新配置
+  updateTenantConfigSuccess: 更新成功
+  cleanupCache: 缓存清空成功
+
+# delete confirm
+confirms:
+  flow: 确认删除 ${name} 流程
+  flowTip: 删除构建代码会同时删除集成测试、发布仓库流程
+  pipeline: 确认删除 ${name} 流水线
+  record: 确认删除纪录 ${name}
+  abortRecord: 确认停止运行 ${name}
+  workspace: 确认删除 ${name} 流水线组
+  workspaceTip: 流水线组下的流水线将被一并删除
+  cleanupCache: 确定清空 ${name} 全部数据
+  imageBuildTip: 会同时删除使用到此构建镜像的集成测试、发布仓库任务
+
+validates:
+  required: 必填项
+  task: 任务不能为空
+  publicGitlab: 公网 Gitlab 的地址不正确
+  gitlab: Gitlab 地址不正确
+  name: 名称以小写字母、数字 . _  -组成，以字母或数字开头，字符长度不超过30个字符
+  imageName: 镜像名称只能由小写字母数字, - 和 _ 组成
+  github: github 地址不正确
+  existTag: tag ${name} 已存在，请添加其他 tag，或者删除已存在的 tag
+  nameRule: 只支持小写字母，数字以及符号.-_，且不能以符号开头和结尾
+  tagNameRule: 只支持字母、数字以及.-_，且不能以.-开头
+  noExistRegistry: 镜像仓库 ${name} 已不存在，请重新选择
+  noExistProject: 项目 ${name} 已不存在，请重新选择
+  existTaskName: 任务名不可重复
+  existImageName: 镜像名不可重复
+
+# 平台配置之持续集成
+configuration:
+  validateStorageNum: 数量不能超过 ${name} 个
+  storage: 存储方案
+  storageNum: 数据卷数量
+  storageCapacity: 数据卷容量
+  firstContentTip: 持续集成的流水线在运行的时候，会占用一定的 CPU、内存资源。
+  secondContentTip: 请根据实际业务需求，合理分配流水线的资源配置，以保证平台在执行流水线任务的时候不会影响到其他业务的正常运行。
+  operation: 运行配置
+  cluster: 集群
+  speedup: 构建加速
+  validateQuota: 不能超过 ${name}
+  noRecommendConfig: 当前无有效推荐方案，请自定义配额
+  cannotDeployApp: 该分区不支持部署应用/任务
+  cannotAddVolume: 该分区不支持手动添加数据卷
+  validateExceed: 请求值不可超过上限值
+
+# image select
+imageSelect:
+  project: 项目
+  projectPlaceholder: 输入项目
+  repository: 镜像
+  repositoryPlaceholder: 输入镜像
+  tagPlaceholder: 输入 Tag
+  tag: Tag
+  preview: 预览
+  noExist: 输入的 ${name} 不存在
+  emptyNoExist: 不存在
+  onlyPrivate: 只能为私有项目

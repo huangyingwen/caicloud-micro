@@ -1,0 +1,9 @@
+chart:
+  label: 发生次数
+  title: 事件发生频率
+grid:
+  type: 类型
+  count: 发生次数
+  message: 消息
+  reason: 原因
+  lastHappenTime: 最后发生时间

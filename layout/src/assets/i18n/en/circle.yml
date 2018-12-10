@@ -1,0 +1,12 @@
+tips:
+  addCodeBaseSuccess: Code library ${name} new success!
+  deleteCodeBaseSuccess: Code library deleted successfully!
+  deleteCodeBaseDenied: This code base is used in project, can not delete temporarily
+  accountCanceled: ${o} Account has been written off
+  configCodeBaseSuccess: Codebase configuration settings are successful
+  addVersionSuccess: Version ${name} new success!
+  cancelVersionBuildSuccess: Version build canceled successfully!
+  createDeployPlanSuccess: Deployment program created successfully!
+  deleteDeployPlanSuccess: Deployment program deleted successfully!
+  configResourceSuccess: The resource configuration is set successfully
+  editCodeBaseTypeSuccess: "Codebase ${type === 'dockerfile'? 'Dockerfile': 'yaml'} succeeded"

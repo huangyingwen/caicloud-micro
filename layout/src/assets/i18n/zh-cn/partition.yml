@@ -1,0 +1,90 @@
+name: 分区名称
+cluster: 所属集群
+noPartition: 暂无分区
+networkConf: 网络配置
+storage: 存储
+networkStr: 网络策略
+networkIsolation: 网络隔离
+whitelist: 白名单
+list: 同集群下其它分区
+noStorage: 该集群暂未分配存储方案
+cpuRequestValue: CPU请求值
+cpuCap: CPU上限
+CPUQuota: CPU 配额
+memoryQuota: 内存配额
+GPUQuota: GPU 配额
+request: 请求值
+limit: 上限值
+memoryRequestValue: 内存请求值
+memoryCap: 内存上限
+select: 选择分区
+storageScheme: 存储方案
+volumeNumber: 数据卷数量
+volumeCapacity: 数据卷容量
+createTime: 创建时间
+deleteTime: 删除时间
+status:
+  active: 正常
+  terminating: 正在删除
+  failed: 删除失败
+  deleteTimeout: 删除超时
+actions:
+  create: 新建
+  openNetworkIsolation: 开启网络隔离
+  closeNetworkIsolation: 关闭网络隔离
+  manageWhitelist: 管理白名单
+  modify: 修改分区配额
+  select: 选择分区
+tips:
+  name: 支持小写英文字母、数字、下划线，不能以下划线开头，不能超过16个字符
+  restCPU: 剩余可用配额 ${rest}
+  restMemory: 剩余可用配额 ${rest}
+  restGPU: 剩余可用 ${rest}
+  storageNum: 数据卷数量 ${num}
+  storageSize: 数据卷容量 ${size}
+  nameWrong: 格式错误
+  exceed: 超出限额
+  deleting: 正在删除中
+  deletingFailed: 分区删除时间过长，可能是集群出现未知故障，请联系平台管理员修复
+  confirmDelete: 确定删除分区 ${name} 吗
+  deleteHint1: 分区内的应用会被一起删除。
+  changeNetworkConf: 修改网络配置
+  changeNetworkIsolation: 修改网络隔离
+  changeNetworkTip: 修改分区的隔离配置和网络策略，可能会导致分区以外的应用不能访问当前分区的服务，请谨慎操作。
+  whitelistTip: 与其它分区网络隔离。只有在白名单内的分区，才可以互相访问。
+  allowService: 允许 ${d} 分区访问当前分区的所有服务。
+  networkIsolationTurnoff: 网络隔离已关闭。其它分区都可以访问当前分区。
+  networkIsolationTurnon: 网络隔离已开启。网络策略里的分区才可以访问当前分区。
+  onDelete: 正在删除分区
+  submitDelRequestSuccess: 提交成功
+  addSuccess: 新建成功
+  onRemoveNetworkPolicy: 正在关闭网络隔离
+  removeNetworkPolicySuccess: 关闭成功
+  onAddNetworkPolicy: 正在开启网络隔离
+  addNetworkPolicySuccess: 开启成功
+  onUpdateNetworkPolicy: 正在更新网络隔离白名单
+  updateNetworkPolicySuccess: 更新成功
+  saveNetwork: 修改成功
+  onEditQuota: 正在修改分区配额
+  editQuotaSuccess: 修改成功
+  used: 已使用
+  currentQuota: 当前配额
+  onLoadList: 正在加载分区列表
+  fuzzyFilterPlaceholder: 输入关键词模糊过滤
+  empty: 集群下暂无分区
+  number: 数量
+  summation: 总量
+  description: 描述信息
+  recycled: 已回收
+  deleteRecycled: 请删除已回收的资源
+
+validation:
+  name: 分区名称由字母、数字、横杠组成，只能以小写英文字母或数字开头，不能以横杠开头
+  whitelist: 只有在白名单内的分区，才可以互相访问。
+  networkIsolation: 关闭网络隔离之后，与其它分区的应用可以互相访问。
+  lessThanCluster: 不能超过集群总量
+  moreThanRequest: 不能小于请求
+  moreThanQuota: 不能低于已使用配额
+  pleaseEnterSmallerThan1024: 请输入小于1024的
+  stroageNumThenAssign: 数量不能超过分配额
+  stroageSizeThenAssign: 容量不能超过分配额

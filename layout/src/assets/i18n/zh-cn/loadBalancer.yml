@@ -1,0 +1,156 @@
+#loadBalancer public properties
+name: 名称
+
+# lb properties
+lb:
+  update: 更新负载均衡
+  rr: 轮询
+  lc: 最少链接
+  lblc: 局部最少链接
+  dh: 目标地址散列
+  sh: 源地址散列
+  cluster: 集群
+  visitIP: 访问 IP
+  arithmetic: 转发方式
+  limitResource: 反向代理使用的资源
+  whiteList: 白名单
+  limitZone: 流量对象控制
+  clientIP: 客户端 IP
+  domain: 域名
+  status: 状态
+  usable: 可用
+  useless: 不可用
+  node: 主机
+  nodeNumber: 主机数
+  nodeCount: 节点数
+  reason: 原因
+  providor: 控制器
+  replicas: 副本信息
+  proxy: 代理
+  resource: 配额
+  cpuLimit: CPU 上限值
+  cpuRequest: CPU 请求值
+  memoryLimit: 内存上限值
+  memoryRequest: 内存请求值
+  advanced: 高级配置
+  whiteListClosed: 未开启
+  createTime: 创建时间
+  desc: 描述
+  updateTime: 更新时间
+  antiProxy: 反向代理
+  networkIn: 网络流量（in）
+  networkOut: 网络流量（out）
+  copyName: 副本名称
+  selectable: 可选择
+  selected: 已选择
+  subnetMask: 子网掩码
+  recommendQuota: 推荐配额
+  wholeNode: 独占节点资源
+  mark: 标识
+  resourceQuota: 资源配额
+  manual: 手动管理
+# ingress properties
+ingress:
+  add: 创建负载均衡规则
+  update: 更新负载均衡规则
+  L7: 七层协议
+  L4: 四层协议
+  portRangeOfL4: 四层协议端口范围
+  cert: 证书
+  lb: 负载均衡
+  protocol: 协议
+  partition: 分区
+  name: 规则名称
+  domain: 域名
+  path: 路径
+  port: 外部端口
+  application: 应用
+  service: 服务
+  servicePort: 服务端口
+  visitAddress: 访问地址
+  L4PortRange: 端口范围
+  unlimited: 无限制
+  passthrough: 证书透传
+  enableCors: 允许跨域访问
+  limitConnections: 限制连接数
+  clientDomain: 客户端域名
+  ip: 客户端 IP
+  limitRps: 每秒访问数
+  whitelist: 白名单
+  forceSSLRedirect: 严格安全性
+  secureBackends: 安全代理
+# buttons, form titles
+actions:
+  openManual: 已开启手动管理
+  moreDetail: 了解详情
+  addWhiteList: 添加白名单
+  position: 部署位置
+  baseInfo: 基本信息
+  nodeSelect: 选择主机
+  advanced: 高级选项
+  service: 分流服务
+  addService: 添加分流服务
+  lbList: 同集群下负载均衡列表
+  config: 配置
+  configInfo: 配置信息
+  overview: 概览
+  rule: 规则
+  userMonitor: 用户监控
+  systemMonitor: 系统监控
+  updateIngress: 更新规则
+  removeIngress: 删除规则
+# messages, placeholders
+tips:
+  search: 输入名称模糊过滤
+  addressableIp: 设置开放访问的客户端IP段，针对七层规则生效。
+  ingressWhiteList: 会覆盖全局的白名单
+  notExitNodes: 已选的 ${nodes} 节点不存在当前的可用节点中，如更新lb， 则需选择其他可用节点
+  noNodes: 暂无节点信息
+  empty: 无符合搜索条件的内容
+  notExitApplication: 应用 ${appName} 已不存在，如需更新规则，请重新选择应用
+  portPlaceholder: 只能使用${port.start} - ${port.end}之间的端口
+  noIngress: 暂无规则
+  vip: 虚拟 IP
+  limitZone: 会影响规则内的流量控制选项。规定了负债均衡将以客户端IP，还是网站的域名来控制流量
+  wholeNode: 使用这个选项，会占用整个节点的资源，导致其他应用无法运行在负载均衡节点
+  # form validate
+  onCreate: 正在创建负载均衡器
+  addSuccess: 新增成功
+  onUpdate: 正在更新负载均衡器
+  updateSuccess: 更新成功
+  onDelete: 正在删除负载均衡器
+  deleteSuccess: 删除成功
+  onUpdateOrAddRule: "正在${update ? '更新' : '添加'}负载规则"
+  updateOrAddRuleSuccess: "${update ? '更新' : '添加'}成功"
+  deleteRuleSuccess: 删除成功
+  confirmDelLoadBalancer: 确定删除负载均衡器 ${name} ?
+  willDelAllLoadBalancer: 将会删除该负载均衡器所有负载均衡规则
+  releaseNodeResource: 释放占用的节点资源回集群供调度
+  confirmDelRule: 确定删除负载规则 ${rule}
+  confirmDelCertificate: 确定删除证书 ${name}
+  confirmDelPlan: 确定删除部署方案 ${plan}
+  confirmDelCircle: 确定删除代码库 ${circle}
+  confirmDelProject: 确定删除项目 ${proName}
+  confirmRebuild: 确定需要再次构建镜像?
+  sshTip: 将 SSL 证书透传给后端服务。（注意：一旦开启证书透传，7层的配置都将失效）
+  limitConnections: ${name}的最大连接数
+  limitConnectionsPlaceholder: 自定义限制连接数
+  limitRps: ${name}每秒内的最大请求数
+  limitRpsPlaceholder: 自定义最大请求数
+  forceSSLRedirect: 在 https 规则下，如果使用 http 访问将被重定向至 https
+  secureBackendTip: proxy 默认会使用 http 协议代理后端服务，如果后端服务是 https，则需开启安全代理
+validate:
+  name: 由字母、数字、横杠组成，只能以英文字母开头，不能以横杠开头和结尾
+  required: 必填
+  ip: IP 不能为空
+  ipError: IP 地址不正确
+  cidrs: CIDRs 的前缀长度有效范围0-32
+  number: 请输入数字
+  node: 节点不能为空
+  noEmpty: ${name}不能为空
+  ingressName: 规则名由小写字母、数字、横杠组成，只能以英文字母开头，不能以横杠开头和结尾
+  ingressUrlError: 域名格式不符合规范（例如：mydir.com）
+  servicePort: 服务端口格式非法
+  limitConnect: 需设定限制连接数
+  limitRps: 需设定最大请求数
+  portRange: 外部端口范围为 ${range}

@@ -1,0 +1,11 @@
+codescan:
+  name: Code Analyser
+  add: Add Code Analyser Service
+  instanceName: Instance Name
+  address: API Adress
+  tip:
+    nameExists: Insstance name exists
+    address: sonarqube server address
+    token: service access token
+    deleteConfirm: Delete ${name}
+    deleteContent: Removing service won't compact existing pipelines.

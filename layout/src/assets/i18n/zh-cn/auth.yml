@@ -1,0 +1,180 @@
+# auth properties
+auth: 权限
+tenant: 租户
+name: 用户名
+nickname: 昵称
+email: 邮箱
+phone: 手机
+createTime: 创建日期
+all: 全部
+allUsers: 全部用户
+search: 搜索
+remove: 移除
+set: 设为
+tenantList: 租户列表
+resource: 资源配额
+reUpdate: 重新修改
+distribute: 分配
+noMember: 暂无成员
+select: 请选择
+none: 无
+content: 内容
+group: 团队列表
+enable: 已启用
+lbPorts: 4 层协议端口
+lbPortsRange: 4 层协议端口范围
+modifyTenantlb: "${clusterName} 集群的负载均衡"
+modifyTenantStorage: "${clusterName} 集群的数据卷"
+requestNum: 请求值
+limitNum: 上限值
+startPort: 开始端口
+endPort: 结束端口
+loadbalancerAvail: 可选择的负载均衡
+defaultGroup: 默认团队
+members: 成员
+
+roles:
+  roleType: 权限类型
+  systemOwner: 平台管理员
+  notSystemOwner: 用户
+  owner: 管理员
+  normalUser: 普通用户
+  member: 成员
+  basic: 基础角色
+  cancelBasic: 取消基础角色
+  resource: 资源权限
+
+# buttons, form titles
+actions:
+  addMembers: 新建成员
+  addTenant: 新建租户
+  updateInfo: 修改信息
+  nowAdd: 现在添加
+  addGroup: 新建团队
+  distribute: 立即分配
+  seeAll: 查看全部
+  enable: 启用
+  stayOn: 保持开启状态
+  rolesTab: 资源权限
+  membersTab: 团队成员
+
+# messages, placeholders
+tips:
+  tenantExist: 租户名称已存在，请重新命名
+  enterTenant: 请填写租户名称
+  tenantWrong: 租户名称必须为4-12位,小写字母开头，且只包含小写字母、数字和减号
+  filterBy:auth: 按权限筛选
+  filterBy:tenant: 按租户筛选
+  choose:tenant: 选择租户
+  choose:role: 选择成员角色
+  member:roleInTenant: 成员在租户内的权限
+  member:name: 成员的用户名
+  inputMultipleUsers: 可输入多个用户名，以逗号分隔
+  setUser: 分配用户到租户
+  selectUser: 请选择用户
+  noUser: 没有找到用户!
+  selectRegistedUser: 选择已注册用户
+  search: 输入关键字进行模糊搜索
+  selectTenantAdmin: 选择 ${tenantName} 的管理员
+  needTenantAdmin: 一个租户至少需要一个管理员；
+  setUserSelect: 管理员可以选择租户的成员，也可以设定新的管理员；
+  setUserDistribute: 管理员可以分配租户内的成员权限。
+  optional: 选填 200字以内
+  noTenantAdmin: 暂无租户管理员
+  chooseTenantAdmin: 选择管理员
+  addResource: 添加${description}资源
+  giveBasicRole: 赋予所有${description}基础角色
+  displayBasicRole: 所有${description}基础角色
+  roleResource: "对各个资源的权限如下："
+  noGroup: 当前租户下，您还没有加入任何团队
+  noDestribute: 暂无被分配${permissionItem.description}权限的${current.description}
+  inGroup: 租户内的成员默认都在该团队中，享有该团队的权限
+  cantDelete: 该团队无法删除
+  # TODO: deprecate inGroup, cantDelete
+  defaultTeamDescription: 租户内的成员都在该团队中，享有该团队的权限。默认团队不能被删除
+  noMember: 暂无团队成员
+  enterTeamName: 请输入团队名称
+  filter: 输入关键词模糊过滤
+  selectUsers: 选择成员
+  noSystemUser: 系统暂无用户可添加
+  contactSystemAdmin: 还未分配资源，请联系平台管理员
+  noResource: 还未进行资源分配，
+  setSuccess: 设置成功！
+  createTenantSuccess: 创建租户 ${name} 成功！
+  editTenantSuccess: 修改租户 ${name} 成功！
+  addUserFailure: 用户${info}添加失败
+  addUserSuccess: 添加用户成功！
+  removeMemberSuccess: 移除成员 ${users} 成功！
+  tenantSetSuccess: "租户 ${users} 设为${role === 'owner' ? '管理员' : '普通用户'}成功！"
+  addUserGroupSuccess: 添加团队 ${name} 成功！
+  editUserGroupSuccess: 修改团队 ${name} 成功！
+  deleteUserGroupSuccess: 删除团队 ${name} 成功！
+  addMembersSuccess: 添加成员成功！
+  editAuthSuccess: 修改 ${messageName} 权限成功！
+  addAuthSuccess: 新建 ${messageName} 权限成功！
+  deleteAuthSuccess: 删除 ${messageName} 权限成功！
+  enableClusterSuccess: 启用集群成功！
+  closeResourceSuccess: 关闭资源成功
+  editResourceSuccess: 修改资源成功！
+  createTeamSuccess: 团队"${name}"创建成功！
+  deleteTeamSuccess: 团队"${name}"删除成功！
+  invideEmailSended: 邀请邮件已发送
+  changeUserRoleSuccess: 用户角色修改成功！
+  changePasswordSuccess: 密码修改成功，请重新登录
+  delTeamHint: 删除该团队将取消该团队赋予组内成员的资源权限
+  delRoleConfirm: 确定删除 ${role} 权限
+  delRoleHint: 删除该权限将取消团队赋予组内成员的资源权限
+  confirmDelTeam: 确定删除 ${team}
+  deleteAccountConfirm: 确定删除用户 ${account}
+  confirmRemoveUser: 确定移除 ${name}
+  confirmDelUser: 确定删除 ${name}
+  confirmDelPowerGroup: 确定删除 ${name}
+  delPowerGroupHint: 删除该权限组将取消该权限组赋予组内成员的资源权限
+  setLowValueWarning: 新的值低于当前租户的使用值！
+  afterEdit: 修改后：
+  afterClose: 关闭后：
+  cantInfluenceApp: 当前租户已部署的应用不会受到影响
+  useMoreThanQuota: 当前租户的使用量会超过配额
+  cantDeployNewApp: 当前租户将无法部署新应用
+  confirmCloseCluster: 确定关闭 ${cluster} 集群
+  deploiedAppDelHint: 当前租户已部署的应用、服务会被删除
+  cantWatchClusterHint: 当前租户无法再看到该集群
+  confirmRemoveMember: 确定移除 ${member}
+  rmUserFromTenantConfirm: 确定从租户移除 ${name}
+  cantUseProductHint: 该用户将不能在当前租户中继续使用产品
+  afterRemove: 移除后：
+  afterChange: 变更后：
+  rmAdminFromTenantConfirm: 确定从租户移除管理员 ${admin}
+  haveNoAdminRole: 该用户将不再具备当前租户的管理员权限
+  confirmAddToAdmin: 确定把 ${name} 设为管理员
+  haveAdminRoleHint: 该用户将具备当前租户的管理员权限
+  canUseProductHint: 该用户可以在租户中继续使用产品
+  backToUserConfirm: 确定把 ${name} 设为普通用户
+  addSystemAdminConfirm: 确定把 ${name} 设为平台管理员
+  haveSysAdminRoleHint: 该用户将具备平台管理员权限
+  canUseSysProductHint: 该用户可以在系统租户中继续使用产品
+  depriveSystemAdminConfirm: 确定把 ${name} 设为用户
+  haveNoSysAdminRoleHint: 该用户将不再具备平台管理员权限
+  canUseProductInTenant: 该用户仍然可以在加入的租户中继续使用产品
+  defaultGroupCantDel: 默认团队不能被删除
+  giveClusterRoleHint: 赋予基础角色后，所有该集群下的分区默认都拥有对应角色的权限
+  giveTeamRoleHint: 赋予基础角色后，所有该分组下的配置默认都拥有对应角色的权限
+
+# validates
+validates:
+  storageNum: 数据卷数量不能大于 1000
+  enterTeamName: 请输入团队名称
+  setQuota: 请设置上限配额
+  setQuotaPositive: 上限配额必须为大于0的整数
+  moreThanTotal: 上限配额超出总可配
+  requestQuota: 请设置请求配额
+  requestQuotaPositive: 请求配额必须为大于0的整数
+  requestQuotaMore: 请求配额超出总可配
+  restQuota: 剩余${displayType}配额
+  selectPartition: 请先选择集群，再添加分区资源
+  setGroupName: 请设置团队名称
+  tooMuch: 不要超过200字
+  portsRange: 必须大于1024小于30000
+  cpuMemoryResourcesLimits: 请求配额应该小于上限配额
+  required:
+    users: 请选择成员

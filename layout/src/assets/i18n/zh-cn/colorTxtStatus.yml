@@ -1,0 +1,129 @@
+# cluster actionsMap
+clusterAction:
+  ClusterCreate: 新建
+  ClusterDelete: 删除
+  ClusterCreateRetry: 重试
+  ClusterUpdateName: 重命名
+  ClusterMachinesBind: 添加节点
+  ClusterMachinesUnbind: 移除节点
+  ClusterMachineOffline: 下线节点
+  ClusterMachineOnline: 上线节点
+
+# machine actionsMap
+machineAction:
+  ClusterMachinesBind: 添加至集群
+  ClusterMachinesUnbind: 从集群移除
+  ClusterMachineOffline: 在集群内下线
+  ClusterMachineOnline: 在集群内上线
+  MachineDelete: 删除
+  MachineCreate: 新建
+  MachineUpdateAuth: 修改
+
+smtpTest:
+  success: 发送成功
+  failed: 发送失败
+  sending: 正在发送
+
+# posStatus
+podsStatus:
+  Pending: 创建中
+  Running: 运行中
+  Succeeded: 执行完毕
+  Failed: 失败
+  Unknown: 未知
+
+# tenants
+tenantStatus:
+  Deleting: 删除中
+
+# cluster detail Event tab Status
+clusterEventsAction:
+  ClusterNew: 新建
+  ClusterInstallMaster: 安装控制节点
+  ClusterInstallMasterFailed: 安装控制节点失败
+  ClusterInstallAddon: 安装附加组件
+  ClusterInstallAddonFailed: 安装附加组件失败
+  ClusterReady: 运行中
+  ClusterDeleting: 正在删除
+  ClusterDeletingFailed: 删除失败
+  ClusterMachineBinding: 正在添加节点
+  ClusterMachineBindFailed: 添加节点失败
+  ClusterMachineBindDone: 添加节点完成
+  ClusterMachineUnbinding: 正在移除节点
+  ClusterMachineUnbindFailed: 移除节点失败
+  ClusterMachineUnbindDone: 节点移除完成
+  ClusterMachineSetOnline: 节点上线
+  ClusterMachineSetOnlineFailed: 节点上线失败
+  ClusterMachineSetOnlineDone: 节点上线完成
+  ClusterMachineSetOffline: 节点下线
+  ClusterMachineSetOfflineFailed: 节点下线失败
+  ClusterMachineSetOfflineDone: 节点下线完成
+
+# cargo sync tactics record status
+tacticsRecordStatus:
+  Syncing: 同步中
+  Succeeded: 成功
+  Failed: 失败
+
+# devops pipeline record status
+pipelineRecord:
+  Pending: 正在等待
+  Running: 正在执行
+  Aborted: 停止
+  Success: 成功
+  Failed: 失败
+
+lbStatus:
+  usable: 可用
+  unusable: 不可用
+
+jobStatus:
+  Pending: 等待中
+  Deploying: 部署中
+  Updating: 更新中
+  Scaling: 伸缩中
+  Suspending: 停止中
+  Suspended: 已挂起
+  Starting: 启动中
+  Restarting: 重启中
+  RollingBack: 回滚中
+  Error: 运行异常
+  Succeeded: 执行成功
+  Failed: 执行失败
+  Running: 运行中
+
+appStatus:
+  Pending: 等待中
+  Deploying: 部署中
+  Updating: 更新中
+  Scaling: 伸缩中
+  Suspending: 停止中
+  Suspended: 已停止
+  Starting: 启动中
+  Restarting: 重启中
+  RollingBack: 回滚中
+  Error: 运行异常
+  Succeeded: 执行成功
+  Failed: 执行失败
+  Running: 运行中
+  Preparing: 未部署
+  pod:
+    Normal: 正常
+    Uncertain: 未知
+    Abnormal: 异常
+
+  container:
+    Waiting: 异常
+    Running: 正常
+    Terminated: 终止
+
+nodeStatus:
+  Ready: 正在运行
+  Failed: 失败
+  NodeNotReady: 未就绪
+  Offline: 已下线
+  Binding: 正在绑定
+  Removing: 正在移除
+  Unbinding: 正在解绑
+  SetOffline: 正在下线
+  SetOnline: 正在上线

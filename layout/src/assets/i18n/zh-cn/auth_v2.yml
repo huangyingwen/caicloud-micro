@@ -1,0 +1,237 @@
+# auth properties
+auth: 权限
+tenant: 租户
+name: 用户名
+nickname: 昵称
+email: 邮箱
+phone: 手机
+createTime: 创建时间
+joinTime: 加入时间
+account: 用户名
+storageNum: 数据卷数量
+storageTotalCapacity: 数据卷总容量
+availStorageNum: 可分配数据卷数量
+availStorageTotalCapa: 可分配数据卷总容量
+cpuRequest: CPU 请求
+memoryRequest: 内存请求
+application: 应用
+all: 全部
+allUsers: 全部用户
+search: 搜索
+remove: 移除
+set: 设为
+tenantList: 租户列表
+tenantDetail: 租户详情
+systemTenant: 系统租户
+resource: 资源配额
+reUpdate: 重新修改
+distribute: 分配
+noMember: 暂无成员
+select: 请选择
+none: 无
+content: 内容
+enable: 已启用
+lbPorts: 4 层协议端口
+lbPortsRange: 4 层协议端口范围
+modifyTenantlb: "${clusterName} 集群的负载均衡"
+modifyTenantStorage: "${clusterName} 集群的数据卷"
+startPort: 开始端口
+endPort: 结束端口
+loadbalancerAvail: 可选择的负载均衡
+appStatistics: 应用概览
+partitionStatistics: 分区概览
+
+# 用户管理，团队管理（详情），租户管理（详情）中有关用户的概念文案放这里
+users:
+  systemAdmin: 平台管理员
+  user: 用户
+  normalUser: 普通用户
+  owner: 管理员
+  member: 成员
+  allMembers: 全部成员
+  userUnit: 个
+  membersCount: 成员数
+  registerTime: 注册时间
+  password: 密码
+  resetPassword: 恢复初始密码
+  resetPasswordSuccess: 密码恢复成功
+  active: 活跃
+  notActive: 不活跃
+  modifyPassword:
+    old: 旧密码
+    new: 新密码
+    confirmNew: 确认新密码
+    tip:
+      old: 请输入旧密码
+      new: 请输入 8-30 位字符密码
+      confirmNew: 请再次确认密码
+
+  role: 角色
+  remote: 账号来源
+  remoteEnum:
+    haier: 海尔
+    unionpay: 银联
+  validate:
+    emailError: "邮箱格式错误"
+    passwordError: "您输入的密码不符合要求请重新输入"
+    confirmPasswordError: "两次输入的密码不一致"
+  tip:
+    accountValidate: 由字母、数字、横杠、下划线组成，长度限制5-24个字符
+
+# 角色相关的概念文案
+roles:
+  roleType: 权限类型
+
+tenants:
+  detail:
+    defaultDescription: 暂无
+  quotas:
+    requestsNum: 请求值
+    limitsNum: 上限值
+
+# buttons, form titles
+actions:
+  selectMembers: 选择成员
+  addMembers: 新建成员
+  invite: 邀请
+  updateInfo: 修改信息
+  nowAdd: 现在添加
+  seeAll: 查看全部
+  rolesTab: 资源权限
+  addTenant: 新建租户
+  modifyQuotas: 修改配额
+  turnOffCluster: 关闭集群
+  setOwner: 设为管理员
+  setNormalUser: 设为普通用户
+  setLater: 稍后配置
+  saveAndChooseMembers: 保存并选择成员
+  saveAndSetQuota: 保存并设置配额
+
+# messages, placeholders
+tips:
+  tenantExist: 租户名称已存在，请重新命名
+  enterTenant: 请填写租户名称
+  tenantWrong: 租户名称必须以字母或中文开头，支持中文和特殊符号，长度限制 2 - 32 个字符
+  filterBy:auth: 按权限筛选
+  filterBy:tenant: 按租户筛选
+  choose:tenant: 选择租户
+  choose:role: 选择成员角色
+  member:roleInTenant: 成员在租户内的权限
+  member:name: 成员的用户名
+  inputMultipleUsers: 可输入多个成员用户名，以逗号分隔
+  setUser: 分配用户到租户
+  selectUser: 请选择用户
+  selectRegistedUser: 选择已注册用户
+  search: 输入关键字进行模糊搜索
+  selectTenantAdmin: 选择 ${tenantName} 的管理员
+  needTenantAdmin: 一个租户至少需要一个管理员；
+  setUserSelect: 管理员可以选择租户的成员，也可以设定新的管理员；
+  setUserDistribute: 管理员可以分配租户内的成员权限。
+  noTenantAdmin: 暂无租户管理员
+  chooseTenantAdmin: 选择管理员
+  addResource: 添加${description}资源
+  giveBasicRole: 赋予所有${description}基础角色
+  displayBasicRole: 所有${description}基础角色
+  noDestribute: 暂无被分配${permissionItem.description}权限的${current.description}
+  filter: 输入关键词模糊过滤
+  selectUsers: 选择成员
+  canSelected: 可选择
+  haveSelected: 已选择
+  addUserFailure: 邀请失败
+  addUserSuccess: 邀请成功
+  removeMemberSuccess: 移除成功
+  tenantSetSuccess: "设置成功"
+  addMembersSuccess: 添加成员成功！
+  invideEmailSended: 邀请邮件已发送
+  changeUserRoleSuccess: 用户角色修改成功！
+  changePasswordSuccess: 密码修改成功，请重新登录
+  delTeamHint: 删除该团队将取消该团队赋予组内成员的资源权限
+  delRoleConfirm: 确定删除 ${role} 权限
+  delRoleHint: 删除该权限将取消团队赋予组内成员的资源权限
+  confirmDelTeam: 确定删除 ${team}
+  deleteAccountConfirm: 确定删除账号 ${account}
+  confirmRemoveUser: 确定移除 ${name}
+  confirmDelUser: 确定删除 ${name}
+  confirmDelPowerGroup: 确定删除 ${name}
+  delPowerGroupHint: 删除该权限组将取消该权限组赋予组内成员的资源权限
+  afterEdit: 修改后：
+  afterClose: 关闭后：
+  cantInfluenceApp: 当前租户已部署的应用不会受到影响
+  useMoreThanQuota: 当前租户的使用量会超过配额
+  cantDeployNewApp: 当前租户将无法部署新应用
+  confirmCloseCluster: 确定关闭 ${cluster} 集群
+  deploiedAppDelHint: 当前租户已部署的应用、服务会被删除
+  cantWatchClusterHint: 当前租户无法再看到该集群
+  setMembersSuccess: 配置成功
+  chooseMembersSuccess: 选择成功
+  confirmRemoveMember: 确定移除 ${member}
+  rmUserFromTenantConfirm: 确定从租户移除 ${name}
+  cantUseProductHint: 该用户将不能在当前租户中继续使用产品
+  afterRemove: 移除后：
+  afterDelete: 删除后：
+  afterChange: 变更后：
+  rmAdminFromTenantConfirm: 确定从租户移除管理员 ${admin}
+  haveNoAdminRole: 该用户将不再具备当前租户的管理员权限
+  confirmAddToAdmin: 确定把 ${name} 变为管理员
+  haveAdminRoleHint: 该用户将具备当前租户的管理员权限
+  haveUserRoleHint: 该用户将具备当前租户的成员权限
+  canUseProductHint: 该用户可以在租户中继续使用产品
+  backToUserConfirm: 确定把 ${name} 变为普通用户
+  addSystemAdminConfirm: 确定把 ${name} 变为平台管理员
+  haveSysAdminRoleHint: 该用户将具备平台管理员权限
+  canUseSysProductHint: 该用户可以在系统租户中继续使用产品
+  depriveSystemAdminConfirm: 确定把 ${name} 变为用户
+  haveNoSysAdminRoleHint: 该用户将不再具备平台管理员权限
+  canUseProductInTenant: 该用户仍然可以在加入的租户中继续使用产品
+  defaultGroupCantDel: 默认团队不能被删除
+  giveClusterRoleHint: 赋予基础角色后，所有该集群下的分区默认都拥有对应角色的权限
+  giveTeamRoleHint: 赋予基础角色后，所有该分组下的配置默认都拥有对应角色的权限
+  storageNumAddToTenant: 租户内可以新建的数据卷总数
+  sumOfStorageCapacity: 租户内可以新建的数据卷容量总和
+  defaultOpenL7: 分配给租户的负载均衡默认开启七层协议，例如：Http、Https
+  defaultOpenL4: 分配给租户的负载均衡默认开启四层协议，例如：TCP、UDP
+  portRangeOfL4: 4 层协议端口范围 20000-29999
+  alreadyUsed: 租户已使用
+  leftAvailableQuotas: 剩余可用配额
+  destriRelatedResToTenant: 集群 ${clusterName} 已开启，请为租户 ${tenantName} 分配相应资源
+  confirmSetUserActive:
+    header: 确定把 ${name} 的状态设置成活跃吗
+  confirmSetUserNotActive:
+    header: 确定把 ${name} 的状态设置成不活跃吗
+    tips: ${name} 将无法使用平台
+  resetPassword:
+    header: 确定恢复 ${name} 的初始密码
+    tips1: 该用户当前的密码会失效
+    tips2: 该用户新的密码：${initialPassword}
+  tenant:
+    createTenantSuccess: 创建成功
+    enableQuotaSuccess: 启用集群成功
+    disableQuotaSuccess: 关闭资源成功
+    editResourceSuccess: 修改集群资源成功
+    deleteTenantSuccess: 删除成功
+    confirm:
+      deleteTenant: 确定删除租户 ${name}
+    lowerThanActual:
+      alert: ${name} 请求值低于当前租户的使用值！
+      tipNoEffect: 当前租户已部署的应用不会受到影响
+      tipExceed: 当前租户的使用量会超过配额
+      tipEnableDeploy: 当前租户将无法部署新应用
+    deletingQuota: 正在关闭集群，该过程大约需要十分钟时间，请稍等
+    deletingQuotaError: 集群关闭时间过长，可能集群出现未知故障，请联系管理员修复
+
+# validates
+validates:
+  storageNum: 数据卷数量不能大于 1000
+  setQuota: 请设置上限配额
+  setQuotaPositive: 上限配额必须为大于0的整数
+  moreThanTotal: 上限配额超出总可配
+  requestQuota: 请设置请求配额
+  requestQuotaPositive: 请求配额必须为大于0的整数
+  requestQuotaMore: 请求配额超出总可配
+  restQuota: 剩余${displayType}配额
+  selectPartition: 请先选择集群，再添加分区资源
+  tooMuch: 不要超过200字
+  portsRange: 必须大于1024小于30000
+  cpuMemoryResourcesLimits: 请求配额应该小于上限配额
+  required:
+    users: 请选择成员

@@ -1,0 +1,208 @@
+# messages, placeholders
+safe: 安全
+count: 个数
+search: 查询
+clear: 清空
+version: 版本
+overview: 概览
+name: 名称
+deployApp: 部署应用
+preview: 预览
+delete: 删除
+edit: 编辑
+duplicate: 复制
+description: 描述
+recent: 最近
+modify: 修改
+save: 保存
+cancel: 取消
+fullScreen: 全屏
+integration: 集成
+replicationPolicy: 同步策略
+sync: 同步
+syncDel: 同步删除
+basicInfo: 基本信息
+strategy: 策略
+note: 备注
+from: 从
+reason: 原因
+record: 记录
+close: 关闭
+actions:
+  selectFile: 选择文件
+identity:
+  username: 用户名
+  password: 密码
+  address: 地址
+  accessTime: 接入时间
+  cargoAccount: 仓库账号
+  project: 项目
+  image: 镜像
+  diskUsage: 磁盘使用量
+  private: 私有
+  public: 公有
+  tenant: 租户
+tips:
+  addSyntactics: 无法新建${replication}
+  vulnerability: ${vulnerabilitiesCount}个漏洞
+  input:image: 输入镜像地址
+  mirror: 镜像名称
+  version: 版本信息
+  historicVersion: 历史版本
+  noHistoricVersion: 暂无历史版本！
+  useOriginalMirror: 使用原镜像名
+  useOriginalVersion: 使用原版本
+  importMirrorFromFile: 从文件导入镜像
+  vulnerabilityInfo: 漏洞信息
+  deleteWorkspaceSuccess: 删除成功
+  deleteRepo: 正在删除 repo
+  deleteRepoSuccess: 删除成功
+  deleteTagSuccess: 删除成功
+  confirmHardDel: 确定执行硬删除
+  deleteRegistry: 确定删除镜像仓库 ${name}
+  deleteRegistryPromptTop: 镜像仓库本身不会受到任何影响
+  deleteRegistryPromptBottom: 镜像仓库与平台集成后的相关信息会被删除
+  willErase: 当前已删除的所有镜像信息将会被抹去，不可恢复
+  willStopPushAndPull: 将会停止镜像仓库的 push / pull 服务
+  sugExecuteWhenFree: 建议在镜像仓库空闲的时候执行此操作
+  spaceWillRelease: 硬删除后，被占用的存储空间将被释放
+  confirmDelImage: 确定删除镜像 ${image}
+  willDelCurrentImage: 当前镜像将被删除，不可恢复
+  confirmDelProject: 确定删除项目 ${proName}
+  confirmDelRepoImage: 确定删除镜像 ${image}
+  deleteReplication: 确定删除同步策略 ${replication}
+  confirmDelRepo: 确定删除 repo ${repo}
+  willDelCurrentPro: 当前项目将被删除，不可恢复
+  willDelImage: 该项目下的镜像也将被删除
+  willDelSync: 会同时删除关联的同步策略
+  confirmRemoveTag: 确定删除标签 ${tag}
+  willDelRelation: 标签及其与镜像的关联都将被删除
+  confirmDelLabelHook: 确定删除项目
+  willDelRelationBetweenProAndTag: 将删除项目 ${proName} 与标签 ${tag} 的关联
+  badUrl: 仓库地址无法解析
+  badScheme: 仓库地址只支持 https 协议
+  registryExisted: 该仓库已经集成
+  accessFailed: 镜像仓库无效或账户信息错误
+  usedAlready: 该仓库已经集成到其他集群
+  validation: 地址需以 https:// 开头
+  unknownHost: 手动输入非列表中的仓库集成后，普通用户的仓库账号无效，请谨慎操作。
+  validationDomain: URL 地址，以 https:// 开头, 支持域名
+  copyCommand: 复制登录命令
+  cargosNumberLimit: 该版本最多只支持接入三个镜像仓库
+  nameTip: 支持中文和特殊符号，长度限制 2 － 32 个字符
+  selectProject: 请选择项目
+  selecImageCargo: 请选择镜像仓库
+  syncTo: 同步到
+  successCount: 成功 ${count} 个
+  failedCount: 失败 ${count} 个
+  loadMore: 加载更多
+project:
+  name: 项目名称
+  manage: 项目管理
+  publicProject: 公有项目
+  privateProject: 私有项目
+  description: 项目描述
+  public: 公有项目
+  private: 私有项目
+  tenantUsage: 租户用量
+  selectProject: 选择项目类型
+  replicationPolicy: 同步策略
+  replicationPolicyCount: 同步策略数
+  strategyType: 策略类型
+  latestUpdate: 最新更新
+  actions:
+    select: 选择项目
+    add: 新建项目
+    create: 创建项目
+    import: 导入项目
+  validate:
+    name: 项目名不能为空
+    empty: 项目不能为空
+    mirrorName: 镜像名称不能为空
+    mirrorVersion: 镜像版本不能为空
+    file: 文件不能为空
+    workspace: 仅支持小写字母数字以及符号 _-. 不可由符号开头和结尾且符号不可连续，长度 2 - 30(包含前缀)
+    lengthErr: 长度限制 2 - 30 个字符
+  title:
+    cargoPush: 仓库推送
+    cargoPull: 仓库拉取
+  tips:
+    pushVolume: 推送量
+    pullVolume: 拉取量
+    frequency: 次数
+duplicateImage:
+  name: 复制镜像
+  source: 选择复制源
+  target: 复制到
+  replicating: 正在复制中，请等待
+image:
+  name: 镜像
+  cargo: 镜像仓库
+  public: 公有镜像
+  private: 私有镜像
+  publicImage: 公有镜像
+  privateImage: 私有镜像
+  updateTime: 更新时间
+  numberOfTags: 标签数
+  pullTimes: 拉取次数
+  instruction: 说明
+  tag: 标签
+  pullCommand: Pull 命令
+  author: 作者
+  creationTime: 创建时间
+  pullCount: 下载数
+  operation: 操作
+cargoIntegration:
+  name: 仓库名称
+  address: 仓库地址
+  account: 管理员账号
+  password: 管理员密码
+syncronization:
+  title: 策略 ${currTactics} 同步记录
+  source: 源项目
+  target: 目标镜像仓库
+  direction: 同步方向
+  recentTime: 最近同步时间
+  initiative: 主动
+  passive: 被动
+  all: 全部
+  manual: 手动触发
+  automatic: 更新触发
+  scheduled: 定时触发
+  syncRecord: 同步信息
+  success: 成功
+  failure: 失败
+  status: 状态
+  time: 时间
+  repeat: 重复周期
+  everyDay: 每天
+searching:
+  placeholder: 输入名称模糊过滤
+uploader:
+  upladeTar: 上传 Tar 包
+  uploadImage: 镜像上传
+  closeWhenUploading: 关闭后数据会转为后台上传
+  uploadProgress: 上传进度
+  uploadDoneWaiting: 上传完毕，等待服务端解析
+  errCode:
+    uploadFail: 上传失败
+    cargo:RegistryNotFound: 仓库不存在
+    cargo:ProjectNotExit: 项目不存在
+    cargo:BadImageFile: 镜像文件有误
+uploadDF:
+  title: 镜像构建
+  selectTemplate: Dockerfile 模板
+  selectDockerFile: 应用程序包
+  startBuilding: 开始构建
+  errCode:
+    haveVoidInfo: 请完善镜像名称或镜像模板
+    noUploadFile: 请选择需要构建的镜像文件
+    ReasonInternal: 构建镜像失败
+    templateValueHavePlaceholder: 镜像模板存在未替换的占位符
+basisScan:
+  flaw: 漏洞
+  basisImage: 基础镜像
+  pass: 通过
+  fail: 不通过
+vulnerability:
+  setting: 漏洞库更新设置

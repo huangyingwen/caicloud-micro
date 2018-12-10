@@ -1,0 +1,185 @@
+# storage properties
+name: storage
+
+# resources
+tips:
+  confirmDel: Are you sure to delete the storage class ${name}
+services:
+  name: Storage service
+  create: Create storage service
+  update: Update storage service
+  delete: Delete storage service
+  types: Storage type
+  action:
+    delete:
+      deleting: Removing storage service
+      success: Deleted successfully
+  form:
+    create:
+      creating: Creating storage service
+      success: Created successfully
+    update:
+      updating: Updating storage service
+      success: Updated successfully
+    resturl: resturl
+    glusterfs:
+      restauthenabled: restauthenabled
+      resturl: resturl
+      authMethod: Authentication method
+      authTypeUsername: Username
+      authTypeKey: Secret key
+      restuser: restuser
+      restuserkey: restuserkey
+      secretName: secretName
+      secretNamespace: secretNamespace
+      heketi: Heketi address
+    nas-netapp:
+      backendType: backendType
+    nfs:
+      server: server
+      exportPath: exportPath
+    ceph:
+      monitors: monitors address
+    rbd:
+      adminId: Username
+      adminSecret: Password
+      pool: RBD pool
+    sescephrbd:
+      adminId: Username
+      adminSecret: Password
+      pool: RBD pool
+    cephfs:
+      cluster: Cluster name
+      adminId: Username
+      adminSecret: Password
+      claimRoot: claimRoot
+    sescephfs:
+      cluster: Cluster name
+      adminId: Username
+      adminSecret: Password
+      claimRoot: claimRoot
+  list:
+    name: name
+    alias: alias
+    type: type
+    clusterfs:
+      resturl: resturl
+  tips:
+    namePlaceholder: Storage service name
+    typePlaceholder: Storage type
+    resturlPlaceholder:
+      Storage service interface node address, such as http://1.2.3.4:5 (multiple nodes please use commas
+      ',' separated)
+    confirmDel: Are you sure to delete the storage service ${service}
+    nameTip: Composed of lowercase letters, numbers, bars, and underscores, limited to 2-32 characters in length. Only begin with lower case letters.
+    tip:
+      restuser: Support for uppercase and lowercase English fields, numbers, bars, can not start with numbers and bars.
+      restuserkey: refer to heketi config
+      secretName: Support for uppercase and lowercase English fields, numbers, bars, can not start with numbers and bars.
+      secretNamespace: default、kube-system、kube-default
+      server: Generally IP or domain name
+      cluster: usually 'ceph'
+    tooltips:
+      resturl: Heketi address
+      restuser: Gluster REST service or Heketi service for creating data volumes
+      restuserkey: REST authentication key
+      secretName: Key name
+      secretNamespace: Partition where the key
+      server: NFS service address
+      monitors: Ceph cluster monitors address
+      cluster: Ceph cluster name
+
+classes:
+  name: Storage class
+  create: Create a storage class
+  update: Update the storage class
+  number: Quantity
+  capacity: Volume
+  avail: Available storage classes
+  list:
+    status: Status
+    name: Name
+    type: Type
+    cluster: Cluster
+    service: Storage Service
+  action:
+    delete:
+      deleting: Removing storage class
+      success: Deleted successfully
+  form:
+    create:
+      creating: Creating storage class
+      success: Created successfully
+    cluster: Choose to a cluster
+    noCluster: No cluster available
+    service: Choose a storage service
+    base: Basic Information
+    customConfiguration: Custom configuration
+    glusterfs:
+      clusterid: clusterid
+      gidMax: gidMax
+      gidMin: gidMin
+      volumetype: volumetype
+      readOnly: readOnly
+    nas-netapp:
+      media: media
+      provisioningType: provisioningType
+      clones: clones
+      encryption: encryption
+      snapshots: snapshots
+      IOPS: IOPS
+      requiredStorage: requiredStorage
+    nfs:
+      readOnly: readOnly
+    validation:
+      positiveInt: ${name} must be a positive integer
+      lessOrEqual: ${min} must be less than or equal to ${max}
+      aliasLimit: Alias's length can't be more than 32
+  tips:
+    namePlaceholder: Name of storage class
+    confirmDel: Are you sure to delete the storage class ${name}
+    relatedVolumeDel: The data volume associated with this storage will be deleted all
+    influAppRunning: It will affect tenants' apps' normally running
+
+volumes:
+  name: Data volume
+  create: Create
+  update: Edit
+  action:
+    delete:
+      deleting: Removing data volume
+      success: Deleted successfully
+  list:
+    status: Status
+    name: Name
+    cluster: Cluster
+    partition: Partition
+    capacity: Capacity
+    creationTimestamp: Create time
+  form:
+    create:
+      creating: Creating data volume
+      success: Created successfully
+    clusterPartition: Deployment location
+    base: Basic Information
+    storageClass: Choose a storage class
+    size: Capacity size
+    num: Quantity
+    noStorageClass: No Available Storage Class(Check if Cluster and Partition with quota Are Checked)
+    accessModes: Read and write strategy
+    ReadWriteOnce: Single node read-only
+    ReadOnlyMany: Multi-node read-only
+    ReadWriteMany: Multi-node read and write
+    advanced: Advanced Options
+    validation:
+      selectCluster: Please select a cluster
+      selectPartition: Please select a partition
+      selectStorageClass: Please choose a storage class
+      selectAccessModes: Please choose read and write strategy
+      name: Data volume name can not be empty
+      size: Size must be a positive integer, and no greater than the quota(and no more than 1024000 GiB)
+      selectStorageClassFirst: Please select an available Storage Class
+  tips:
+    namePlaceholder: Data volume name
+    confirmDel: Are you sure to delete the data volume ${volume}
+    cannotDel: The data volume is associated with apps and cannot be deleted

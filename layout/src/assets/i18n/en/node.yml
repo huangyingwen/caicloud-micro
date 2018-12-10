@@ -1,0 +1,103 @@
+name: Node name
+type: Node type
+count: The number of nodes
+configuration: Node configuration
+SSHInfo: Node SSH information
+workNode: Work node
+hostNode: Control node
+containerVersion: Container version
+list: The node list under the same cluster
+no: No node
+runningContainerGroup: Running container group
+lastHeartbeatTime: Last heartbeat time
+tag: Tag
+online: Online
+offline: Offline
+status: Node Status
+creationTime: Creation Time
+runStatus: Running Status
+overview: Overview
+monitor: Monitor
+containerGroup: Container Group
+image: Images
+operationLog: Operation Logs
+events: Events
+journal: Journal
+cpuRequest: CPU Capacity
+memRequest: memory Capacity
+bindCluster: Bind Cluster
+allSchedulableStatus: All Schedulable Status
+allTag: All Tags
+select: Select Node
+# node detail tab
+tab:
+  type: Type
+  time: Time
+  action: Action
+
+overViewTab:
+  systemInfo: System Info
+  hardwareInfo: Hardware Info
+  diskInfo: Dick Info
+  nicInfo: Nic Info
+  serveInfo: Serve Info
+
+podTab:
+  status: Status
+  name: Name
+  containerImage: Container Image
+  restart: Restart Count
+  updateTime: Update Time
+  runningTime: Running Time
+
+eventTab:
+  associationObject: Association Object
+  info: Info
+
+operateTab:
+  field: Field
+  operator: Operator
+
+actions:
+  add: Add node
+  create: Create a node
+  modifyTags: Modify Tags
+  addNode: Add node
+  bindCluster: Bind Cluster
+  unbind: Unbind
+tips:
+  diskOut: Disk overflow
+  memoryNotEnough: Out of memery
+  diskNotEnough: Insufficient disk
+  nodeError: Node abnormal
+  numPlaceHolder: Number of node supports is 2-15 currently
+  schedule: Can not schedule
+  configuration: Inter Xecon CPU, DDR3 memory.
+  addNodeSuccess: Added successfully
+  beginDelNode: Start to remove the host
+  confirmDel: Are you sure to delete the host ${node}
+  confirmUnbind: Are you sure to remove the host ${node} from the cluster ${cluster}
+  confirmOffline: Are you sure to set ${node} offline
+  confirmOnline: Are your sure to set ${node} online
+  cantResetDel: Delete operation can not be undo
+  backupHint: Please backup the necessary data before deleting
+  delAliYunHint: Delete Alibaba node will also delete the corresponding virtual machine
+  influence: Apps in tenants will be influenced
+validation:
+  numberEmpty: The number of nodes can not be empty
+  numberWrong: The number of nodes must be a positive integer from 2-15 inclusive
+cluster: Cluster
+searchByIP: Input IP and starting fuzzy filter
+scheduleStatus: Schedule status
+nodeStatus: Status
+schedule: Schedule
+IPAddress: IP
+storage: Storage
+disk: Disk memory
+freeNode: Free node
+schedulable: Schedulable
+noschedulable: Non-schedulable
+add: Add
+
+tags:
+  placeholder: Name can only consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character

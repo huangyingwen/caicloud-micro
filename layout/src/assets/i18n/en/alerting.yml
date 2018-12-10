@@ -1,0 +1,138 @@
+noticeGroup: Notification group
+noticeName: Notification Name
+noticeMethod: Method to Notify
+noticeAddress: Notification Address
+noticeGroupBy: Notification Group
+key: key
+value: value
+item: Item
+alertInfo: Alert Information
+alertRule: Alert Rule
+alertObj: Alert Target
+alertValue: Alert Value
+alertTime: Alert Time
+alertTarget: Alert Metric
+alertNotice: Alert Notification
+alertLabel: Alert Label
+alertState: Alert Status
+alertCondition: Alert Condition
+alertStrategyList: Alert Rule List
+todoAlert: Pending Alert
+alertHis: Alert Records
+alertHistory: History Alert Records
+handleTime: Resolved Time
+creatTime: Created Time
+target: Metric
+threshold: Threshold
+condition: Condition
+eventList: Event List
+time: Time
+state: Status
+operator: Operator
+strategy: Rule
+monitorObj: Target
+actions:
+  editContacts: Edit Contact
+  editContactsInfo: Edit Contact Information
+  emailAddress: Email Address
+  addContacts: Add a new contact
+  address: Name
+  editName: Edit name
+  noticeType: Notification method
+  addNoticeAddress: Add notification address
+  addContactAddress: Add contact address
+  addGroup: Add a New Group
+  editGroup: Edit Group
+  addNoticeGroup: Add a new notification group
+  search: Search
+  newAddress: New address
+  saveAndBack: Save and return
+  modify: Edit
+  addLabel: Add label
+  removeFromGroup: Remove from group
+  showMore: More
+  hide: Collapse
+  addImmediately: Add now
+  selectContactsAddress: Choose a address
+  firing: Firing
+  noAlert: No alarm now
+  resolved: Solved
+  query: Query
+  addAlertStrategy: Add alert rule
+  greaterThan: greater than
+  equalTo: equal to
+  lessThan: less than
+  duration: duration
+  selectNoticeGroup: Select notification group
+  ruleDetail: Detail
+  belongToGroup: Change group
+validation:
+  contactsNameEmpty: Name can not be empty!
+  emailAddressEmpty: E-mail address can not be empty
+  emailAddressWrong: E-mail address format is incorrect
+  slackApiUrlEmpty: API url can not be empty
+  slackApiUrlWrong: "API url must start with http: // or https: //"
+  webhookUrlEmpty: url can not be empty
+  webhookUrlWrong: "url must begin with http: // or https: //"
+  groupNameEmpty: Group name can not be empty
+  labelNameEmpty: Label name can not be empty
+  labelNameWrong: The label name consists of numbers, letters, and underscores, and must start with a letter
+  labelValueEmpty: Tag value can not be empty
+  strategyNameEmpty: Please fill in the name of the strategy
+  strategyNameWrong: The policy name consists of numbers and letters and must start with a letter
+  selectAlertId: Please select metric
+  selectCluster: Please select cluster
+  selectPartition: Please select partition
+  selectNode: Please select node
+  selectApp: Please select application
+  conditionValEmpty: Threshold can not be empty
+  groups: notify groups can not be empty
+tips:
+  webhookUrlPlaceholder: Enter the Webhook url address
+  emailAddressPlaceholder: Enter the email address
+  addressPlaceholder: Enter the address name
+  contactsEmpty: No contacts, please add contacts first
+  addressNotFound: Did not find the contact address!
+  addressEmpty: No available contact address, please add a new contact address.
+  addressEmptyCurrent: Currently no contact address,
+  groupNamePlaceholder: Fill in the group name
+  alertStrategyNamePlaceholder: Please enter the name of the alert strategy
+  closed: Closed
+  mute: Mute
+  spaceFull: Disk space utilization up to 97%
+  spaceCloseToFull: Disk space utilization(%) maximum >= 80
+  solvedTime: Resolved Time
+  noMatchGroup: No matching group
+  selectGroup: Please select group
+  labelMatchGroup: Label matching group
+  autoMatchGroup: The system automatically matches the new grouping based on the label of the group selected
+  alertAutoTaged: Each alert is automatically labeled with the above labels that currently come from the selected notification group
+  noNoticeGroup: No notification group
+  mustHaveLabel: The selected grouping must have a label. You can not select groups with the same label name but different label values ​​at the same time.
+  deletedApplication: Deleted app, unable to view details
+  deletedRule: Deleted rule, unable to view details
+  monitorApplicationName: ${clusterName} cluster ${namespace} partition ${name} application
+  monitorNodeName: ${clusterName} cluster ${name} node
+  monitorPartitionName: ${clusterName} cluster ${namespace} partition
+  monitorObjHadRemove: The monitoring object has been deleted and cannot be viewed
+  creatingAlertStrategy: Creating alert rule
+  addAlertStrategySuccess: Alert rule added successfully
+  deletingStrategy: Removing rule
+  deleteAlertStrategySuccess: Delete successfully!
+  deletingContactsGroup: Deleting notification group
+  deleteContactsGroupSuccess: Deleted successfully
+  addSuccess: Added successfully
+  deleteSuccess: Successfully deleted
+  contactsDeleted: Contact deleted
+  closeConfirm: Are you sure to turn off the ${name} threshold alert
+  confirmDelRule: Are you sure to delete rule ${rule}
+  confirmDelGroup: Are you sure to delete group ${name}
+  confirmAddressRemove: Are you sure to remove ${address} from ${name}
+  confirmDelAddress: Are you sure to delete notification ${name}
+  delAddressHint: notification will be deleted, it can't be restored
+  confirmDelTag: Are you sure to delete tag ${tag}
+  confirmAddContactToGroup: Are you sure to add the address to ${name}
+  addContactToGroupHint: Add ${name} to address group ${group}
+  delContactFromGroupConfirm: Are you sure to delete the address from ${name}
+  delContactFromGroupHint: Delete address ${name} from group ${group}
+  searchPlaceholder: Enter name for fuzzy search

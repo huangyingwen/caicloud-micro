@@ -1,0 +1,102 @@
+all: All
+create: Create
+delete: Delete
+remove: Remove
+change: Change
+save: Save
+cancel: Cancel
+confirm: Confirm
+modify: Modify
+more: More
+update: Updated
+next: Next step
+pref: Previous step
+complete: complete
+add: Add
+memory: Memory
+disk: Disk
+name: Name
+back: Return
+skip: Skip
+second: s
+personUnit: people
+logout: Logout
+noData: No data!
+actions: Actions
+basicInfo: Basic Informations
+advancedOptions: Advanced Options
+cap: Limit
+quota: Quota
+request: Request
+cost: Cost
+exit: Exit
+usage: Usage
+username: Username
+password: Password
+series: Series
+example: An example
+capacity: Capacity
+unset: Not set
+select: Select
+showAll: Display All
+proxy: Proxy
+type: Types of
+search: Search
+description: Description
+edit: Edit
+number: Quantity
+currentStatus: Current Status
+fuzzySearch: Search the keywords and filter fuzzily
+keySearch: Search the keywords
+allocated: Assigned
+used: Used
+yes: Yes
+no: No
+readonly: readonly
+validateError: There are formatting errors in the form, please check
+overview: Overview
+close: Close
+volume: Data Volume
+status:
+  running: Normal
+  onRun: Running
+  runFailure: Failure
+  pending: Pending
+  setUpSuccess: Creating Successful
+  failed: Creating Failed
+  setUpFailure: Creating Failed
+  gainSuccess: Getting Successful
+  onGain: Getting
+  gainFailure: Getting Failed
+  circleSuccess: Building Successful
+  waitCircle: Waiting For Building
+  onCircle: Building
+  circling: Building
+  cancelCircle: Abort
+  circleFailure: Failed
+  trainSuccess: Training Successful
+  onTrain: Training
+  onWait: Waiting
+  initializing: Initializing
+  trainFailure: Training Failed
+  onDel: Deleting
+  uploadSuccess: Uploading successful!
+  uploadFailure: Uploading failed!
+  waitOperationComplete: Wait for the current operation to complete
+  loading: Loading
+  noData: No data
+copy: copy
+copySuccess: Copy Successful
+copyFailed: Copy Failed
+optional: Optional
+
+breadcrumbs:
+  create: Create
+  update: Update
+  detail: Detail
+  copy: Copy
+hints:
+  success:
+    update: Update successfully
+    add: Create successfully
+    delete: Delete successfully

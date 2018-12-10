@@ -1,0 +1,117 @@
+all: 全部
+about: 关于
+create: 创建
+delete: 删除
+remove: 移除
+change: 变更
+save: 保存
+cancel: 取消
+confirm: 确定
+modify: 修改
+more: 更多
+update: 更新
+next: 下一步
+pref: 上一步
+complete: 完成
+add: 新建
+memory: 内存
+disk: 磁盘
+name: 名称
+back: 返回
+skip: 跳过
+second: 秒
+personUnit: 个
+logout: 退出登录
+noData: 暂无数据！
+actions: 操作
+basicInfo: 基本信息
+advancedOptions: 高级选项
+cap: 上限
+quota: 配额
+request: 请求
+cost: 费用
+exit: 退出
+usage: 使用量
+username: 用户名
+password: 密码
+series: 系列
+example: 例
+capacity: 容量
+unset: 未设置
+select: 选择
+showAll: 显示全部
+proxy: 代理
+type: 类型
+search: 搜索
+description: 描述
+edit: 编辑
+number: 数量
+currentStatus: 当前状态
+fuzzySearch: 搜索关键词模糊过滤
+keySearch: 输入关键字搜索
+nameSearch: 输入名称搜索
+allocated: 已分配
+used: 已使用
+yes: 是
+no: 否
+readonly: 只读
+validateError: 表单内存在格式错误，请检查
+overview: 概览
+close: 关闭
+volume: 数据卷
+status:
+  running: 运行正常
+  onRun: 运行中
+  runFailure: 运行失败
+  pending: 正在创建
+  setUpSuccess: 创建成功
+  failed: 创建失败！
+  setUpFailure: 创建失败
+  gainSuccess: 获取成功
+  onGain: 正在获取
+  gainFailure: 获取失败
+  circleSuccess: 构建成功
+  waitCircle: 等待构建
+  onCircle: 正在构建
+  circling: 正在构建
+  cancelCircle: 构建取消
+  circleFailure: 构建失败
+  trainSuccess: 训练成功
+  onTrain: 正在训练
+  onWait: 正在等待
+  initializing: 初始化
+  trainFailure: 训练失败
+  onDel: 删除中
+  uploadSuccess: 上传成功！
+  uploadFailure: 上传失败！
+  waitOperationComplete: 等待当前操作完成
+  loading: 正在加载
+  noData: 暂无数据
+copy: 复制
+copySuccess: 复制成功
+copyFailed: 复制失败
+optional: 可选
+
+breadcrumbs:
+  create: 新建
+  update: 更新
+  detail: 详情
+  copy: 复制
+hints:
+  success:
+    update: 更新成功
+    add: 新增成功
+    delete: 删除成功
+
+caicloudchromeframe:
+  actions:
+    exit: 退出
+
+# '关于'弹窗
+aboutPopup:
+  softwareVersion: 程序版本：
+  releaseTime: 发布时间：
+
+footer: 杭州才云科技有限公司
+footer2: 版权所有 ${year} 杭州才云科技有限公司
+caicloud: Caicloud

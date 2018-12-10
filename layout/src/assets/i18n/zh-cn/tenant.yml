@@ -1,0 +1,22 @@
+# Copyright 2018 caicloud authors. All rights reserved.
+
+tenant: 租户
+
+# buttons, form titles
+titles:
+  systemTenantUI: 系统管理界面
+  switchToTenant: 切换租户
+actions:
+  switchToTenant: 切换租户
+  tenantDetailPage: 租户详情
+  userEntrance: 使用者入口
+  adminEntrance: 管理员入口
+  enter: 开始使用
+
+# messages, placeholders
+tips:
+  noMoreTenantToSwitch: 当前账号只加入了一个租户
+  tenantPrefix: 租户：
+  enterAdminPlatformSuccess: 正在进入系统管理平台 ...
+  enterUserPlatformSuccess: 正在进入 ${name} ...
+  currentTenant: 当前租户

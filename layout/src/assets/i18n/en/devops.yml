@@ -1,0 +1,298 @@
+name: Name
+description: Description
+creationTime: Create time
+custom: Customize
+default: System allocation
+noSetting: No setting yet
+mark: Name
+pipeline:
+  name: Pipeline name
+  alias: Alias
+  latestVersion: Latest version
+  latestVersionStatus: Latest version status
+  latestSuccessVersion: Latest successful version
+  imageName: Image name
+  image: Image
+  selectTemplate: Choose a template
+  default: default
+  custom: customize
+  checkoutRepo: Checkout the code base
+  imageUrl: Image address
+  unitTest: Unit test command
+  compile: Compile command
+  output: Output file path
+  deployWay: Configuration method
+  serverName: Service Name
+  startCommand: Start command
+  testImage: Test image
+  testCommand: Test command
+  pipelineList: Pipeline list
+  envs: Environment variables
+  task: Task
+  codeCheckout: Checkout code
+  package: Build code #TODO(qme): remove
+  codeScan: Code scan
+  build: Build code
+  imageBuild: Build image
+  imageBuildTask: Image build task
+  context: Image build context
+  integrationTest: Integration Test
+  imageRelease: Publish image
+  buildTool: Build Tools
+  piplineState: Pipline Overview
+  implementTotal: Implement total
+  aborted: Aborted
+  failed: Failed
+  success: Success
+  total: Total
+  overview: Nearly one month profile
+  pipelineTask: Pipeline tasks
+  setting: Setting
+  autoTrigger: Autotrigger
+  notify: Notify
+  autoTriggerConfig: Autotrigger configuration
+  trigger: Trigger
+  preview: Preview
+  selectPublishImage: Select images publish to the registry
+  publishImage: Images publish to the registry
+  environmental: Environmental claim
+  microservice: Microservice
+  owner: Owner
+  configuration: Configuration
+  existImage: Been built images
+  basicInfo: Basic information
+  notifyPolicy: Notification policy
+  notifyGroup: Notification group
+  notifyMethod: Notification method
+  contactInfo: Contact Information
+  always: Always
+  executionSucceed: Execution succeed
+  executionFailed: Execution failed
+  email: Email
+workspace:
+  name: Workspace
+  serverAddress: Service address
+  authentication: Ways of identifying
+  project: project
+  projectName: project name
+  custom: customize
+  default: System allocation
+  username: username
+  password: password
+  oauthPassword: password
+  serverType: Service type
+  cargoProject: Image repository project
+  repository: Image repository
+  workspaceList: Workspace list
+  check: Check
+  workspaceState: Pipline Overview
+  aborted: Aborted
+  failed: Failed
+  success: Success
+  total: Total
+  overview: Nearly one month profile
+  piplineTotal: Pipline total
+  userName: Username
+  sourceType: Type
+record:
+  branch: Branch
+  tag: Tag
+  pullRequest: PR
+  version: Version
+  setVersion: Setting version
+  autoTag: Automatic Tag
+  timeConsuming: Time consuming
+  status: Status
+  useCache: Use Cache
+  name: Record list
+  configuration: Configuration
+  codeAddress: Code address
+  running: Running
+  failed: Failed
+  success: Success
+  aborted: Aborted
+  rebuild: Rebuild
+  runPipeline: Run pipeline
+  noQuota: No enough resources to create worker
+  outQuota: Worker required resources are out of quota limit
+  log: Record log
+  executeParams: Execute parameters
+  triggerMan: Trigger man
+  source: Source
+  pushImage: Images of push
+chart:
+  seven: Last seven days
+  thirty: Last thirty days
+actions:
+  baseInfo: Basic information
+  codeSource: Source code
+  repository: Image repository
+  createWorkspace: Create
+  updateWorkspace: Update workspace
+  selectWorkspace: Select workspace
+  configTitle: Config
+  tenantConfigPartition: Select a partition to perform pipeline tasks
+  createPipeline: Create pipeline
+  updatePipeline: Update the pipeline
+  runPipeline: Execute
+  stepCodeSource: Select code source
+  stepFlowLine: Pipeline tasks
+  addServer: Add dependent microservices
+  downloadLog: Download log
+  showLog: View log
+  abortPipeline: Abort pipeline
+  cancelEdit: Cancel changes
+  saveEdit: Save changes
+  saveTask: Save task
+  addTask: Create task
+  addFlow: Create process
+  recordTitle: 'Version: ${record} log'
+  stepTitle: ${step} related log
+  recordList: Perform records
+  triggerConfig: Trigger configuration
+  open: Open
+  close: Close
+  buildSpeedup: Build speedup
+  cleanup: Cleanup ${name} Cache
+  selectRegistry: Select Registry
+  detail: View Details
+  addService: Add microservice
+  addBranch: Add branch
+  addTag: Add tag
+
+tips:
+  cargoWorkspaceTip:
+    The image built in this workspace can only be pushed to the specified image
+    repository project
+  cargoWorkspaceDefaultTip: Create a project in image repository with the same name as this workspace.
+  cargoWorkspaceCustomTip: Select items in the image repository
+  descriptionPlaceholder: Optional, length of description should not be more than 100
+  serverTip: Enter the address
+  OAuthTip: If ${name} has two-factor authentication, please use Token authentication method
+  namePlaceholder: Can be included with lowercase letters or numbers - Length should not be more than 30
+  aliasTip: For the pipeline interface display
+  aliasPlaceholder: Support Chinese name
+  usernameTip: Fill in the correct user name and password to ensure that you can authorize
+  pipelineBrief:
+    Continuous integration pipeline can pull the code from the source management tools, followed by unit testing, code scanning and image building,
+    integration testing, image publishing, deployment and other workflows to
+    provide the best solution for DevOps, greatly reducing the threshold of
+    DevOps practice.
+  emptyWorkspace: Please create a workspace first
+  dockerfileTip: By default, Dockerfile in the codebase is used
+  dockerfilePlaceholder: Dockerfile file path
+  imageNamePlaceholder: Please enter repo name
+  commandPlaceholder: Multiple commands split by carriage return
+  outputPlaceholder: The file need to copy to the build mirror from the code build environment, not the files or folders in the current directory
+  publishTip: The following images are posted to the image repository
+  defaultVersion: The system automatically assigns a version number
+  versionTip: Please fill in the version number
+  autoTagTip: (Tagged automatically on ${name})
+  emptyTip: No tasks found
+  recordSearchTip: Enter version number blur filter
+  envKeyPlaceholder: key
+  envValuePlaceholder: value
+  buildImageTip: 'Image Address: ${imageUrl}'
+  taskTip: The mission can not be empty
+  recordError: An error occurred
+  branchTip: Get branch failed, please confirm whether the workspace is authorized and repo is available.
+  flowAddTip: The task depends on ${flowName}, need to add ${flowName} task first
+  delFlowHint: Removing the build code will also delete the integration test and release the warehouse process
+  delWorkspaceHint: The work area under the pipeline will be deleted
+  githubTokenCreate: to create a new Token and check the repo permissions and paste the production Token copy to this point.
+  githubPassword: Passwords will not stored, are used to dynamically generate token, and all subsequent operations are based on token.
+  githubToken: A set of account password can not be used in multiple places at the same time, this scenario please use the Token authentication method.
+  gitlabPassword: When using password, the new token is dynamically generated, and the old token continues to work.
+  tokenAccess: Token must have access to repo
+  gitlabTokenCreate: to create a new Token and check the API permissions and paste the production Token copy to this point.
+  OAuthChecking: OAuth checking
+  OAuthCheckFailed: OAuth check failed
+  OAuthCheckSuccess: OAuth check success
+  pleaseClick: Please click
+  cleanupCache: Cleanup ${name} cache
+  switchQuicken: ${operate} ${name}‘s build acceleration
+  useCache: Turn on using cache, such as a cache already exists, using a cache dependency package on the data volume, without cache emptying will rely on the cache to the data volume for next build use, turn off the cache need to download dependencies
+  context: Please enter a path corresponding to the context built in the source library
+  speedup: ${name} not turned on Build Acceleration Options
+  noSpeedup: No build acceleration options are turned on
+  existTag: Tag ${name} already exists, please ensure tag uniqueness
+  description: Within 100 characters
+  numberExceeded: Only can add 5 ${name}
+  enterTag: Enter label, carriage return submit
+  noBranch: No optional branch
+messages:
+  addPipeline: Adding pipelines
+  addPipelineSuccess: Added successfully
+  updatePipeline: Updating pipeline
+  updatePipelineSuccess: Updated successfully
+  deletePipeline: Removing pipeline
+  deletePipelineSuccess: Deleted successfully
+  addRecordSuccess: Added successfully
+  deleteRecordSuccess: Deleted successfully
+  abortRecord: Stopping task record
+  abortRecordSuccess: Stop task record successfully
+  addWorkspace: Adding workspace
+  addWorkspaceSuccess: Added successfully
+  updateWorkspace: Updating workspace
+  updateWorkspaceSuccess: Updated successfully
+  deleteWorkspace: Deleted successfully
+  addTenantConfig: Setting configuration
+  addTenantConfigSuccess: Set successfully
+  updateTenantConfig: Updateing configuration
+  updateTenantConfigSuccess: Updated successfully
+  cleanupCache: ${name} cache cleanup successfully
+confirms:
+  flow: Confirm delete ${name} process
+  flowTip: Removing the build code will also delete the integration test and image release process
+  pipeline: Confirm delete pipeline ${name}
+  record: Confirm delete record ${name}
+  abortRecord: Confirm stop running ${name}
+  workspace: Confirm delete workspace ${name}
+  workspaceTip: The workspace under the pipeline will be deleted
+  cleanupCache: Confirm cleanup ${name} all cache
+  imageBuildTip: Will remove the integration test, publish tasks that are used to this image
+validates:
+  request: Required
+  task: The mission can not be empty
+  publicGitlab: Gitlab public network address is incorrect
+  gitlab: Gitlab address is incorrect
+  name:
+    Names are in lower case letters, numbers __, begin with a letter or number,
+    and have a maximum length of 30 characters
+  imageName: Image name only be made up of lowercase number, - and _
+  github: github address is incorrect
+  existTag: Tag already exists, please add other tag, or delete the existing tag
+  nameRule: Only support a-z, 0-9, and .-_. Don't start or end with ._-
+  tagNameRule: Only support a-z, A-Z, 0-9, and .-_. Don't start with .-
+  noExistRegistry: Cargo registry ${name} is not exist, please choose again
+  noExistProject: Cargo project ${name} is bot exist, please choose again
+
+# 平台配置之持续集成
+configuration:
+  validateStorageNum: Quantity can't exceed ${name}
+  storage: Storage scheme
+  storageNum: Volume number
+  storageCapacity: Volume capacity
+  firstContentTip: Devops pipeline at the time of operation, will occupy a certain amount of CPU, memory resources.
+  secondContentTip: According to the actual business needs, reasonable allocation of the pipeline resource allocation to ensure that the platform in the implementation of the pipeline tasks will not affect the normal operation of other business.
+  operation: Run configuration
+  cluster: Cluster
+  speedup: Speedup
+  validateQuota: Can't exceed ${name}
+  noRecommendConfig: No valid recommendations currently available, please customize quotas
+  cannotDeployApp: The partition is not support deploy applications or tasks
+  cannotAddVolume: The partition is not support add volumes manually
+  validateExceed: Quota request can not exceed the limit
+
+# image select
+imageSelect:
+  project: Project
+  projectPlaceholder: Input project
+  repository: Image
+  repositoryPlaceholder: Input image
+  tag: Tag
+  tagPlaceholder: Input Tag
+  preview: Preciew
+  noExist: The input ${name} does not exist
+  emptyNoExist: not exist
+  onlyPrivate: only private items can be selected

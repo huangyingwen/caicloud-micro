@@ -1,0 +1,11 @@
+title:
+  quickDeploy: Quick Deploy
+  completeDeploy: Complete Deploy
+
+tips:
+  onDeploy: Creating job
+  deploySuccess: Create successfully
+  updateApplicationConfig: Updating job config
+  updateApplicationConfigSuccess: Update successfully
+  deletingApplication: Deleting job
+  deleteApplicationSuccess: Delete successfully

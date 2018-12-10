@@ -1,0 +1,109 @@
+tips:
+  editFile: 编辑 已上传文件
+  enterName: 输入配置名称
+  optional: 选填
+  cert: 证书摘要
+  labelFilter: 根据标签过滤
+  noConfigInfo: 当前分组暂无配置信息
+  searchByName: 输入配置名称模糊过滤
+  updateSuccess: 更新成功，引用列表同步可能存在一定延迟
+  addConfigSetSuccess: 新建配置集成功!
+  addConfigTemplateSuccess: 新建配置模版成功!
+  updateConfigSuccess: 更新配置成功!
+  updateConfigSetSuccess: 更新配置集成功!
+  updateTemplateSuccess: 更新模版成功!
+  deleteTagSuccess: 标签 ${name} 删除成功！
+  addOrEditTagSuccess: "标签 ${name} ${o._id === '' ? '新建' : '修改'}成功！"
+  confirmDelFile: 确定删除文件 ${file}
+  confirmDelConfig: 确定删除配置 ${name}
+  confirmDelGroup: 确定删除分组 ${name}
+  saveSuccess: 保存成功，新版本已生成！
+  versionSuccessHint: 当前引用对象仍然使用前一版本的配置，如需更新版本配置，请前往编辑引用列表。
+  emptyGroup: 请先新建分组
+
+actions:
+  createGroup: 新建分组
+  create: 新建配置
+  replace: 替换
+  drop: 点击或者拖拽上传文件
+  addcert: |
+    格式如下：
+    -----BEGIN CERTIFICATE-----
+    MIIE5z...
+    -----END CERTIFICATE-----
+  addPrivateKey: |
+    格式如下：
+    -----BEGIN PRIVATE KEY-----
+    MIICJj...
+    -----END PRIVATE KEY-----
+  change: 修改内容
+  changeFile: 修改文件内容
+  reUpload: 重新上传
+  editReference: 编辑引用列表
+  selectAll: 全选
+  apply: 应用
+  saveAndBack: 保存并返回
+  editcert: 替换证书内容
+  saveAndGenerate: 保存并生成新版本
+  editK/V: 编辑键值对
+  editList: 编辑引用列表
+validates:
+  nameWrong: 只能以小写字母和数字开头，可以包含小写字母、数字和短横线，长度限制为 20 个字符
+  fileWrong: 文件大小不得超过800K, 请重新选择文件
+  key: 可以包含大小写字母、数字、下划线、短横线和点，长度限制为 253 个字符
+tag: 标签
+tags:
+  name: 标签名称
+  manage: 标签管理
+  empty: 标签名称不能为空
+  new: 新标签
+  noTag: 暂无标签
+  allTags: 所有标签
+name: 配置名称
+desc: 描述
+group: 分组
+groups:
+  name: 分组名称
+  manage: 分组管理
+  new: 新分组
+  allGroups: 所有分组
+  number: 配置数
+type: 类型
+k/v: 键值对
+file: 文件
+cert: 证书
+key: 键
+value: 值
+encrypt: 加密
+privateKey: 私钥
+noConfig: 暂无配置
+versionList: 版本列表
+or: 或者
+publishingAgency: 发布机构
+domain: 域名
+startTime: 签发日期
+endTime: 到期日期
+content: 配置内容
+fileContent: 文件内容
+overview: 总览
+referenceList: 引用列表
+loadbalancer: 负载均衡
+c/p/l: 集群/分区/负载均衡
+c/p: 集群/分区
+noDesc: 暂无描述
+search: 查询
+baseConfig: 基础配置
+middleConfig: 中级配置
+highConfig: 高级配置
+creationTime: 创建时间
+uploadFileTip: 请先上传文件
+encryptFile: 加密配置文件
+all: 全部
+modify: 修改
+
+ref:
+  ingress: 负载均衡规则
+  app: 应用
+  version: 应用版本
+  historyName: 应用历史版本
+  controller: 控制器

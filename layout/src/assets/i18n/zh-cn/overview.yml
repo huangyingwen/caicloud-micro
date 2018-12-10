@@ -1,0 +1,50 @@
+title: 总览
+alert:
+  record: 报警记录
+  time: 时间
+  tip: 最近 10 分钟正在报警
+  total: 共
+  unit: 条
+  statistics: 报警统计
+platform:
+  team: 团队
+  user: 用户
+  header: 平台信息
+cargo:
+  header: 镜像统计
+kubernetes:
+  header: Kubernetes 组件状态
+cluster:
+  header: 集群组件状态
+audit:
+ header: 用户操作审计
+loadbalance:
+  out: 出网流量
+  in: 入网流量
+  nomal: 最近 30 分钟运行正常
+  error: 运行异常
+  tip: 最近 30 分钟
+  header: 负载均衡统计
+  tag: 预
+storage:
+  used: 已分配数量
+  volumeUsed: 已分配容量
+  header: 存储统计
+node:
+  percent: 占比
+  header: 节点统计
+  tip: TOP5 CPU 高负载节点
+clusterInfo:
+  logicalResourceSystemRequest: 逻辑资源系统请求
+  logicalResourceSystemCap: 逻辑资源系统上限
+ci:
+  header: 持续集成统计
+  recent: 近
+  tip: 流水线组执行记录
+app:
+  header: 应用统计
+  running: 正在运行
+common:
+  unit: 个
+status:
+  offline: 下线

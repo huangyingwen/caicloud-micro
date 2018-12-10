@@ -1,0 +1,9 @@
+chart:
+  label: Frequency
+  title: Frequency Of Event
+grid:
+  type: Type
+  count: Count
+  message: Message
+  reason: Reason
+  lastHappenTime: Last Happen Time

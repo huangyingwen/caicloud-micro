@@ -1,0 +1,93 @@
+defaultTeam: 默认团队
+tabTitles:
+  members: 团队成员
+  partition: 分区权限
+  template: 模版组
+  balance: 负载均衡
+  config: 配置权限
+  operator: 运维权限
+  manageCenter: 管理中心
+  devops: 流水线组权限
+  cargo: 镜像组权限
+  clever: Clever平台功能权限
+
+# messages, placeholders
+tips:
+  enterTeamName: 请输入团队名称
+  noSystemUser: 系统暂无用户可添加
+  noUser: 没有找到用户!
+  selectUsers: 选择成员
+  filterName: 输入名称模糊过滤
+  filter: 输入关键词模糊过滤
+  defaultTeamDescription: 默认团队包含平台或租户下的所有成员，不可删除。修改默认团队的基础权限对该团队内所有成员生效。
+  optional: 选填 200字以内
+  teamNameWrong: 团队名称必须以字母或中文开头，支持中文和特殊符号，长度限制 2 - 32 个字符
+validates:
+  nameWrong: 格式错误
+  setTeamName: 请设置团队名称
+  tooMuch: 不能超过 200 字
+# buttons, form titles
+actions:
+  addMembers: 新建成员
+  addTeam: 新建团队
+  modifyTeam: 修改团队信息
+
+# 角色相关概念
+roles:
+  base: 基础权限
+  roleTypes:
+    none: 无
+    owner: 管理员权限
+    user: 操作员权限
+    guest: 访客权限
+    operator: 操作员权限
+    workspaces: 交付管理员权限
+  resourceNames:
+    singular:
+      partition: 分区
+      config: 配置
+      devops: 流水线组
+      cargo: 镜像项目
+      template: 模版组
+    plural:
+      partition: 分区
+      config: 配置
+      devops: 流水线组
+      cargo: 镜像项目
+      template: 模版组
+  tips:
+    base: 赋予基础权限后，该团队下的所有成员对${resourceName}资源都享有基础权限
+    workspaces: 包含了镜像组的管理权限
+    cargo: 流水线组的基础权限是管理员，镜像组的权限已经被变更成管理员，当前权限设置已失效。
+  actions:
+    chooseBaseRole: 选择基础权限
+    chooseSingletonRole: 选择权限
+  simpleAuth:
+      balanceUse: 负载均衡使用
+      logging: 日志事件
+      monitoring: 监控报警
+      notifyConfig: 通知配置
+
+# clever平台访问相关
+clever:
+  title: 功能权限
+  access: 平台访问：
+  stop: 关闭 Clever 平台访问
+  stopInfo: 关闭平台访问之后，该团队的用户将不能够登录 Clever 平台，但用户在平台上创建的资源（Notebook 实例、训练作业、TensorBoard 实例和模型服务等）还将继续保留。如果要清理，则需要管理员登录 Clever 平台进行清理。确定要关闭该团队访问 Clever 平台开关吗？
+  roleType:
+    none: 无
+    admin: 管理员
+    operator: 操作员
+  tips:
+    developAdmin: 管理所有用户的 Notebook 实例
+    developOperator: 创建和管理自己的 Notebook 实例
+    developName: 模型开发
+    developHelp: 提供在线代码开发和调试工具 Notebook
+    trainingAdmin: 管理所有用户的训练作业和 TensorBoard 实例
+    trainingOperator: 提交和管理自己模型训练作业；创建和管理自己的 TensorBoard 实例
+    trainingName: 模型训练
+    trainingHelp: 提交模型训练作业、创建学习可视化工具 TensorBoard
+    servingAdmin: 管理所有用户部署的模型服务
+    servingOperator: 部署和管理自己的模型服务
+    servingName: 模型服务
+    servingHelp: 部署模型服务，提供模型推理 gRPC API

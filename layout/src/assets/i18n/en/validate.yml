@@ -1,0 +1,28 @@
+name: consists of letters, numbers, dash, and can only begin with English letter, can't start or end with a dash.
+name:length: length can't exceed ${length} letters
+name:lengthLimit: length limit ${min} - ${max} characters
+num:positive: Please enter a positive integer (float number allowed)
+num:positiveInt: Please enter a positive integer
+num:nonNegativeInt: Must be a non-negative integer
+num:betweenMinAndMax: Please enter a number in ${min} ~ ${max}
+num:lengthLimit: Length must be ${min}-${max} characters
+num:chineseSpecialBetween: Support chinese and special symbols, length limit ${min}-${max} characters
+
+required:
+  cluster: Please select a cluster
+  partition: Please select a partition
+  protocol: Please select a protocol
+  unix:
+    path: Illegal path
+  empty: Required
+
+validation:
+  int: Must be a nonnegative integer
+  positiveInt: Must be a positive integer
+  positiveIntOrUpToTwoDigitsFloat: Must be a positive number with up to two decimal places
+  smallerThan1024: Please enter number less than 1024
+  smallerThan1000: Please enter number less than 1000
+  positiveNum: Must be a positive number
+  noneNegativeOrUpToThreeDigitsFloat: Must be a none-negative number with up to three decimal places
+  notLargerThanInt32: Please enter number less than 2147483648(2^31)!
+  ip: Please enter legitimate IP address

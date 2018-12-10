@@ -1,0 +1,51 @@
+contactGroups:
+  name: 联系人组
+  action:
+    delete: 确定删除联系人组 ${name}
+  form:
+    optional: （选填）
+    nameTip: 支持中文和特殊字符，长度不能超过 32 个字符
+
+contacts:
+  name: 联系人
+  action:
+    delete: 确定删除联系人 ${name}
+
+smtp:
+  name: SMTP
+  action:
+    delete: 确定删除 SMTP 配置 ${name}
+    setSuccessfully: 保存成功
+    sendSuccessfully: 发送成功
+    sendFailure: 发送失败
+    send: 发送
+    sending: 正在发送
+  mailServer: 邮件服务器
+  valid:
+    servicehost: 域名或 IP 地址格式错误
+    serviceport: 只能输入数字
+    email: 邮箱格式错误
+  sendTestEmail: 发送测试邮件
+  sendTestEmailTip: 仅向输入的收件人地址发送邮件,需用户自己查看是否收到邮件
+  emailTip: 填写可用的收信人地址，验证邮件配置内容
+  form:
+    title: 通知的邮件服务器，用于通知信息的邮件发送
+    serviceHost: SMTP 服务地址
+    serviceHostTip: 域名或 IP 地址，例如：smtpdomain.com 或 192.168.1.1
+    servicePort: SMTP 服务端口
+    username: SMTP 服务账号
+    usernameTip: SMTP 服务账号
+    passwordTip: （选填）留空则保留原密码
+    useSSL: 使用 SSL
+    testEmail: 测试邮件
+grid:
+  updateTime: 更新时间
+  member: 成员
+  selectMember: 选择成员
+  notifyAddress: 通知地址
+tips:
+  search: 搜索人员名称
+  searchGroup: 搜索联系人组名称
+domain:
+  form:
+    title: '平台默认使用 IP : 端口 的形式对外提供服务，用户可以自行设置平台的访问地址（域名）。'

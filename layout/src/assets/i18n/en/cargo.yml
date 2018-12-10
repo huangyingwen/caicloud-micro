@@ -1,0 +1,206 @@
+safe: Safety
+count: Number
+search: Inquire
+clear: Emptied
+version: version
+overview: Overview
+name: Name
+deployApp: Deploy
+delete: Delete
+preview: Preview
+edit: Edit
+duplicate: Duplicate
+description: Description
+recent: Recent
+modify: Modify
+save: Save
+cancel: Cancel
+fullScreen: Full Screen
+integration: Integration
+replicationPolicy: Strategy
+sync: Sync
+syncDel: Synchronous delete
+basicInfo: Basic Information
+strategy: Strategy
+note: Note
+from: From
+reason: Reason
+record: Record
+close: Close
+identity:
+  username: Username
+  password: Password
+  address: Address
+  accessTime: Time
+  cargoAccount: Account
+  project: Projects
+  image: Images
+  diskUsage: Disk Usage
+  private: Private
+  public: Public
+  tenant: Tenant
+actions:
+  selectFile: Select a document
+tips:
+  addSyncTactics: Cannot add replication${replication}
+  vulnerability: ${vulnerabilitiesCount} vulnerabilities
+  input:image: Enter the mirror address
+  mirror: Image name
+  version: Version Information
+  historicVersion: historic version
+  noHistoricVersion: No history version!
+  useOriginalMirror: Use the original image name
+  useOriginalVersion: Use the original version
+  importMirrorFromFile: Import the image from the file
+  vulnerabilityInfo: Vulnerability information
+  deleteWorkspaceSuccess: Deleted successfully
+  deleteRepo: Removing repo
+  deleteRepoSuccess: Deleted successfully
+  deleteTagSuccess: Deleted successfully
+  confirmHardDel: OK to perform a hard delete
+  deleteRegistry: Confirm delete registry ${name}
+  willErase: All currently deleted mirror information will be erased and can not be restored
+  willStopPushAndPull: Will stop mirroring the push / pull service of the repository
+  sugExecuteWhenFree: It is recommended to do this when the mirror repository is idle
+  spaceWillRelease: Hardly deleted, the occupied storage space will be released
+  confirmDelImage: Are you sure you want to delete the image ${image}
+  willDelCurrentImage: The current image will be deleted and can not be restored
+  confirmDelProject: Are you sure you want to delete item ${proName}
+  confirmDelRepoImage: Are you sure to delete ${image}
+  deleteReplication: Are you sure to delete ${replication}
+  confirmDelRepo: Are you sure to delete ${repo}
+  willDelCurrentPro: The current project will be deleted, can not be restored
+  willDelImage: The image under this item will also be deleted
+  willDelSync: Associated sync policy will also be deleted
+  confirmRemoveTag: Are you sure you want to delete the tag ${tag}
+  willDelRelation: The label and its association with the mirror will be deleted
+  confirmDelLabelHook: Determine delete items
+  willDelRelationBetweenProAndTag: The association for the item ${proName} and the label ${tag} will be deleted
+  publicWorkspacePlaceholder: Project name head and tail must be number or lowercase letter, that can be included. _ -, length 2-30
+  badUrl: Url cannot be parsed
+  badScheme: URL only supports https protocol
+  registryExisted: The warehouse has been integrated
+  accessFailed: Unable to access using the provided account
+  usedAlready: The warehouse has been integrated into other clusters
+  validation: The address must begin with https://
+  unknownHost: It may not work properly if you input a Cargo Address manually instead of picking one from the list
+  copyCommand: copy login command
+  cargosNumberLimit: This version only supports access to three image cargos
+  validationDomain: URL address starting with https://, which supports the domain name
+  nameTip: Support Chinese and special symbols, length limit 2 - 32 characters
+  selectProject: Please select a project
+  selecImageCargo: Please select Image Cargo
+  syncTo: Sync to
+  successCount: ${count} Success
+  failedCount:  ${count} Failed
+  loadMore: load more
+project:
+  name: Project Name
+  manage: Project management
+  description: Project Description
+  publicProject: Public Project
+  privateProject: Private Project
+  public: Public Project
+  private: Private Project
+  tenantUsage: Tenant Usage
+  selectProject: select project type
+  replicationPolicy: Replication Policy
+  replicationPolicyCount: Replication Policy Count
+  latestUpdate: Latest Update
+  strategyType: Strategy Type
+  actions:
+    select: Select item
+    add: Add itemsitems
+    create: Create a project
+    import: Import the project
+  validate:
+    name: Project name can not be empty
+    empty: Item can not be empty
+    mirrorName: The image name can not be empty
+    mirrorVersion: Mirrored version can not be empty
+    file: File can not be empty
+    workspace: Only lowercase alphanumeric characters and symbols are supported _-. At the beginning and end of the symbol cannot be used and symbols are not continuous, length 2 - 30 (include prefix)
+    lengthErr: Length 2-30
+  title:
+    cargoPush: Cargo Push
+    cargoPull: Cargo Pull
+  tips:
+    pushVolume: Push Volume
+    pullVolume: Pull Volume
+    frequency: Frequency
+duplicateImage:
+  name: Duplicate Images
+  source: Source
+  target: Target
+  replicating: Copying, please wait
+image:
+  name: Image
+  cargo: Image Cargos
+  public: Public Image
+  private: Private Image
+  publicImage: Public Image
+  privateImage: Private Image
+  updateTime: Update Time
+  numberOfTags: Tag Count
+  pullTimes: Pull Times
+  tag: Tag
+  instruction: Instruction
+  pullCommand: Pull Command
+  author: Author
+  creationTime: Creation Time
+  pullCount: Pull Count
+  operation: Operation
+cargoIntegration:
+  name: Cargo Name
+  address: Cargo Address
+  account: Admin Account
+  password: Admin Password
+syncronization:
+  title: Sync Record of Strategy ${currTactics}
+  source: Source Project
+  target: Target
+  direction: Direction
+  recentTime: Recent Sync Time
+  initiative: Forward
+  all: All
+  passive: Backword
+  manual: Manual
+  automatic: On Push
+  scheduled: Scheduled
+  syncRecord: Sync Record
+  success: Success
+  failure: Failure
+  status: Status
+  time: Time
+  repeat: Repeat
+  everyDay: Everyday
+searching:
+  placeholder: Fuzzy filtering
+uploader:
+  upladeTar: Upload Tar file
+  uploadImage: Upload image
+  closeWhenUploading: Files will continue to upload after the frame is closed
+  uploadProgress: Progress
+  uploadDoneWaiting: Upload completed, waiting for the server to resolve
+  errCode:
+    uploadFail: Upload failed
+    cargo:RegistryNotFound: Registry not found
+    cargo:ProjectNotExit: Project not found
+    cargo:BadImageFile: Bad image file
+uploadDF:
+  title: Build image
+  selectTemplate: Select Templage
+  selectDockerFile: Select Docker File
+  startBuilding: Start build
+  errCode:
+    haveVoidInfo: Image name and image template are necessary
+    noUploadFile: Select the image file you want to build
+    ReasonInternal: Build image failed
+    templateValueHavePlaceholder: Docker file template have placeholder
+basisScan:
+  flaw: Flaw
+  basisImage: Basis image
+  pass: Pass
+  fail: Fail
+vulnerability:
+  setting: Setting

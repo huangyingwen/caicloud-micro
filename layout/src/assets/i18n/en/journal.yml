@@ -1,0 +1,32 @@
+search: Search
+reason: Reason
+relatedObj: Related object
+notify: Notify
+warn: Alert
+normal: Normal
+event:
+  type: Event type
+  content: Event content
+  tips:
+    selectType: Choose the type of event
+    selectObj: Select the Related object
+    noRelated: No related events
+    noInfo: No available cluster, unable to obtain the event information
+actions:
+  seeContext: Click to view the context
+tips:
+  happen: ${count} times have occurred in ${time}
+  downloading: Downloading
+  downloadLog: Download log
+  search: Enter keywords for fuzzy search
+  startDownload: Downloading
+  searchTarget: Search target must be selected to the application level
+  logContent: View the log context
+  loadMore: Load more
+  noLog: No logs
+  searchBtn: Search
+validates:
+  clusterSelectedRequired: Please select a target cluster to search events
+  selectCluster: Please select the cluster
+  selectPartition: Please select the partition
+  selectApp: Please select application

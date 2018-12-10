@@ -1,0 +1,24 @@
+name: Solution name
+actions:
+  add: Add a solution
+  create: Add a solution
+tips:
+  addSuccess: Solution ${name} new success!
+  deleteSuccess: Solution ${solution} deleted successfully!
+  onCreateSpace: Creating project group ${data.spaceName}
+  createSpaceNameSuccess: Create a plan group ${data.spaceName} success
+  onDeleteSpace: Removing repository ${spaceName}
+  deleteSpaceSuccess: Delete Scenario Library Success ${spaceName}
+  nodeNameRepeat: "The dependent node name (${repeat.join (',')}) in the scheme structure can
+   not be repeated."
+  nodeNameEmpty: Dependent node name in scheme structure can not be empty.
+  onDeleteChartVersion: Removing program ${chart} version ${version}
+  deleteChartVersionSuccess: Remove program ${chart} version ${version} is successful
+  onDeleteChart: Removing program ${chart} ...
+  deleteChartSuccess: Delete program successful ${chart}
+  confirmDelSolution: Are you sure you want to delete the solution ${solution}
+  confirmDel: Are you sure you want to delete ${solution}
+  confirmDelCulsterEnv: Are you sure you want to delete the development environment from cluster
+   ${cluster}
+  confirmDelServing: Are you sure you want to delete ${service}
+  confirmDelSpace: Are you sure you want to delete the repository ${space}

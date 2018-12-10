@@ -1,0 +1,11 @@
+title:
+  quickDeploy: Quick Deploy
+  completeDeploy: Complete Deploy
+
+tips:
+  onDeploy: Creating statefulset
+  deploySuccess: Create successfully
+  updateApplicationConfig: Updating statefulset config
+  updateApplicationConfigSuccess: Update successfully
+  deletingApplication: Deleting statefulset
+  deleteApplicationSuccess: Delete successfully

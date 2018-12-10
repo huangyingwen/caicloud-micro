@@ -1,0 +1,30 @@
+name: 由字母、数字、横杠组成，只能以英文字母开头，不能以横杠开头和结尾。
+name:length: 长度不能超过 ${length}
+name:lengthLimit: 长度限制 ${min} - ${max} 个字符
+num:positive: 必须输入正数(包含小数)
+num:positiveInt: 请输入正整数
+num:nonNegativeInt: 请输入非负整数
+num:betweenMinAndMax: 请输入 ${min} ~ ${max} 内的数字
+num:chineseSpecialBetween: 支持中文和特殊符号，长度限制 ${min} - ${max} 个字符
+
+required:
+  cluster: 请选择集群
+  partition: 请选择分区
+  protocol: 请选择协议类型
+  unix:
+    path: 路径不合法
+    foot: 不能是根目录
+  empty: 不能为空
+
+validation:
+  int: 必须是非负整数
+  positiveInt: 必须是正整数
+  positiveIntOrUpToTwoDigitsFloat: 必须是最多两位小数的正数
+  smallerThan1024: 请输入小于 1024 的数字
+  smallerThan1000: 请输入小于 1000 的数字
+  positiveNum: 必须是正数
+  noneNegativeOrUpToThreeDigitsFloat: 必须是最多三位小数的非负数
+  notLargerThanInt32: 必须小于 2147483648(2^31)
+  ip: 请输入合法的 IP 地址
+  maskCode: 掩码范围 1-21
+  ipPort: 请输入合法的 IP 端口号
